@@ -47,3 +47,9 @@ Building Movie OST Search Application using APIs, JavaScript, HTML, CSS 🚀🚀
    |   |-- main.js
    |   |-- style.css
 ```
+
+# Branches
+
+- `main` branch: 프로덕션에 배포될 브랜치. 절대 터치 ❌🙅‍♂️🙅‍♀️
+- `develop` branch: 개발을 진행할 브랜치. `main` 브랜치에서 파생됨.
+- `featuers` branch: 기능 구현을 진행하는 브랜치. `develop` 브랜치에서 파생됨.
