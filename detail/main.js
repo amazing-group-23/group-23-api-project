@@ -1,8 +1,6 @@
-// TMDB API Key
 const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
 const SPOTIFY_API_KEY = "54410b2597msh4c14c6ce560ed8cp1da39fjsn606b73555cd2";
 
-//
 const searchButton = document.querySelector("button");
 const searchInput = document.querySelector("#search");
 
