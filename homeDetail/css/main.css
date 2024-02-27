@@ -1,0 +1,264 @@
+/* reset */
+html, body {
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #515151;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+h1,h2,h3,h4,dl,dt,dd,figure,ul,li {
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 0 .5rem 0;
+    box-sizing: border-box;
+    color: lightgray;
+}
+
+/* wrap */
+#wrap {
+    max-width: 128rem;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+/* header */
+#header {
+    padding: 0 2rem;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+#header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header nav .menu {
+    position: relative;
+    width: 3rem;
+    height: 2.5rem;
+}
+/* menu icon */
+#header nav .menu span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: .3rem;
+    border-radius: 2rem;
+    background-color: gray;
+    transition: all .1s ease;
+}
+#header nav .menu span:nth-of-type(1) {
+    top: 0;
+}
+#header nav .menu span:nth-of-type(2) {
+    top: 45%;
+}
+#header nav .menu span:nth-of-type(3) {
+    bottom: 0;
+}
+/* logo */
+#header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    text-transform: uppercase;
+    background-color: gray;
+    color: lightgray;
+}
+#header .nav-right {
+    display: flex;
+    align-items: center;
+}
+/* search button */
+#header .search {
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: gray;
+    color: lightgray;
+}
+/* login button */
+#header .login {
+    display: block;
+    padding: 1rem;
+    margin: 0 0 0 1rem;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: lightgray;
+    background-color: gray;
+}
+
+/* container */
+#container {
+}
+#container .con-inner {
+}
+#container main {
+    width: 100%;
+    min-height: 46.1rem;
+    background-color: gray;
+    overflow: hidden;
+}
+#container main h2 {
+    margin: 0 0 0 2rem;
+}
+#container main .main-inner {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+}
+#container .main-inner {
+    display: flex;
+    justify-content: space-between;
+}
+#container .main-inner dl {
+    width: 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+#container .main-inner dl dt {
+    margin: 0 0 2rem 0;
+}
+#container .main-inner dl dt h3 {
+    display: inline-block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: gray;
+    border-bottom: 2px solid #fff;
+}
+#container .main-inner dl dd {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: gray;
+    color: lightgray;
+}
+#container .main-img {
+    width: 50%;
+    box-shadow:inset 0 0 2px 0 lightgrey;
+    background-color: gray;
+}
+#container .main-img figure {
+    text-align: center;
+    line-height: 30rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: lightgray;
+}
+
+
+/* section */
+section {
+    padding: 0 2rem 1rem 2rem;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+section h2{
+    padding: 0;
+    color: gray;
+}
+section ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+section ul li {
+    width: 22.5rem;
+    height: 31.5rem;
+    line-height: 30rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: gray;
+    color: lightgrey;
+    border-radius: 5%;
+}
+#movie-board {
+    flex-flow: row wrap;
+}
+#movie-board > li{
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+}
+#movie-board > li > img {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination a {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 .5rem 1rem .5rem;
+
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 3rem;
+
+    border-radius: 50%;
+    color: lightgray;
+    background-color: gray;
+}
+
+/* footer */
+footer {
+    height: 6.2rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+aside {
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2rem;
+}
+aside > button {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem 0 ;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px 0 #000;
+    background-color: lightgrey;
+}
+aside > button > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 4rem;
+    transition: all .3s ease-in;
+}
