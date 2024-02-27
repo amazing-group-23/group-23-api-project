@@ -1,0 +1,28 @@
+header{
+    background-color: grey;
+}
+
+.movie-detail-container{
+display: flex;
+justify-content: space-around;
+margin: 3em 0;
+}
+.movie-detail-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-ost-playlist{
+    display: flex;
+    margin-bottom: 3em;
+   flex-direction: column;
+   margin-left: 3.5em;
+}
+.ost-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer{
+    background-color: grey;
+}
