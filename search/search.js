@@ -50,4 +50,5 @@ document.querySelector('.search-page-input-box input').addEventListener('keydown
     }
 });
 
+
 getMovies(); // 초기 인기 영화 목록 로드
