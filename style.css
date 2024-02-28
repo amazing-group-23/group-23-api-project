@@ -239,6 +239,7 @@ h2 {
 
 #top-rate-movie-section{
   max-width: 1280px;
+  margin: 0 auto;
 }
 #top-rate-movie-section #top-rate-movies{
   display: flex;
