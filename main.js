@@ -11,7 +11,7 @@ const getMovies = async () => {
   const response = await fetch(url);
   const data = await response.json();
   console.log("데이터는", data);
-  movieList = data.results.slice(0, 10);
+  movieList = data.results.slice(0, 12);
 
   getMoviesRender();
 };
