@@ -221,14 +221,15 @@ h2 {
   max-width: 1280px;
   margin: 0 auto;
 }
-#movie-board {
+
+#main-movie-board {
   flex-wrap: wrap;
 }
-#movie-board > li {
+#main-movie-board > li {
   margin: 0 0 2rem 0;
   overflow: hidden;
 }
-#movie-board > li img {
+#main-movie-board > li img {
   width: 100%;
   text-align: center;
   border-radius: 20px;
