@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="search.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 검색 페이지 뼈대 -->
+    <header></header>
+    <section id="search-page">
+        <div class = "search-page-input-box">
+            <input type="text" placeholder="제목을 입력해보세요."/>
+            <button onclick="getMovieByKeyword()">검색</button>
+        </div>
+        <div class="searched-films-container">
+            <ul id="movie-board">
+                
+            </ul>
+        </div>
+    </section>
+
+    <script src="search.js"></script>
+</body>
+</html>
