@@ -1,4 +1,5 @@
-//검색창에 글자수가 1이하일 때 전송 막기
+//검색창에 글자수가 1이하일 때 전송 막기 (0)
+//css꾸미기
 
 
 const API_KEY = "30cd8cae353bf46280229ed39cd6c327";
@@ -31,7 +32,12 @@ const getMoviesRender = () => {
 };
 
 const getMovieByKeyword = async () => {
-    let keyword = document.querySelector('.search-page-input-box input').value;
+    let keyword = document.querySelector('.search-page-input-box input').value.trim(); // 입력값 앞뒤 공백 제거
+    if (keyword === "") { // 입력값이 비어 있다면 검색 실행하지 않음
+        alert("검색어를 입력해주세요.");
+        return;
+    }
+
     url = new URL(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=ko-KR&query=${keyword}`);
     const response = await fetch(url);
     const data = await response.json();
@@ -49,6 +55,3 @@ document.querySelector('.search-page-input-box input').addEventListener('keydown
         getMovieByKeyword();
     }
 });
-
-
-getMovies(); // 초기 인기 영화 목록 로드
