@@ -1,0 +1,69 @@
+/* 박스크기 기준 : 테두리 기준 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 뷰포트 높이값에 맞춰 */
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background: #292C35;
+}
+
+body.dark p {
+    color: #fff;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    border-radius: 50px;
+    /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
+    transform: scale(1.5);
+}
+
+.ball {
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
+    /* transform을 0.2초간 끝이 느려지도록 */
+    transition: transform 0.2s ease-out;
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+/* 투명하게 만들고 label 안에 위치시킴 */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+/* label(checkbox)이 클릭되면 공의 모션 */
+/* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
