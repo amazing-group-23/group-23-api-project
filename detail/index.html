@@ -3,11 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>상단바</header>
+    <div id="wrap">
+      <header id="header">
+        <div class="header-inner">
+        <!-- logo -->
+          <h1>
+            MUVIC
+          </h1>
+          <nav>
+        <!-- menu open -->
+          <button type="button" class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+    
+        <!-- nav-right -->
+            <div class="nav-right">
+              <button type="button" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+    
+              <a href="#" class="login">
+                login
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
     <main>
       <section class="movie-detail-container"></section>
       <section class="movie-ost-container">
@@ -15,8 +43,27 @@
         <div class="ost-playlist"></div>
       </section>
     </main>
-    <footer>footer</footer>
+                                   
+    <footer>
+      <h2>
+        footer
+      </h2>
+    </footer> 
 
+    <aside>
+    <button type="button">
+    <i class="fa-solid fa-moon"></i>
+    </button>
+                    
+    <button type="button">
+    <a href="#header">
+    <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    </button>
+    </aside>               
+    
+    <!--script-->
+    <script src="https://kit.fontawesome.com/e106b2b7eb.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
 </html>
