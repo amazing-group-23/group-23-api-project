@@ -1,0 +1,52 @@
+/* reset */
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #515151;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+dl,
+dt,
+dd,
+figure,
+ul,
+li {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 0 .5rem 0;
+    box-sizing: border-box;
+    color: lightgray;
+}
