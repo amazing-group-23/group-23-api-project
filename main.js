@@ -34,7 +34,7 @@ const getMoviesRender = () => {
     )
     .join("");
 
-  document.getElementById("main-movie-board").innerHTML = moviesHtml;
+  document.getElementById("movie-board").innerHTML = moviesHtml;
 };
 
 

@@ -1,7 +1,7 @@
 const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
-const SPOTIFY_API_KEY = "54410b2597msh4c14c6ce560ed8cp1da39fjsn606b73555cd2";
+const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
-const YOUTUBE_API_KEY="AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
+const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
 const renderMovieDetail = async (videoId) => {
   // get movie detail data
@@ -9,6 +9,9 @@ const renderMovieDetail = async (videoId) => {
     `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`
   );
   const data = await response.json();
+  const trailer = data.videos.results.find(
+    (video) => video.type === "Trailer"
+  );
   const movieDetailHTML = `
     <img src="${
       data.poster_path
@@ -16,8 +19,7 @@ const renderMovieDetail = async (videoId) => {
         : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
     }" />
     <div class="movie-detail-text">
-      <iframe id="ytplayer" type="text/html" width="640" height="360"
-      src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0"></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <h1>${data.title}</h1>
       <span>장르:${data.genres[0].name}</span>
       <span>평점:${data.vote_average}</span>
@@ -35,8 +37,7 @@ const renderMovieDetail = async (videoId) => {
   resultElement.innerHTML = await getOSTFromSpotify(data.title);
 
   //영화 제목으로 페이지 타이틀 변경
-  document.title=`${data.title} | MUVIC`;
-  getYoutubeVideoId(data.title); 
+  document.title = `${data.title} | MUVIC`;
 };
 
 // Get Spotify iframe of OST songs for a given movie
@@ -53,7 +54,7 @@ const getOSTFromSpotify = async (query) => {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-
+    console.log(result);
     const playlist = result.albums.items.find((item) =>
       item.data.name.toLowerCase().includes("soundtrack")
     );
@@ -76,19 +77,6 @@ const getOSTFromSpotify = async (query) => {
     console.error(error);
     return "<span>No OST found</span>";
   }
-};
-
-const getYoutubeVideoId=async(movietitle)=>{
-//get youtubevideo data
-url = new URL(
-    `https://www.googleapis.com/youtube/v3/search?type=video&videoEmbeddable=true&videoDuration=short&videoSyndicated=true&q=${movietitle}&key=${YOUTUBE_API_KEY}`
-  );
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log("item은: ", data);
-  console.log("video id:",data.items[0].id.videoId);
-  const videoId=data.items[0].id.videoId;   
-  renderMovieDetail(videoId);
 };
 
 renderMovieDetail();

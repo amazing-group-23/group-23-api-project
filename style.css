@@ -129,7 +129,7 @@ h2 {
 #home-main .home-main-inner {
   width: 100%;
   height: 100%;
-  background: url('./img/home-main-img-3.jpeg')center center no-repeat;
+  background: url('./assets/img/home-main-img-3.jpeg')center center no-repeat;
   background-size: cover;
 }
 #home-main .home-main-inner::after {
@@ -221,11 +221,11 @@ h2 {
 #movie-board {
   flex-wrap: wrap;
 }
-#main-movie-board > li {
+#movie-board > li {
   margin: 0 0 2rem 0;
   overflow: hidden;
 }
-#main-movie-board > li img {
+#movie-board > li img {
   width: 100%;
   text-align: center;
 }
@@ -255,7 +255,7 @@ h2 {
 }
 
 /* main-movie-pagination */
-.main-movie-pagination {
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
