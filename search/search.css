@@ -66,4 +66,8 @@ header {
     text-align: center;
     color: #ccc;
     line-height: 300px;
+    overflow: hidden;
+}
+#search-page .searched-films-container ul li img{
+    width: 100%;
 }
