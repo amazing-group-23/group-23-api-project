@@ -181,13 +181,14 @@ h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 400px;
 }
-.home-section ul li {
+#home-section-1 ul li {
   width: 300px;
-  height: 450px;
+  height: 350px;
   text-align: center;
-  background-color: gray;
   color: lightgrey;
+  background-color: #ccc;
   border-radius: 10px;
 }
 .home-section span {
@@ -216,9 +217,14 @@ h2 {
 }
 
 /* section2 */
-#home-section-2 {
+#main-movie-section {
+  max-width: 1280px;
+  margin: 0 auto;
 }
-#movie-board {
+#main-movie-board{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   flex-wrap: wrap;
 }
 #movie-board > li {
@@ -228,6 +234,7 @@ h2 {
 #movie-board > li img {
   width: 100%;
   text-align: center;
+  border-radius: 20px;
 }
 
 
