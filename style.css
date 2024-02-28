@@ -181,13 +181,14 @@ h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 400px;
 }
-.home-section ul li {
+#home-section-1 ul li {
   width: 300px;
-  height: 450px;
+  height: 350px;
   text-align: center;
-  background-color: gray;
   color: lightgrey;
+  background-color: #ccc;
   border-radius: 10px;
 }
 .home-section span {
@@ -216,7 +217,9 @@ h2 {
 }
 
 /* section2 */
-#home-section-2 {
+#main-movie-section {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 #movie-board {
   flex-wrap: wrap;
@@ -228,11 +231,13 @@ h2 {
 #movie-board > li img {
   width: 100%;
   text-align: center;
+  border-radius: 20px;
 }
 
 
 #top-rate-movie-section{
   max-width: 1280px;
+  margin: 0 auto;
 }
 #top-rate-movie-section #top-rate-movies{
   display: flex;
