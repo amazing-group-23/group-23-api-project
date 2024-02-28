@@ -13,8 +13,7 @@ const getMovies = async () => {
   const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=${currentPage}`);
   const data = await response.json();
   console.log("데이터는", data);
-  movieList = data.results.slice(0, 12);
-
+  movieList = data.results;
   getMoviesRender();
 };
 

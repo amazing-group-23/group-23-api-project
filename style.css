@@ -221,10 +221,7 @@ h2 {
   max-width: 1280px;
   margin: 0 auto;
 }
-#main-movie-board{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+#movie-board {
   flex-wrap: wrap;
 }
 #movie-board > li {
