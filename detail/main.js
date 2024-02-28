@@ -29,6 +29,9 @@ const renderMovieDetail = async () => {
   // get spotify ost playlist by movie title and display the playlist on the screen
   const resultElement = document.querySelector(".ost-playlist");
   resultElement.innerHTML = await getOSTFromSpotify(data.title);
+
+  //영화 제목으로 페이지 타이틀 변경
+  document.title=`${data.title} | MUVIC`;
 };
 
 // Get Spotify iframe of OST songs for a given movie

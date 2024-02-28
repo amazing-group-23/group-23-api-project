@@ -8,15 +8,14 @@
     <title>MUVIC</title>
   </head>
   <body>
-    <div id="wrap">
-      <header id="header">
-        <div class="header-inner">
+    <div id="home-wrap">
+      <header id="home-header">
+        <div class="home-header-inner">
           <!-- logo -->
           <h1>MUVIC</h1>
-
           <nav>
             <!-- menu open -->
-            <button type="button" class="menu">
+            <button type="button" class="home-hamburger">
               <span></span>
               <span></span>
               <span></span>
@@ -24,64 +23,49 @@
 
             <!-- nav-right -->
             <div class="nav-right">
-              <button type="button" class="search">
+              <button type="button">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
 
-              <a href="#none" class="login"> login </a>
+              <button>
+                <i class="fa-solid fa-moon"></i>
+              </button>
             </div>
           </nav>
         </div>
       </header>
 
       <!-- container -->
-      <div id="container">
-        <div class="con-inner">
+      <div id="home-container">
           <!-- main -->
-          <main>
-            <h2>인기 추천 작품</h2>
-            <div class="main-inner">
+          <main id="home-main">
+            <div class="home-main-inner">
               <dl>
                 <dt>
-                  <h3>title</h3>
+                  <h2>muvic</h2> is
+                  <span>awesome !</span>
                 </dt>
-
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
+                <dd>Movies and music at the same time</dd>
               </dl>
-
-              <div class="main-img">
-                <figure>img</figure>
-              </div>
             </div>
           </main>
 
           <!-- section1 -->
-          <section id="top-rate-movie-section">
+          <section id="home-section-1" class="home-section">
             <h2>Top10</h2>
-
-            <ul id="top-rate-movies">
-              <!-- <li>img</li>
-              <li>img</li>
-              <li>img</li>
-              <li>img</li> -->
+            
+            <ul id="top10">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
+            <!-- line -->
+            <span></span>
           </section>
-
           <!-- section2 -->
-          <section id="main-page-movie-secion">
+
+          <section id="home-section-2" class="home-section">
             <h2>Movie</h2>
 
             <ul id="main-movie-board"></ul>
@@ -99,29 +83,28 @@
             </nav> -->
           </section>
         </div>
-
-        <footer>
-          <h2>footer</h2>
-        </footer>
-      </div>
     </div>
 
-    <aside>
-      <button type="button">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+    <!-- footer -->
+    <footer id="home-footer">
+      <h2>footer</h2>
+    </footer>
 
+    <!-- aside -->
+    <aside id="home-aside">
       <button type="button">
-        <a href="#header">
+        <a href="#home-wrap">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
       </button>
     </aside>
+
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/5a0d19e43a.js"
       crossorigin="anonymous"
     ></script>
+    <!-- script -->
     <script src="./main.js" defer></script>
   </body>
 </html>
