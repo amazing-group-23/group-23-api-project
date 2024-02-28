@@ -3,13 +3,14 @@ const API_KEY = "45b6699cac67a94b62f8d2f0e07277da";
 let url = "";
 let movieList = [];
 let topRateFilmsList = [];
+// 무한스크롤
+let currentPage = 1;
+let isLoading = false;
+
 
 // movies 가져오기
 const getMovies = async () => {
-  url = new URL(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR`
-  );
-  const response = await fetch(url);
+  const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=${currentPage}`);
   const data = await response.json();
   console.log("데이터는", data);
   movieList = data.results.slice(0, 12);
@@ -66,7 +67,25 @@ const topRateFilmsRender = () => {
   document.getElementById("top-rate-movies").innerHTML = TopMoviesHtml;
 }
 
+// 스크롤 이벤트 리스너 추가
+window.addEventListener('scroll', () => {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  if (scrollTop + clientHeight >= scrollHeight - 5 && !isLoading) {
+    fetchMoreMovies();
+  }
+});
 
+// 추가적인 영화 가져오기
+const fetchMoreMovies = async () => {
+  isLoading = true;
+  currentPage++;
+  const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=${currentPage}`);
+  const data = await response.json();
+  console.log("추가 데이터는", data);
+  movieList = [...movieList, ...data.results];
+  getMoviesRender();
+  isLoading = false;
+};
 
 // 영화 및 최고 평점 영화 가져오기
 const fetchMovies = async () => {
