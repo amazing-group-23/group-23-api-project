@@ -126,7 +126,7 @@ aside {
     bottom: 2rem;
 }
 
-aside>button {
+aside > button {
     display: block;
     width: 4rem;
     height: 4rem;
@@ -136,7 +136,7 @@ aside>button {
     background-color: lightgrey;
 }
 
-aside>button>a {
+aside > button > a {
     display: block;
     width: 100%;
     height: 100%;

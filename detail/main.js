@@ -2,8 +2,6 @@ const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
 const SPOTIFY_API_KEY = "54410b2597msh4c14c6ce560ed8cp1da39fjsn606b73555cd2";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
 
-
-
 const renderMovieDetail = async () => {
   // get movie detail data
   const response = await fetch(
@@ -34,7 +32,6 @@ const renderMovieDetail = async () => {
 
   //영화 제목으로 페이지 타이틀 변경
   document.title=`${data.title} | MUVIC`;
-
 };
 
 // Get Spotify iframe of OST songs for a given movie
@@ -75,7 +72,5 @@ const getOSTFromSpotify = async (query) => {
     return "<span>No OST found</span>";
   }
 };
-
-
 
 renderMovieDetail();
