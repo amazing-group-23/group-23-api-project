@@ -13,8 +13,7 @@ Building Movie OST Search Application using APIs, JavaScript, HTML, CSS 🚀🚀
 # APIs
 
 - [The Movie Database](https://developer.themoviedb.org/docs/getting-started)
-- [Spotify](https://developer.spotify.com/documentation/web-api)
-- [YouTube](https://developers.google.com/youtube/v3)
+- [Spotify](https://rapidapi.com/Glavier/api/spotify23)
 
 # Features
 
@@ -26,7 +25,7 @@ Building Movie OST Search Application using APIs, JavaScript, HTML, CSS 🚀🚀
   - Display a search result
 - Movie detail
   - Display the detail of a selected movie
-  - Title, Synopsis, Casts, Rate, etc
+  - Title, Synopsis, Trailers, Rate, etc
 - Movie OST list and play
   - Get movie OST songs using spotify API
   - List songs of the movie OST
@@ -39,13 +38,20 @@ Building Movie OST Search Application using APIs, JavaScript, HTML, CSS 🚀🚀
 
 ```
 (root)
-   |-- index.html // 홈화면과 검색기능
+   |-- index.html      // 홈 화면 
    |-- main.js
    |-- style.css
+   |-- README.md
    |-- detail (folder) // 상세 화면과 영화 OST 기능
    |   |-- index.html
    |   |-- main.js
    |   |-- style.css
+   |-- search          // 검색 기능
+   |   |-- index.html
+   |   |-- main.js
+   |   |-- style.css
+   |-- assets
+   |   |-- img        // image 파일 모아둔 곳
 ```
 
 # Branches
@@ -54,7 +60,7 @@ Building Movie OST Search Application using APIs, JavaScript, HTML, CSS 🚀🚀
 - `develop` branch: 개발을 진행할 브랜치. `main` 브랜치에서 파생됨.
 - `featuers` branch: 기능 구현을 진행하는 브랜치. `develop` 브랜치에서 파생됨.
 
-# How To Collabrate
+# How To Contribute
 
 1. 프로젝트를 로컬로 클론 - `git clone https://github.com/amazing-group-23/group-23-api-project.git` (처음에 한번만)
 1. `develop` 브랜치를 최신 코드로 업데이트 - `git pull origin develop`
@@ -70,10 +76,10 @@ Building Movie OST Search Application using APIs, JavaScript, HTML, CSS 🚀🚀
 1. features 브랜치 리모트 저장소인 Github에 push하기 - `git push origin features/xxxxxxx`
 1. 깃헙 리모트 저장소로 가서 `develop` 브랜치로 Pull Request 보내기
    - https://github.com/amazing-group-23/group-23-api-project 에서 Pull Request 선택 후 New pull request  
-     ![pr-1](pr-1.png)
+     ![pr-1](./assets/img/pr-1.png)
    - `develop` <= `features/xxxxxxxx` 로 pull request 생성
-     ![pr-2](pr-2.png)
+     ![pr-2](./assets/img/pr-2.png)
    - Pull Request 제목과 설명 추가적으로 더 작성하고 pull request 생성
-     ![alt text](pr-3.png)
+     ![alt text](./assets/img/pr-3.png)
    - Pull Request 리뷰 후 머지 (`Files changed`에서 변경된 사항 볼 수 있음)
-     ![alt text](pr-4.png)
+     ![alt text](./assets/img/pr-4.png)
