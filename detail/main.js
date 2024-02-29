@@ -3,7 +3,7 @@ const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
 const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
-const renderMovieDetail = async (videoId) => {
+const renderMovieDetail = async () => {
   // get movie detail data
   const response = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`

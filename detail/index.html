@@ -7,30 +7,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="wrap">
-      <header id="header">
-        <div class="header-inner">
-        <!-- logo -->
-          <h1>
-            <a href="/">MUVIC</a>
-          </h1>
+      <header id="home-header">
+        <div class="home-header-inner">
           <nav>
-        <!-- menu open -->
-          <button type="button" class="menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-    
-        <!-- nav-right -->
+            <div class="home-nav-inner">
+              <!-- logo -->
+              <h1><a href="/">MUVIC</a></h1>
+              <!-- menu -->
+              <ul class="home-menu">
+                <li><a href="#none">category</a></li>
+                <li><a href="#none">category</a></li>
+                <li><a href="#none">category</a></li>
+                <li><a href="#none">category</a></li>
+              </ul>
+            </div>
+            <!-- nav-right -->
             <div class="nav-right">
-              <button type="button" class="search">
+              <a href="./search/index.html">
                 <i class="fa-solid fa-magnifying-glass"></i>
+              </a> 
+              <button>
+                <i class="fa-solid fa-moon"></i>
               </button>
-    
-              <a href="#" class="login">
-                login
-              </a>
             </div>
           </nav>
         </div>
@@ -44,25 +42,20 @@
         <div class="ost-playlist"></div>
       </section>
     </main>
-                                   
+
+    <!--footer-->>                               
     <footer>
-      <h2>
-        footer
-      </h2>
+      <h2></h2>
     </footer> 
 
-    <aside>
+    <!--aside-->>
+    <aside id="home-aside">
       <button type="button">
-        <i class="fa-solid fa-moon"></i>
-      </button>
-                    
-      <button type="button">
-        <a href="#header">
-        <i class="fa-solid fa-arrow-up"></i>
+        <a href="#home-wrap">
+          <i class="fa-solid fa-arrow-up"></i>
         </a>
-       </button>
-    </aside>               
-    
+      </button>
+    </aside>   
     <!--script-->
     <script src="https://kit.fontawesome.com/e106b2b7eb.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
