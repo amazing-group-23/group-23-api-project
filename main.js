@@ -45,7 +45,7 @@ const getTopRateMovies = async () => {
   const response = await fetch(url);
   const data = await response.json();
   console.log("데이터는", data);
-  topRateFilmsList = data.results.slice(0, 10);
+  topRateFilmsList = data.results.slice(0, 4);
   topRateFilmsRender();
 };
 
