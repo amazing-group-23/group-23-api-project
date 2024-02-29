@@ -79,17 +79,4 @@ const getOSTFromSpotify = async (query) => {
   }
 };
 
-const getYoutubeVideoId=async(movietitle)=>{
-//get youtubevideo data
-url = new URL(
-    `https://www.googleapis.com/youtube/v3/search?type=video&videoEmbeddable=true&videoDuration=short&videoSyndicated=true&q=${movietitle}&key=${YOUTUBE_API_KEY}`
-  );
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log("item은: ", data);
-  console.log("video id:",data.items[0].id.videoId);
-  const videoId=data.items[0].id.videoId;   
-  renderMovieDetail(videoId);
-};
-
 renderMovieDetail();
