@@ -8,15 +8,14 @@
     <title>MUVIC</title>
   </head>
   <body>
-    <div id="wrap">
-      <header id="header">
-        <div class="header-inner">
+    <div id="home-wrap">
+      <header id="home-header">
+        <div class="home-header-inner">
           <!-- logo -->
-          <h1>MUVIC</h1>
-
+          <h1><a href="/">MUVIC</a></h1>
           <nav>
             <!-- menu open -->
-            <button type="button" class="menu">
+            <button type="button" class="home-hamburger">
               <span></span>
               <span></span>
               <span></span>
@@ -24,104 +23,98 @@
 
             <!-- nav-right -->
             <div class="nav-right">
-              <button type="button" class="search">
+              <a href="./search/index.html">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
+              </a>
 
-              <a href="#none" class="login"> login </a>
+              <div>
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label
+                  style="right: -50px"
+                  for="checkbox"
+                  class="label_DarkMode"
+                >
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <!-- 다크모드 전환 원 -->
+                  <div class="ball"></div>
+                </label>
+              </div>
             </div>
           </nav>
         </div>
       </header>
 
       <!-- container -->
-      <div id="container">
-        <div class="con-inner">
-          <!-- main -->
-          <main>
-            <h2>인기 추천 작품</h2>
-            <div class="main-inner">
-              <dl>
-                <dt>
-                  <h3>title</h3>
-                </dt>
+      <div id="home-container">
+        <!-- main -->
+        <main id="home-main">
+          <div class="home-main-inner">
+            <dl>
+              <dt>
+                <h2>muvic</h2>
+                is
+                <span>awesome !</span>
+              </dt>
+              <dd>Movies and music at the same time</dd>
+            </dl>
+          </div>
+        </main>
 
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-                <dd>간략한 줄거리 설명</dd>
-              </dl>
+        <!-- section1 -->
+        <section id="top-rate-movie-section" class="home-section">
+          <h2>Top10</h2>
 
-              <div class="main-img">
-                <figure>img</figure>
-              </div>
-            </div>
-          </main>
+          <ul id="top-rate-movies">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <!-- line -->
+          <span></span>
+        </section>
+        <!-- section2 -->
 
-          <!-- section1 -->
-          <section id="section-1">
-            <h2>Top10</h2>
+        <section id="main-movie-section">
+          <h2>Movie</h2>
 
-            <ul id="top10">
-              <li>img</li>
-              <li>img</li>
-              <li>img</li>
-              <li>img</li>
-            </ul>
-          </section>
-
-          <!-- section2 -->
-          <section id="section-2">
-            <h2>Movie</h2>
-
-            <ul id="movie-board"></ul>
-
-            <nav class="pagination">
-              <a href="#none">
-                <i class="fa-solid fa-angles-left"></i>
-              </a>
-              <a href="#none">1</a>
-              <a href="#none">2</a>
-              <a href="#none">3</a>
-              <a href="#none">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </nav>
-          </section>
-        </div>
-
-        <footer>
-          <h2>footer</h2>
-        </footer>
+          <ul id="main-movie-board"></ul>
+          <nav class="main-movie-pagination">
+            <a href="#none">
+              <i class="fa-solid fa-angles-left"></i>
+            </a>
+            <a href="#none">1</a>
+            <a href="#none">2</a>
+            <a href="#none">3</a>
+            <a href="#none">
+              <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </nav>
+        </section>
       </div>
     </div>
 
-    <aside>
-      <button type="button">
-        <i class="fa-solid fa-moon"></i>
-      </button>
+    <!-- footer -->
+    <footer id="home-footer">
+      <h2>footer</h2>
+    </footer>
 
+    <!-- aside -->
+    <aside id="home-aside">
       <button type="button">
-        <a href="#header">
+        <a href="#home-wrap">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
       </button>
     </aside>
+
     <!-- font awesome -->
     <script
       src="https://kit.fontawesome.com/5a0d19e43a.js"
       crossorigin="anonymous"
     ></script>
+    <!-- script -->
     <script src="./main.js" defer></script>
   </body>
 </html>
