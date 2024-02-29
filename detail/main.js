@@ -9,6 +9,7 @@ const renderMovieDetail = async (videoId) => {
     `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`
   );
   const data = await response.json();
+  console.log(data);
   const movieDetailHTML = `
     <img src="${
       data.poster_path
