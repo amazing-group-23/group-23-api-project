@@ -13,19 +13,24 @@ const renderMovieDetail = async (videoId) => {
     (video) => video.type === "Trailer"
   );
   const movieDetailHTML = `
-    <img src="${
+  <div class="movie-detail-info">
+    <img class="movie-detail-poster" src="${
       data.poster_path
         ? "https://image.tmdb.org/t/p/w500" + data.poster_path
         : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
     }" />
     <div class="movie-detail-text">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <h1>${data.title}</h1>
-      <span>장르:${data.genres[0].name}</span>
-      <span>평점:${data.vote_average}</span>
-      <span>개봉일:${data.release_date}</span>
+      <span>Grenre:${data.genres[0].name}</span>
+      <span>Rating:${data.vote_average}<img src="star.png"/></span>
+      <span>Release Date:${data.release_date}</span>
+      <div class="movie-detail-text-line"></div>
       <p>${data.overview}</p>
     </div>
+  </div>
+  <div class="iframe-container">
+    <iframe width="1170" height="650" src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
