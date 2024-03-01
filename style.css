@@ -223,11 +223,15 @@ h2 {
 }
 
 #main-movie-board {
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
 #main-movie-board > li {
-  margin: 0 0 2rem 0;
-  overflow: hidden;
+  transition: .2s;
+}
+#main-movie-board > li:hover {
+  transform: scale(1.05);
 }
 #main-movie-board > li img {
   width: 100%;
@@ -261,7 +265,7 @@ h2 {
 }
 
 /* main-movie-pagination */
-.pagination {
+/* .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,7 +284,7 @@ h2 {
   border-radius: 50%;
   color: lightgray;
   background-color: gray;
-}
+} */
 
 /* footer */
 #home-footer {
