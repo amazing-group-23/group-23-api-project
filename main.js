@@ -6,6 +6,9 @@ let topRateFilmsList = [];
 // 무한스크롤
 let currentPage = 1;
 let isLoading = false;
+// Typing effect
+const typingWords = ["awesome", "amazing", "fantastic"]
+const typingText = document.querySelector(".typing-text");
 
 
 // movies 가져오기
@@ -92,5 +95,44 @@ const fetchMovies = async () => {
   await getTopRateMovies();
 }
 
+const typeWord = async (word, delay = 100) => {
+  const letters = word.split("");
+  let i = 0;
+  while(i < letters.length) {
+    await waitForMs(delay);
+    typingText.innerHTML += letters[i];
+    i++
+  }
+  return;
+}
+
+const deleteSentence = async (eleRef) => {
+  const sentence = typingText.innerHTML;
+  const letters = sentence.split("");
+  let i = 0;
+  while(letters.length > 0) {
+    await waitForMs(100);
+    letters.pop();
+    typingText.innerHTML = letters.join("");
+  }
+}
+
+const waitForMs = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+const typingEffect = async () => {
+  var i = 0;
+  while(true) {
+    await typeWord(typingWords[i]);
+    await waitForMs(1500);
+    await deleteSentence();
+    await waitForMs(500);
+    i++
+    if(i >= typingWords.length) {
+      i = 0;
+    }
+  }
+}
+
 // 영화 및 최고 평점 영화 가져오기
 fetchMovies();
+typingEffect();

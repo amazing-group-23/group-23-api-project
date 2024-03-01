@@ -143,3 +143,28 @@ aside > button > a {
     line-height: 4rem;
     transition: all .3s ease-in;
 }
+
+.movie-ost-container {
+    position: relative;
+}
+
+.record-image {
+    position: fixed;
+    left: -300px;
+    bottom: -300px;
+    animation: rotation 6s infinite linear;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 20px 20px rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
