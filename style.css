@@ -120,7 +120,7 @@ h2 {
   color: #fff;
 }
 #home-main .home-main-inner dl dt {
-  font-size: 45px;
+  font-size: 40px;
   text-transform: uppercase;
   border-bottom: 1px solid #fff;
 }
@@ -281,4 +281,21 @@ body.dark p {
   border-radius: 50px;
   /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
   transform: scale(1.5);
+}
+
+/* typing effect */
+.input-cursor {
+  display: inline-block;
+  width: 5px;
+  height: 35px;
+  background-color: white;
+  margin-left: 5px;
+  animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  40% {opacity: 1;}
+  60% {opacity: 0;}
+  100% {opacity: 0;}
 }
