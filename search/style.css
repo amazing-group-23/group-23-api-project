@@ -21,7 +21,9 @@ header {
 #search-page {
     margin: 0 auto;
     margin-top: 150px;
-    width: 1280px;
+    max-width: 1280px;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 #search-page .search-page-input-box{
     position: relative;
@@ -150,4 +152,118 @@ header {
 
 .sp-hidden {
     display: none;
+}
+
+@media (max-width : 1080px) {
+    .searched-films-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        gap: 10px;
+    }
+    #search-page .searched-films-container ul li{
+        width: 192.5px;
+        height: 270px;
+    }     
+}
+@media (max-width : 912px) {
+    .searched-films-container {
+        max-width: 700px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        gap: 10px;
+    }
+    #search-page .searched-films-container ul li{
+        width: 167.5px;
+        height: 240px;
+    }
+}
+
+@media (max-width : 781px) {
+    #search-page {
+        padding: 0 20px;
+    }
+    .searched-films-container {
+        max-width: 650px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(3, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 210px;
+        height: 300px;
+    }
+}
+
+@media (max-width : 696px) {
+    #search-page .search-page-input-box {
+        width: 450px;
+    }
+    .searched-films-container {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    #search-page .searched-films-container ul li{
+        width: 176px;
+        height: 260px;
+    }
+}
+
+@media (max-width : 592px) {
+    #search-page .search-page-input-box {
+        width: 350px;
+    }
+    #search-page .search-page-input-box input {
+        padding: 10px 90px 10px 20px;
+        font-size: 16px;
+    }
+    #search-page .search-page-input-box .sp-button-wrap {
+        top: 11px;
+    }
+    .searched-films-container {
+        max-width: 450px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(2, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 220px;
+        height: 310px;
+    }
+}
+@media (max-width : 486px) {
+    #search-page .search-page-input-box {
+        width: 280px;
+    }
+    .searched-films-container {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    #search-page .searched-films-container ul li{
+        width: 170px;
+        height: 250px;
+    }
+}
+@media (max-width : 390px) {
+    #search-page .search-page-input-box {
+        width: 250px;
+    }
+    #search-page .search-page-input-box .sp-button-wrap {
+        top: 10px;
+    }
+    .searched-films-container {
+        max-width: 250px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(1, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 250px;
+        height: 350px;
+    }
 }
