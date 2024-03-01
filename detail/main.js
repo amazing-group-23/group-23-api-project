@@ -27,13 +27,19 @@ const renderMovieDetail = async (videoId) => {
       <p>${data.overview}</p>
     </div>
   `;
+  const recordImage = document.querySelector("img.record-image");
+  recordImage.style.backgroundImage = `url(${
+    data.poster_path
+    ? "https://image.tmdb.org/t/p/w500" + data.poster_path
+    : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"})`;
+
   const movieDetailContainer = document.querySelector(
     ".movie-detail-container"
   );
   movieDetailContainer.innerHTML = movieDetailHTML;
 
   // get spotify ost playlist by movie title and display the playlist on the screen
-  const resultElement = document.querySelector(".ost-playlist");
+  const resultElement = document.querySelector(".movie-ost-playlist");
   resultElement.innerHTML = await getOSTFromSpotify(data.title);
 
   //영화 제목으로 페이지 타이틀 변경
