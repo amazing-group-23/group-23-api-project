@@ -173,10 +173,11 @@ h2 {
   margin: 0 auto;
 }
 #main-movie-board {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
+
 #main-movie-board li{
   width: 300px;
   margin: 0 0 15px 0;
