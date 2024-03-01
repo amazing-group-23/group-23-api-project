@@ -183,14 +183,19 @@ h2 {
   box-sizing: border-box;
 }
 #main-movie-board {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
 }
-#main-movie-board  li{
-  width: 300px;
-  margin: 0 0 15px 0;
-  overflow: hidden;
+#main-movie-board > li {
+  transition: .2s;
+}
+#main-movie-board > li:hover {
+  transform: scale(1.05);
+}
+#main-movie-board > li img {
+  width: 100%;
+  text-align: center;
   border-radius: 20px;
 }
 
