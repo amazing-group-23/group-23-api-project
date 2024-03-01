@@ -1,47 +1,13 @@
 /* :root */
 :root {
-  --main-color: #FF0558;
+  --main-color: #ff0558;
 }
 
-/* reset */
-html,
-body {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-button {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-h1,
-h2,
-h3,
-h4,
-dl,
-dt,
-dd,
-figure,
-ul,
-li,
-button {
-  padding: 0;
-  margin: 0;
-}
 h2 {
   font-size: 30px;
   font-weight: bold;
 }
+
 /* header */
 #home-header {
   position: fixed;
@@ -92,7 +58,7 @@ h2 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -111,9 +77,9 @@ h2 {
 #home-header .nav-right button i {
   font-size: 22px;
 }
-#home-header .nav-right button:nth-of-type(2){
+#home-header .nav-right button:nth-of-type(2) {
   margin: 0 0 0 10px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 50%;
 }
 
@@ -123,17 +89,16 @@ h2 {
   position: relative;
   width: 100%;
   height: 100vh;
-  margin: 0 0 100px 0;
   overflow: hidden;
 }
 #home-main .home-main-inner {
   width: 100%;
   height: 100%;
-  background: url('./assets/img/home-main-img-3.jpeg')center center no-repeat;
+  background: url("./assets/img/home-main-img-3.jpeg") center center no-repeat;
   background-size: cover;
 }
 #home-main .home-main-inner::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   left: 0;
@@ -145,7 +110,7 @@ h2 {
 }
 #home-main .home-main-inner dl {
   position: absolute;
-  left: 8%;
+  left: 7.5%;
   top: 60%;
   transform: translateY(-60%);
   padding: 20px;
@@ -169,133 +134,77 @@ h2 {
   font-size: 30px;
 }
 
-/* section */
-.home-section {
-  padding: 0 20px;
+/* section area */
+/* section1 - top10 */
+#top-rate-movie-section {
+  max-width: 1240px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 100px 0;
   box-sizing: border-box;
 }
-.home-section h2 {
-  margin: 35px ;
-}
-.home-section ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 400px;
-}
-#home-section-1 ul li {
-  width: 300px;
-  height: 350px;
-  text-align: center;
-  color: lightgrey;
-  background-color: #ccc;
-  border-radius: 10px;
-}
-.home-section span {
-  display: block;
-  position: relative;
-  width: 1200px;
-  height: 4px;
-  margin: 60px auto;
-  border-radius: 20px;
-  background-color: #000000;
-}
-.home-section span::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 20%;
-  height: 100%;
-  background-color: var(--main-color);
-}
 
-/* section1 */
-#home-section-1 {
-  height: 100vh;
+#top-rate-movie-section h2,
+#main-movie-section h2 {
+  margin: 0 0 50px 0;
+  font-size: 35px;
 }
-
-/* section2 */
-#main-movie-section {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-#main-movie-board {
-  flex-wrap: wrap;
-}
-#main-movie-board > li {
-  margin: 0 0 2rem 0;
-  overflow: hidden;
-}
-#main-movie-board > li img {
-  width: 100%;
-  text-align: center;
-  border-radius: 20px;
-}
-
-
-#top-rate-movie-section{
-  max-width: 1280px;
-  margin: 0 auto;
-}
-#top-rate-movie-section #top-rate-movies{
+/* top10 list */
+#top-rate-movies{
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 350px;
+  align-items: center;
   overflow-x: auto;
-  overflow-y: hidden;
   scrollbar-width: none;
   cursor: grab;
 }
-#top-rate-movie-section #top-rate-movies li{
-  width: 220px;
-  border-radius: 20px;
-  margin-right: 20px;
-}
-#top-rate-movie-section #top-rate-movies li img{
-  width: 220px;
+#top-rate-movies li{
+  width: 300px;
   border-radius: 20px;
 }
-
-/* main-movie-pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 30px 0;
-}
-.pagination a {
-  width: 30px;
-  height: 30px;
-  margin: 0  5px 1px 0.5px;
-
-  text-align: center;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 30px;
-
-  border-radius: 50%;
-  color: lightgray;
-  background-color: gray;
+#top-rate-movies li a {
+  display: block;
+  width: 100% ;
+  height: 100% ;
 }
 
-/* footer */
-#home-footer {
+#top-rate-movies li a img{
   width: 100%;
-  height: 60px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #000;
-}
-#home-footer h2 {
-  line-height: 60px;
-  margin: 0 0 0 50px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
+/* section2 - movie */
+#main-movie-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+#main-movie-board {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#main-movie-board  li{
+  width: 300px;
+  margin: 0 0 15px 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#main-movie-board  li a {
+  display: block;
+  width: 100% ;
+  height: 100% ;
+}
+#main-movie-board  li a img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
 
 /* aside */
 #home-aside {
@@ -318,6 +227,60 @@ h2 {
   line-height: 50px;
   transition: all 0.3s ease-in;
   color: #000;
+}
+
+body.dark {
+  background: #292c35;
+}
+
+body.dark p {
+  color: #fff;
+}
+
+.ball {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
+  /* transform을 0.2초간 끝이 느려지도록 */
+  transition: transform 0.2s ease-out;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+/* 투명하게 만들고 label 안에 위치시킴 */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+/* label(checkbox)이 클릭되면 공의 모션 */
+/* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
+.checkbox:checked + .label_DarkMode .ball {
+  transform: translateX(24px);
+}
+
+.label_DarkMode {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #111;
+  border-radius: 50px;
+  /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
+  transform: scale(1.5);
 }
 
 /* typing effect */
