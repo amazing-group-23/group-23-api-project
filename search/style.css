@@ -14,12 +14,16 @@ a{
 /* 헤더자리대체 */
 header {
     width: 100%;
-    height: 80px;
+    height: 60px;
     border-bottom: 1px solid #ebebeb;
 }
 
 #search-page {
-    width: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+    max-width: 1280px;
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 #search-page .search-page-input-box{
     position: relative;
@@ -28,7 +32,7 @@ header {
     margin-top: 20px;
     margin-bottom: 40px;
 }
-#search-page .search-page-input-box::after {
+/* #search-page .search-page-input-box::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -36,25 +40,62 @@ header {
     width: 600px;
     height: 1px;
     background-color: #ccc;
-}
+} */
 #search-page .search-page-input-box input{
     width: 100%;
-    height: 40px;
-    padding: 10px 10px;
-    padding-right: 50px;
+    padding: 15px 90px 15px 20px;
     box-sizing: border-box;
-    border: none;
+    border: 1px solid #ccc;
     outline: none;
-    font-size: 18px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+#search-page .search-page-input-box span {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 20px;
+    color: #ccc;
+    pointer-events: none;
 }
 #search-page .search-page-input-box button {
-    position: absolute;
-    top: calc(50% - 10px);
-    right: 0;
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
+}
+#search-page .search-page-input-box .sp-button-wrap{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 16px;
+    right: 20px;
+    width: 60px;
+}
+#search-page .search-page-input-box .sp-close-button {
+    position: relative;
+    opacity: 0;
+    height: 21px;
+    transition: .5s;
+}
+#search-page .search-page-input-box .sp-close-button::after {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    content: "";
+    width: 2px;
+    height: 20px;
+    background: #ccc;
+}
+#search-page .search-page-input-box button i {
+    font-size: 20px;
+}
+#search-page .search-page-input-box p{
+    height: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    box-sizing: border-box;
 }
 #search-page .searched-films-container {
     width: 100%;
@@ -84,4 +125,145 @@ header {
 
 #search-page .searched-films-container ul li img{
     width: 100%;
+}
+
+/* 인기 */
+.sp-popular-movies {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#sp-popular-movies-board{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 350px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    cursor: grab;
+}
+#sp-popular-movies-board li{
+    width: 150px;
+    margin-right: 20px;
+}
+#sp-popular-movies-board li img{
+    width: 150px;
+    border-radius: 15px;
+}
+
+.sp-hidden {
+    display: none;
+}
+
+@media (max-width : 1080px) {
+    .searched-films-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        gap: 10px;
+    }
+    #search-page .searched-films-container ul li{
+        width: 192.5px;
+        height: 270px;
+    }     
+}
+@media (max-width : 912px) {
+    .searched-films-container {
+        max-width: 700px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        gap: 10px;
+    }
+    #search-page .searched-films-container ul li{
+        width: 167.5px;
+        height: 240px;
+    }
+}
+
+@media (max-width : 781px) {
+    #search-page {
+        padding: 0 20px;
+    }
+    .searched-films-container {
+        max-width: 650px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(3, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 210px;
+        height: 300px;
+    }
+}
+
+@media (max-width : 696px) {
+    #search-page .search-page-input-box {
+        width: 450px;
+    }
+    .searched-films-container {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    #search-page .searched-films-container ul li{
+        width: 176px;
+        height: 260px;
+    }
+}
+
+@media (max-width : 592px) {
+    #search-page .search-page-input-box {
+        width: 350px;
+    }
+    #search-page .search-page-input-box input {
+        padding: 10px 90px 10px 20px;
+        font-size: 16px;
+    }
+    #search-page .search-page-input-box .sp-button-wrap {
+        top: 11px;
+    }
+    .searched-films-container {
+        max-width: 450px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(2, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 220px;
+        height: 310px;
+    }
+}
+@media (max-width : 486px) {
+    #search-page .search-page-input-box {
+        width: 280px;
+    }
+    .searched-films-container {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    #search-page .searched-films-container ul li{
+        width: 170px;
+        height: 250px;
+    }
+}
+@media (max-width : 390px) {
+    #search-page .search-page-input-box {
+        width: 250px;
+    }
+    #search-page .search-page-input-box .sp-button-wrap {
+        top: 10px;
+    }
+    .searched-films-container {
+        max-width: 250px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(1, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 250px;
+        height: 350px;
+    }
 }
