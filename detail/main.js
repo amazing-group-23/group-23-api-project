@@ -3,7 +3,7 @@ const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
 const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
-const renderMovieDetail = async (videoId) => {
+const renderMovieDetail = async () => {
   // get movie detail data
   const response = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`
@@ -21,15 +21,15 @@ const renderMovieDetail = async (videoId) => {
     }" />
     <div class="movie-detail-text">
       <h1>${data.title}</h1>
-      <span>Grenre:${data.genres[0].name}</span>
-      <span>Rating:${data.vote_average}<img src="star.png"/></span>
-      <span>Release Date:${data.release_date}</span>
+      <span>Grenre: ${data.genres[0].name}</span>
+      <span>Rating: ${data.vote_average}<img src="star.png"/></span>
+      <span>Release Date: ${data.release_date}</span>
       <div class="movie-detail-text-line"></div>
       <p>${data.overview}</p>
     </div>
   </div>
   <div class="iframe-container">
-    <iframe width="1170" height="650" src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   `;
   const recordImage = document.querySelector("img.record-image");
@@ -86,7 +86,7 @@ const getOSTFromSpotify = async (query) => {
     return iframeResult;
   } catch (error) {
     console.error(error);
-    return "<span>No OST found</span>";
+    return "<span></span>";
   }
 };
 
