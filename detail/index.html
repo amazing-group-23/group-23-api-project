@@ -8,51 +8,56 @@
   </head>
   <body>
     <div id="wrap">
-      <header id="header">
-        <div class="header-inner">
-          <!-- logo -->
-          <h1>
-            <a href="/">MUVIC</a>
-          </h1>
+      <header id="home-header">
+        <div>
+          <!-- nav -->
           <nav>
-            <!-- menu open -->
-            <button type="button" class="menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-
+            <div class="home-nav-inner">
+              <!-- logo -->
+              <h1><a href="../index.html">MUVIC</a></h1>
+              <!-- menu -->
+              <ul class="home-menu">
+                <li><a href="#none">genre</a></li>
+                <li><a href="#none">theater</a></li>
+                <li><a href="#none">music</a></li>
+                <li><a href="#none">trailer</a></li>
+              </ul>
+            </div>
             <!-- nav-right -->
             <div class="nav-right">
-              <button type="button" class="search">
+              <a href="../search/index.html">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-
-              <a href="#" class="login"> login </a>
+              </a>
+      
+              <div>
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label style="right: -50px" for="checkbox" class="label_DarkMode">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <!-- 다크모드 전환 원 -->
+                  <div class="ball"></div>
+                </label>
+              </div>
             </div>
           </nav>
         </div>
       </header>
 
       <main>
+        <div class="movie-info-background"></div>
         <section class="movie-detail-container"></section>
         <section class="movie-ost-container">
-          <h1>Original Sound Tracks</h1>
           <div class="movie-ost-playlist"></div>
         </section>
       </main>
 
-      <footer>
-        <h2>footer</h2>
+      <footer class="detail-footer">
+        <span id="detail-footer"></span>
       </footer>
 
-      <aside>
+      <aside id="home-aside">
         <button type="button">
-          <i class="fa-solid fa-moon"></i>
-        </button>
-
-        <button type="button">
-          <a href="#header">
+          <a href="#home-wrap">
             <i class="fa-solid fa-arrow-up"></i>
           </a>
         </button>

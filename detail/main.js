@@ -3,7 +3,13 @@ const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
 const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
-const renderMovieDetail = async (videoId) => {
+const getYear=()=>{
+  const detailFooter=document.getElementById("detail-footer");
+  const year=new Date().getFullYear();
+  detailFooter.innerText=`©${year} muvic`;
+}
+
+const renderMovieDetail = async () => {
   // get movie detail data
   const response = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`
@@ -13,19 +19,24 @@ const renderMovieDetail = async (videoId) => {
     (video) => video.type === "Trailer"
   );
   const movieDetailHTML = `
-    <img src="${
+  <div class="movie-detail-info">
+    <img class="movie-detail-poster" src="${
       data.poster_path
         ? "https://image.tmdb.org/t/p/w500" + data.poster_path
         : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
     }" />
     <div class="movie-detail-text">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <h1>${data.title}</h1>
-      <span>장르:${data.genres[0].name}</span>
-      <span>평점:${data.vote_average}</span>
-      <span>개봉일:${data.release_date}</span>
+      <span>Grenre: ${data.genres[0].name}</span>
+      <span>Rating: ${data.vote_average}<img src="star.png"/></span>
+      <span>Release Date: ${data.release_date}</span>
+      <div class="movie-detail-text-line"></div>
       <p>${data.overview}</p>
     </div>
+  </div>
+  <div class="iframe-container">
+    <iframe src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
@@ -81,8 +92,10 @@ const getOSTFromSpotify = async (query) => {
     return iframeResult;
   } catch (error) {
     console.error(error);
-    return "<span>No OST found</span>";
+    return "<span></span>";
   }
 };
 
+
 renderMovieDetail();
+getYear();
