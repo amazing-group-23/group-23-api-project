@@ -17,4 +17,41 @@ button {
 
 #category-title-wrap {
     display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+#category-title-wrap li {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#category-title-wrap li:hover button{ 
+    color: #ccc;
+}
+#category-title-wrap button {
+    font-size: 18px;
+}
+#categorized-films-board{
+    display: grid;
+    grid-template-columns :repeat(5, 1fr);
+    width: 1280px;
+    margin: 0 auto;
+    gap: 40px;
+}
+#categorized-films-board li{
+    width: 220px;
+    border-radius: 20px;
+    height: 310px;
+    text-align: center;
+    color: #ccc;
+    line-height: 300px;
+    overflow: hidden;
+    transition: .25s;
+    margin-top: 40px;
+}
+#categorized-films-board li img {
+    width: 100%;
 }
