@@ -59,6 +59,10 @@ header {
   color: #fff;
 }
 
+.dark #categorized-films-board li {
+  box-shadow: 0 0 10px 0px rgb(255, 255, 255);
+}
+
 #category-title-wrap {
   display: flex;
   justify-content: start;
@@ -102,6 +106,7 @@ header {
   color: #ccc;
   overflow: hidden;
   transition: 0.5s;
+  box-shadow: 0 0 10px 0px rgb(0, 0, 0);
 }
 #categorized-films-board li:hover {
   transform: scale(1.1);

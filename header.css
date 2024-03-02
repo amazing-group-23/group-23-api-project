@@ -89,7 +89,8 @@
   transition: 0.2s ease-in-out;
 }
 
-#home-header .home-nav-inner h1::after {
+#home-header .home-nav-inner h1::after,
+#mobile-slide-menu h1::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -170,6 +171,7 @@
   height: 10%;
   z-index: 995;
 }
+
 #home-header .home-submenu-pc > li > a {
   display: block;
   padding: 10px 20px;
@@ -246,6 +248,7 @@
   transform: rotate(-45deg);
 }
 #mobile-slide-menu > h1 {
+  position: relative;
   display: inline-block;
   margin: 15px 0 20px 0;
   font-size: 23px;
