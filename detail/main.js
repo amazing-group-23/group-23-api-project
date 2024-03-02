@@ -1,23 +1,27 @@
 const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
-const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
+const SPOTIFY_API_KEY = "ff518ea60amsh58ecc77c5666d05p17aaabjsnc1b8b85d4e36";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
-const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
-const getYear=()=>{
-  const detailFooter=document.getElementById("detail-footer");
-  const year=new Date().getFullYear();
-  detailFooter.innerText=`©${year} muvic`;
-}
+// const getYear = () => {
+//   const detailFooter = document.getElementById("detail-footer");
+//   const year = new Date().getFullYear();
+//   detailFooter.innerText = `©${year} muvic`;
+// };
 
 const renderMovieDetail = async () => {
-  // get movie detail data
+  // get movie detail data in Korean
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`
+    `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}&language=ko-KR`
   );
   const data = await response.json();
-  const trailer = data.videos.results.find(
-    (video) => video.type === "Trailer"
-  );
+  let trailer = null;
+  if (data.videos) 
+  {
+    trailer = data.videos.results.find((video) => video.type === "Trailer");
+    if (!trailer) {
+      trailer = data.videos.results.find((video) => video.type === "Teaser");
+    }
+  }
   const movieDetailHTML = `
   <div class="movie-detail-info">
     <img class="movie-detail-poster" src="${
@@ -34,15 +38,23 @@ const renderMovieDetail = async () => {
       <p>${data.overview}</p>
     </div>
   </div>
-  <div class="iframe-container">
-    <iframe src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="trailer-container">
+    <h1>Trailer</h1>
+      ${trailer ? `
+        <iframe src="https://www.youtube.com/embed/${
+          trailer.key
+        }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        ` : 
+        "<div>Trailer Not Found</div>"
+      }
   </div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
     data.poster_path
-    ? "https://image.tmdb.org/t/p/w500" + data.poster_path
-    : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"})`;
+      ? "https://image.tmdb.org/t/p/w500" + data.poster_path
+      : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
+  })`;
 
   const movieDetailContainer = document.querySelector(
     ".movie-detail-container"
@@ -50,16 +62,19 @@ const renderMovieDetail = async () => {
   movieDetailContainer.innerHTML = movieDetailHTML;
 
   // get spotify ost playlist by movie title and display the playlist on the screen
-  const resultElement = document.querySelector(".movie-ost-playlist");
-  resultElement.innerHTML = await getOSTFromSpotify(data.title);
+  renderOSTFromSpotify();
 
   //영화 제목으로 페이지 타이틀 변경
   document.title = `${data.title} | MUVIC`;
 };
 
 // Get Spotify iframe of OST songs for a given movie
-const getOSTFromSpotify = async (query) => {
-  const url = `https://spotify23.p.rapidapi.com/search/?q=${query}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
+const renderOSTFromSpotify = async () => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}&language=en-US`
+  );
+  const data = await response.json();
+  const url = `https://spotify23.p.rapidapi.com/search/?q=${data.title}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
   const options = {
     method: "GET",
     headers: {
@@ -89,13 +104,36 @@ const getOSTFromSpotify = async (query) => {
     loading="lazy"
     ></iframe>`;
 
-    return iframeResult;
+    const resultElement = document.querySelector(".movie-ost-playlist");
+    resultElement.innerHTML = iframeResult;
   } catch (error) {
     console.error(error);
-    return "<span></span>";
+    return "<span>OST Not Found</span>";
   }
 };
 
+// const checkbox = document.getElementById('checkbox');
+const checkbox = document.querySelector(".checkbox");
+console.log(checkbox);
+
+// checkbox를 click 했을 때 해당 함수를 실행
+checkbox.addEventListener("click", clickDarkMode);
+
+function clickDarkMode() {
+  // Toggle dark mode for the body
+  document.body.classList.toggle("dark");
+
+  // Toggle dark mode for specific elements in the header
+  const headerElements = document.querySelectorAll(".home-header");
+
+  headerElements.forEach((element) => {
+    element.classList.toggle("dark");
+  });
+
+  console.log("Dark mode toggled");
+}
 
 renderMovieDetail();
-getYear();
+
+// getYear();
+//

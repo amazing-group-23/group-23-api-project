@@ -1,0 +1,88 @@
+/**{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    background: none;
+    outline: none;
+    border: none;
+}*/
+/* main 추가.. */
+#category-main {
+    width: 1280px;
+    height: 400px;
+    background: url('../assets/img/home-main-img-1.jpeg')center center no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+#category-main dl {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translate(-50%,-75%);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+#category-main dl dt h2{
+    font-size: 30px;
+}
+/* 재은언니 area */
+#category-title-wrap {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-top: 5px;
+    border-bottom: 1px solid #ebebeb;
+}
+#category-title-wrap li {
+    padding: 10px 10px 15px 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#category-title-wrap li:hover button{ 
+    color: var(--main-color);
+}
+#category-title-wrap button {
+    font-size: 15px;
+    transition: color .2s ease-in;
+}
+#categorized-films-board{
+    display: grid;
+    grid-template-columns :repeat(5, 1fr);
+    width: 1280px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    gap: 40px;
+}
+#categorized-films-board li{
+    width: 220px;
+    height: 310px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 300px;
+    transition: .25s;
+    color: #ccc;
+    overflow: hidden;
+}
+#categorized-films-board li img {
+    width: 100%;
+}

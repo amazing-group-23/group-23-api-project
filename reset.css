@@ -4,7 +4,6 @@
     /* --sub-color : #; */
     /* --main-font: font-family: "Roboto", sans-serif; */
   }
-  
   /* reset */
   html,
   body {
@@ -24,7 +23,7 @@
   button {
     outline: none;
     border: none;
-    background-color: transparent;
+    background: none;
     cursor: pointer;
   }
   h1,

@@ -3,25 +3,24 @@
 
 /*color*/
 :root {
-    --main-color: #ff0558;
+  --main-color: #ff0558;
 }
 
-
 #wrap {
-    max-width: 1240px;
-    padding: 100px 0;
+    max-width: 77.5rem;
+    padding: 6.25rem;
     margin: 0 auto;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 } 
 
 /*movie detail section*/
 .movie-info-background{
-    position: absolute;
-    height: 800px;
-    width: 100%;
-    top:200px;
+    position: absolute; 
+    height: 50rem;
+    width: 100vw;
+    top: 12.5rem;
     left: 0;
     right: 0;
     background-color: #F4F4F4;
@@ -29,202 +28,499 @@
 }
 
 .movie-detail-container{
-    margin-top: 20px;
+    margin-top: 1.25rem;
     display:flex;
     flex-direction: column;
     align-items: center;
 }
 
 .movie-detail-poster{
-    width: 500px;
-    height: 700px;
+    width: 31.25rem;
+    height: 43.75rem;
     border-radius: 20px;
 }
 
 .movie-detail-info{
     display: flex;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+    margin-bottom: 6.25rem;
 }
 
 .movie-detail-text{
     align-items: center;
-    margin-left:50px;
-    padding-right: 30px;
-    margin-top: 100px;
+    margin-left: 3.125rem;
+    padding-right: 2.5rem;
+    margin-top: 6.25rem;
 }
 
 .movie-detail-text > h1{
     color:var(--main-color);
     font-weight: 800;
-    font-size: 50px;
-    margin: 60px 0;
+    font-size: 3.125rem;
+    margin: 3.75rem 0;
 }
 
 .movie-detail-text > span{  
     font-weight:600;
-    font-size:30px;
+    font-size: 1.875rem;
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
-    margin-bottom:8px;
+    
 }
 
 .movie-detail-text > span > img{
-   margin-left:3px;
-   width:30px;
-   height:30px;
+    margin-left: 0.188rem;
+    width: 1.875rem;
+    height: 1.875rem;
 }
 
 .movie-detail-text > P{
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.563rem;
     line-height: 1.5em;
 }  
 .movie-detail-text-line{
-    height: 4px;
+    height: 0.25rem;
     background-color: #000;
-    margin: 40px 0;
+    margin: 2.5rem 0;
+}
+.trailer-container{
+    margin-top: 20rem;
+    margin-bottom: 10rem;
 }
 
+.trailer-container > h1{
+   text-align: center;
+   font-size: 3rem;
+   margin-bottom: 2rem;
+   font-style: italic;
+}
+.ost-label {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
 iframe{
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.6);
-    margin-top: 350px;
-    width:1170px;
-    height:650px;
+    width: 73.125rem;
+    height: 40.625rem;
+    transition: all 0.3s ease;
 }
 
 /* footer */
 .detail-footer {
-    position: fixed ;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*movie ost*/
 .movie-ost-container {
-    position: relative;
-    margin-bottom: 150px;
+  position: relative;
+  margin-bottom: 150px;
 }
 
 .record-image {
-    position: fixed;
-    left: -300px;
-    bottom: -300px;
-    animation: rotation 6s infinite linear;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 0 0 20px 20px rgba(0,0,0,0.6);
-    z-index: -2;
+  position: fixed;
+  left: -300px;
+  bottom: -300px;
+  animation: rotation 6s infinite linear;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.6);
+  z-index: -2;
 }
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* aside & dark mode*/
-  #home-aside {
-      position: fixed;
-      right: 25px;
-      bottom: 25px;
-  }
+#home-aside {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
 
-  #home-aside>button {
-      display: block;
-      width: 50px;
-      height: 50px;
-      margin: 10px 0;
-      border-radius: 50%;
-      background-color: lightgrey;
-  }
+#home-aside > button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 50%;
+  background-color: lightgrey;
+}
 
-  #home-aside>button>a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      line-height: 50px;
-      transition: all 0.3s ease-in;
-      color: #000;
-  }
+#home-aside > button > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  transition: all 0.3s ease-in;
+  color: #000;
+}
 
-  body.dark {
-      background: #292c35;
-  }
+.dark .movie-detail-info {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  body.dark p {
-      color: #fff;
-  }
+.dark .movie-info-background {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  .ball {
-      background-color: #fff;
-      position: absolute;
-      border-radius: 50%;
-      top: 2px;
-      left: 2px;
-      width: 22px;
-      height: 22px;
-      /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
-      /* transform을 0.2초간 끝이 느려지도록 */
-      transition: transform 0.2s ease-out;
-  }
+.dark #wrap {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  .fa-moon {
-      color: #f1c40f;
-  }
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  .fa-sun {
-      color: #f39c12;
-  }
+/* Dark mode styles for header elements */
+.dark #home-header {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  /* 투명하게 만들고 label 안에 위치시킴 */
-  .checkbox {
-      opacity: 0;
-      position: absolute;
-  }
+.ball {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
+  /* transform을 0.2초간 끝이 느려지도록 */
+  transition: transform 0.2s ease-out;
+}
 
-  /* label(checkbox)이 클릭되면 공의 모션 */
-  /* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
-  .checkbox:checked+.label_DarkMode .ball {
-      transform: translateX(24px);
-  }
+.fa-moon {
+  color: #f1c40f;
+}
 
-  .label_DarkMode {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      position: relative;
-      width: 50px;
-      height: 26px;
-      background-color: #111;
-      border-radius: 50px;
-      /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
-      transform: scale(1.5);
-  }
+.fa-sun {
+  color: #f39c12;
+}
+
+/* 투명하게 만들고 label 안에 위치시킴 */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+/* label(checkbox)이 클릭되면 공의 모션 */
+/* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
+.checkbox:checked + .label_DarkMode .ball {
+  transform: translateX(24px);
+}
+
+.label_DarkMode {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #111;
+  border-radius: 50px;
+  /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
+  transform: scale(1.5);
+}
 
 /* animation */
 .movie-detail-text-line:hover{
     background:
-            linear-gradient(to right,
-                rgba(255, 0, 0, 1),
-                rgba(255, 0, 180, 1),
-                rgba(0, 100, 200, 1));
+        linear-gradient(to right,rgba(255, 0, 0, 1),rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1));
         transition: all 0.3s ease-in-out;      
     }
+
 .movie-detail-poster:hover{
     transform: scale(1.01);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     transition: all 0.5s ease-in-out;
 }
+
 iframe:hover{
     transform: scale(1.01);
     transition: all 0.4s ease-in-out;
 }
+
 p::first-letter {
-    font-size: 30px;
+  font-size: 30px;
+}
+
+/* media query */
+@media screen and (max-width:1280px) {
+    .movie-detail-text>h1 {
+        color: var(--main-color);
+        font-weight: 800;
+        font-size: 2.7rem;
+    }
+    
+    .movie-detail-text>span {
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+    }
+    
+    .movie-detail-text>span>img {
+        margin-left: 0.188rem;
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    
+    .movie-detail-text>P {
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 1.2em;
+    }
+    
+    p::first-letter {
+        font-size: 1.2rem;
+    }
+
+    iframe {
+        width: 60rem;
+        height: 35rem;
+    }
+}
+@media screen and (max-width:1024px) {
+    .movie-detail-poster {
+            width: 70%;
+            height: 40rem;
+        }
+    
+    .movie-detail-text {
+        margin-top: 2.2rem;
+        width: 100%;
+        }
+    
+    .movie-detail-text>h1 {
+        color: var(--main-color);
+        font-weight: 800;
+        font-size: 2.8rem;
+        }
+    
+    .movie-detail-text>span {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+    }
+    
+    .movie-detail-text>span>img {
+        margin-left: 0.188rem;
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+    
+    .movie-detail-text>P {
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.2em;
+    }
+    
+    p::first-letter {
+        font-size: 1.4rem;
+    }
+
+    iframe {
+        width: 50rem;
+        height: 28rem;
+    }
+    .record-image{
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .movie-detail-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-detail-poster {
+        width: 70%;
+        height: 40rem;
+    }
+
+    .movie-detail-text {
+        width: 100%;
+    }
+
+    .movie-info-background {
+        height: 70rem;
+    }
+    
+    .movie-detail-text>h1 {
+        color: var(--main-color);
+        font-weight: 800;
+        font-size: 2.4rem;
+        margin-top: 0.8rem;
+    }
+    
+    .movie-detail-text>span {
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+    }
+    
+    .movie-detail-text>span>img {
+        margin-left: 0.188rem;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    
+    .movie-detail-text>P {
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 1.2em;
+    }
+    
+    p::first-letter {
+        font-size: 1.5rem;
+    }
+    .trailer-container {
+        margin-top: 10rem;
+    }
+    .trailer-container>h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .ost-label{
+        font-size: 2rem;
+        margin-bottom: 0.5rem;}
+
+    iframe {
+        width: 42rem;
+        height: 23rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .movie-detail-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .movie-detail-poster {
+        width: 80%;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .movie-detail-text {
+        margin-top: 0.8rem;
+        width: 100%;
+    }
+
+    .movie-info-background {
+        height: 70rem;
+    }  
+
+    .movie-detail-text>h1 {
+        color: var(--main-color);
+        font-weight: 800;
+        font-size: 1.7rem;
+    } 
+
+    .movie-detail-text>span {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+    }   
+
+    .movie-detail-text>span>img {
+        margin-left: 0.188rem;
+        width: 1rem;
+        height: 1rem;
+    }  
+    .movie-detail-text>P {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2em;
+    }
+   
+    p::first-letter {
+        font-size: 1.1rem;
+    }
+
+    iframe {
+        width: 35rem;
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .movie-detail-text {
+        margin-top: 0.5rem;
+        width: 100%; 
+    }
+    .movie-info-background{
+        height: 58rem;
+    }
+
+    .movie-detail-text>h1 {
+        color: var(--main-color);
+        font-weight: 800;
+        font-size: 1.7rem;
+    }
+
+    .movie-detail-text>span {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: flex;  
+    }
+
+    .movie-detail-text>span>img {
+    margin-left: 0.188rem;
+    width: 1rem;
+    height: 1rem;
+    }
+
+    .movie-detail-text>P {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2em;  
+    }
+
+    p::first-letter {
+        font-size: 1.1rem;
+    }
+.trailer-container {
+    margin-top: 5rem;
+}
+    iframe {
+        width: 30rem;
+        height: 18rem;
+     }
+}
+@media screen and (max-width: 400px){
+    iframe {
+            width: 17rem;
+            height: 13rem;
+        }
 }
