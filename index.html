@@ -3,92 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- font -->
+    <!-- font Roboto, Lato -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- css -->
-    
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./header.css" />
+    <link rel="stylesheet" href="./footer.css" />
     <!-- title -->
     <title>MUVIC</title>
   </head>
   <body>
-    <div id="home-wrap"  >
-       <div class="header-element checkbox-container" >
+    <div id="home-wrap" >
+      <div class="header-element checkbox-container">
       <header id="home-header">
-      <div class="home-header">
-        <div>
-          <!-- nav -->
-          <nav>
-            <div class="home-nav-inner">
-
-              <!-- mobile menu -->
-              <button class="hamburger-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-
-
-              <!-- mobile menu -->
-              <button class="hamburger-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-
-
-              <!-- mobile menu -->
-              <button class="hamburger-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-
-              <!-- logo -->
-              <h1><a href="/">MUVIC</a></h1>
-              <!-- menu -->
-              <ul class="home-menu">
-                <li><a href="#none">genre</a></li>
-                <li><a href="#none">theater</a></li>
-                <li><a href="#none">music</a></li>
-                <li><a href="#none">trailer</a></li>
-              </ul>
-            </div>
-            <div class="header-element"></div>
-            <!-- nav-right -->
-            <div class="nav-right">
-              <a href="./search/index.html">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
-
-              <!-- dark mode -->
-              <div>
-
-                <input type="checkbox" class="checkbox" id="checkbox" />
-                <label
-                  style="right: -50px" align="center"
-                  for="checkbox"
-                  class="label_DarkMode"
-                >
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                  <!-- 다크모드 전환 원 -->
-                  <div class="ball"></div>
-                </label>
+        <div class="home-header">
+          <div>
+            <!-- nav -->
+            <nav>
+              <div class="home-nav-inner">
+                <!-- mobile menu -->
+                <button class="hamburger-btn" onclick="openNav()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <!-- mobile menu -->
+                <button class="hamburger-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <!-- mobile menu -->
+                <button class="hamburger-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <!-- logo -->
+                <h1><a href="/">MUVIC</a></h1>
+                <!-- menu -->
+                <ul class="home-menu">
+                  <li><a href="#none">genre</a>
+                   <!-- submenu -->
+                    <ul class="home-submenu-pc">
+                      <li><a href="#none">Action</a></li>
+                      <li><a href="#none">Comedy</a></li>
+                      <li><a href="#none">Drama</a></li>
+                      <li><a href="#none">Family</a></li>
+                      <li><a href="#none">Romance</a></li>
+                      <li><a href="#none">Thriller</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#none">theater</a>
+                    <!-- submenu -->
+                    <ul class="home-submenu-pc">
+                      <li><a href="#none">Rating</a></li>
+                      <li><a href="#none">Popularity</a></li>
+                      <li><a href="#none">location</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#none">music</a>
+                    <!-- submenu -->
+                    <ul class="home-submenu-pc">
+                      <li><a href="#none">Artists</a></li>
+                      <li><a href="#none">Albums</a></li>
+                      <li><a href="#none">ost</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#none">trailer</a>
+                  </li>
+                </ul>
               </div>
+              <div class="header-element"></div>
+              <div class="header-element"></div>
 
-            </div>
-
-          </nav>
-        </div>
-        </div>
-        </div>
+              <!-- nav-right -->
+              <div class="nav-right">
+                <a href="./search/index.html">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!-- dark mode -->
+                <div>
+                  <input type="checkbox" class="checkbox" id="checkbox" />
+                  <label
+                    style="right: -50px" align="center"
+                    for="checkbox"
+                    class="label_DarkMode"
+                  >
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <!-- 다크모드 전환 원 -->
+                    <div class="ball"></div>
+                  </label>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div> /* home-header end */
       </div>
-      </header>
+
+        <!-- 슬라이딩 메뉴 컨테이너 -->
+        <div id="mobile-slide-menu">
+          <button type="button" onclick="closeNav()">
+            <span></span>
+            <span></span>
+          </button>
+
+          <h1>muvic</h1>
+
+            <ul class="mobile-slide-menu-items">
+              <li><a href="#none" class="mobile-menu-hover">genre</a>
+                <!-- submenu -->
+               <ul class="mobile-slide-menu-items-sub">
+                  <li><a href="#none">Action</a></li>
+                  <li><a href="#none">Comedy</a></li>
+                  <li><a href="#none">Drama</a></li>
+                  <li><a href="#none">Family</a></li>
+                  <li><a href="#none">Romance</a></li>
+                  <li><a href="#none">Thriller</a></li>
+               </ul>
+             </li>
+
+             <li><a href="#none" class="mobile-menu-hover">theater</a>
+                <!-- submenu -->
+               <ul class="mobile-slide-menu-items-sub">
+                 <li><a href="#none">Rating</a></li>
+                 <li><a href="#none">Popularity</a></li>
+                 <li><a href="#none">location</a></li>
+               </ul>
+             </li>
+
+             <li><a href="#none" class="mobile-menu-hover">music</a>
+                <!-- submenu -->
+               <ul class="mobile-slide-menu-items-sub">
+                 <li><a href="#none">Artists</a></li>
+                 <li><a href="#none">Albums</a></li>
+                 <li><a href="#none">ost</a></li>
+               </ul>
+             </li>
+
+             <li><a href="#none" class="mobile-menu-hover">trailer</a>
+             </li>
+            </ul>
+        </div>
+    </header>
 
       <!-- container -->
       <div id="home-container">
@@ -97,7 +162,7 @@
           <div class="home-main-inner">
             <dl>
               <dt>
-                <h2>muvic</h2>
+                <h2>muvic</h2><br>
                 is
                 <span class="typing-text"></span>
                 <span class="input-cursor"></span>
@@ -125,21 +190,34 @@
           </section>
 
           <!-- section2 - top10 -->
-          <section id="top-rate-movie-section">
-            <h2>Top10</h2>
+          <section id="top-rate-movie-section" class="mv-slide-section">
+            <h2>#Top10</h2>
 
             <!-- swiper 할곳 -->
-            <ul id="top-rate-movies">
+            <ul id="top-rate-movies" class="mv-slide">
             </ul>
+            <button class="tr-pre-button"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="tr-next-button"><i class="fa-solid fa-chevron-right"></i></button>
           </section>
+
+          <!-- 추가 -->
+          <section id="trend-movie-section" class="mv-slide-section">
+            <h2>#Trend</h2>
+
+            <!-- swiper 할곳 -->
+            <ul id="trend-movies" class="mv-slide">
+            </ul>
+            <button class="tr-pre-button"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="tr-next-button"><i class="fa-solid fa-chevron-right"></i></button>
+          </section>
+
+
 
           <!-- section3 -->
           <section id="main-movie-section">
             <h2>Movie</h2>
-            <!-- list -->
             <ul id="main-movie-board">
             </ul>
-            <!-- pagination -->
             <nav class="main-movie-pagination">
                 <a href="#none">
                   <i class="fa-solid fa-angles-left"></i>
@@ -154,20 +232,76 @@
           </section>
         </div>
     </div>
-
-    <!-- aside -->
-    <aside id="home-aside">
-      <button type="button">
-        <a href="#home-wrap">
-          <i class="fa-solid fa-arrow-up"></i>
-        </a>
-      </button>
-    </aside>
-
+    
     <!-- footer -->
     <footer id="home-footer">
-      footer
+      <div class="home-footer-inner">
+        <!-- logo -->
+        <h3>
+          <a href="#none">muvic</a>
+        </h3>
+        <!-- list -->
+        <div class="home-footer-list">
+          <dl>
+            <dt>
+              <h4>COMPANY</h4>
+            </dt>
+            <dd><a href="#none">About</a></dd>
+            <dd><a href="#none">Recruit</a></dd>
+            <dd><a href="#none">For the record</a></dd>
+          </dl>
+  
+          <dl>
+            <dt>
+              <h4>COMMUNITY</h4>
+            </dt>
+            <dd><a href="#none">Artist</a></dd>
+            <dd><a href="#none">Version</a></dd>
+            <dd><a href="#none">Provider</a></dd>
+            <dd><a href="#none">Developer</a></dd>
+          </dl>
+  
+          <dl>
+            <dt>
+              <h4>LINKS</h4>
+            </dt>
+            <dd><a href="#none">Support</a></dd>
+            <dd><a href="#none">Web player</a></dd>
+          </dl>
+        </div>
+          
+        <!-- icon -->
+        <div class="home-footer-icon">
+          <ul>
+            <li>
+              <a href="#none">
+                <img src="./assets/img/인스타그램.png" alt="#">
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img src="./assets/img/유튜브.png" alt="#">
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img src="./assets/img/페이스북.png" alt="#">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
     </footer>
+
+       <!-- aside -->
+       <aside id="home-aside">
+        <button type="button">
+          <a href="#home-wrap">
+            top
+          </a>
+        </button>
+      </aside>
 
     <!-- font awesome -->
     <script
@@ -178,7 +312,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     ></script>
     <!-- script -->
-    <script src="./main.js" defer
+    <script src="header.js" defer
+    ></script>
+    <script src="main.js" defer
     ></script>
   </body>
 </html>

@@ -1,43 +1,42 @@
 /* :root */
 :root {
-  --main-color: #ff0558;
-  /* --sub-color : #; */
-  /* --main-font: font-family: "Roboto", sans-serif; */
-}
-
-/* reset */
-html,
-body {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style: none;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-button {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-h1,
-h2,
-h3,
-h4,
-dl,
-dt,
-dd,
-figure,
-ul,
-li,
-button {
-  padding: 0;
-  margin: 0;
-}
+    --main-color: #FF0558;
+    /* --sub-color : #; */
+    /* --main-font: font-family: "Roboto", sans-serif; */
+  }
+  /* reset */
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  dl,
+  dt,
+  dd,
+  figure,
+  ul,
+  li,
+  button {
+    padding: 0;
+    margin: 0;
+  }

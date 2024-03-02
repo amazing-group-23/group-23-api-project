@@ -16,7 +16,6 @@ header {
   height: 60px;
   border-bottom: 1px solid #ebebeb;
 }
-
 #search-page {
   width: 100%;
 }
@@ -119,4 +118,105 @@ header {
 
 #search-page .searched-films-container ul li img {
   width: 100%;
+}
+
+@media (max-width : 696px) {
+    #search-page .search-page-input-box {
+        width: 450px;
+    }
+    .searched-films-container {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    #search-page .searched-films-container ul li{
+        width: 176px;
+        height: 260px;
+    }
+}
+
+@media (max-width : 592px) {
+    #search-page .search-page-input-box {
+        width: 350px;
+    }
+    #search-page .search-page-input-box input {
+        padding: 10px 90px 10px 20px;
+        font-size: 16px;
+    }
+    #search-page .search-page-input-box .sp-button-wrap {
+        top: 11px;
+    }
+    .searched-films-container {
+        max-width: 450px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(2, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 220px;
+        height: 310px;
+    }
+}
+@media (max-width : 486px) {
+    #search-page .search-page-input-box {
+        width: 280px;
+    }
+    .searched-films-container {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    #search-page .searched-films-container ul li{
+        width: 170px;
+        height: 250px;
+    }
+}
+@media (max-width : 390px) {
+    #search-page .search-page-input-box {
+        width: 250px;
+    }
+    #search-page .search-page-input-box .sp-button-wrap {
+        top: 10px;
+    }
+    .searched-films-container {
+        max-width: 250px;
+        margin: 0 auto;
+    }    
+    #search-page .searched-films-container ul {
+        grid-template-columns :repeat(1, 1fr)
+    }
+    #search-page .searched-films-container ul li{
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@keyframes sp-scroll-1{
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes sp-scroll-2 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  /* 애니메이션 속도 및 무한 반복 설정 */
+  #sp-popular-movies-board {
+    animation: sp-scroll-1 65s linear infinite;
+    white-space: nowrap;
+    /* overflow: hidden; */
+}
+
+#sp-running-movies-board {
+    animation: sp-scroll-2 65s linear infinite;
+    white-space: nowrap;
+    /* overflow: hidden; */
 }

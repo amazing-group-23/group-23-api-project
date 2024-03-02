@@ -32,11 +32,9 @@ const renderMovieDetail = async () => {
       <p>${data.overview}</p>
     </div>
   </div>
-  <div class="iframe-container">
-    <iframe src="https://www.youtube.com/embed/${
-      trailer.key
-    }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
+  <div class="trailer-container">
+    <h1>Trailer</h1>
+    <iframe src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
@@ -119,4 +117,5 @@ function clickDarkMode() {
 }
 
 renderMovieDetail();
+
 getYear();
