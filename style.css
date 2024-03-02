@@ -115,8 +115,11 @@ h2 {
 .mv-slide-section h2,
 #main-movie-section h2 {
   position: relative;
-  margin: 50px 0 25px 0;
+  margin: 50px 0 10px 15px;
   font-size: 35px;
+}
+.mv-slide-section p {
+  margin-left: 15px;
 }
 #main-movie-section h2 {
   margin-top: 100px;
@@ -216,9 +219,7 @@ h2 {
 #main-movie-board li:hover {
   transform: scale(1.05);
 }
-#main-movie-board li:hover img{
 
-}
 /* aside */
 #home-aside {
   position: fixed;
