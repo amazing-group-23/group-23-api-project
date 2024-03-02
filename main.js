@@ -162,18 +162,35 @@ checkbox.addEventListener("click", clickDarkMode);
 //   }
 // }
 
+// function clickDarkMode() {
+//   if (document.body.classList.contains("dark")) {
+//     //documentElement.head.classList.remove("dark");
+//     document.head.classList.remove("dark");
+//     //HTMLBodyElement.head.classList.remove("dark");
+//     //document.head.classList.remove("dark");
+//     document.body.classList.remove("dark");
+//     //document.documentElement.classList.remove("dark");
+//     //document.head.classList.remove("dark");
+//     console.log("convert into Light Mode");
+//   } else {
+//     //HTMLBodyElement.head.classList.add("dark");
+//     //documentElement.head.classList.add("dark");
+//     document.head.classList.add("dark");
+//     document.body.classList.add("dark");
+//     //document.documentElement.classList.add("dark");
+//     //document.head.classList.add("dark");
+//     console.log("convert into Dark Mode");
+//   }
+// }
+
 function clickDarkMode() {
-  // Toggle dark mode for the body
-  document.body.classList.toggle("dark");
-
-  // Toggle dark mode for specific elements in the header
-  const headerElements = document.querySelectorAll(".home-header");
-
-  headerElements.forEach((element) => {
-    element.classList.toggle("dark");
-  });
-
-  console.log("Dark mode toggled");
+  if (document.body.classList.contains("dark")) {
+    document.body.classList.remove("dark");
+    console.log("convert into Light Mode");
+  } else {
+    document.body.classList.add("dark");
+    console.log("convert into Dark Mode");
+  }
 }
 
 const typeWord = async (word, delay = 100) => {
