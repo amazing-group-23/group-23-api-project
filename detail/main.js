@@ -27,9 +27,9 @@ const renderMovieDetail = async () => {
     }" />
     <div class="movie-detail-text">
       <h1>${data.title}</h1>
-      <span>Grenre: ${data.genres[0].name}</span>
-      <span>Rating: ${data.vote_average}<img src="star.png"/></span>
-      <span>Release Date: ${data.release_date}</span>
+      <span>장르 : ${data.genres[0].name}</span>
+      <span>평점 : ${data.vote_average}<img src="star.png"/></span>
+      <span>개봉일 : ${data.release_date}</span>
       <div class="movie-detail-text-line"></div>
       <p>${data.overview}</p>
     </div>
