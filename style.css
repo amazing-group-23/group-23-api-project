@@ -154,14 +154,9 @@ h2 {
 .mv-slide{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   overflow: none;
-  flex-wrap: wrap;
-  overflow: none;
-/*
   flex-wrap: no-wrap;
   overflow-x: auto;
-*/
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   cursor: grab;
@@ -450,6 +445,9 @@ h2 {
   #main-movie-board {
     grid-template-columns: repeat(3, 1fr);
   }
+  .mv-slide-section button {
+    display: none;
+  }
 }
 /* tablet */
 @media (max-width: 768px){
@@ -575,4 +573,4 @@ h2 {
   .mv-slide li {
     width: calc(100% / 1 - 20px);
   }
-}}
+}
