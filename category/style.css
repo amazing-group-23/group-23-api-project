@@ -14,10 +14,13 @@ button {
     outline: none;
     border: none;
 }
-
+header {
+    font-family: 'Roboto';
+  }
 
 #category-container{
     margin-top: 60px;
+    font-family: 'Lato';
 }
 /* main 추가..*/
 #category-main {
