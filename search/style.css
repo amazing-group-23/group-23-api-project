@@ -1,35 +1,30 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* 헤더자리대체 */
 header {
-    width: 100%;
-    height: 60px;
-    border-bottom: 1px solid #ebebeb;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #ebebeb;
 }
 #search-page {
-    margin: 0 auto;
-    margin-top: 150px;
-    width: 100%;
-    padding: 0 40px;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  width: 100%;
 }
-#search-page .search-page-input-box{
-    position: relative;
-    width: 600px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
+#search-page .search-page-input-box {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 /* #search-page .search-page-input-box::after {
     content: "";
@@ -40,177 +35,89 @@ header {
     height: 1px;
     background-color: #ccc;
 } */
-#search-page .search-page-input-box input{
-    width: 100%;
-    padding: 15px 90px 15px 20px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 20px;
-    border-radius: 50px;
+#search-page .search-page-input-box input {
+  width: 100%;
+  padding: 15px 90px 15px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 20px;
+  border-radius: 50px;
 }
 #search-page .search-page-input-box span {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    font-size: 20px;
-    color: #ccc;
-    pointer-events: none;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 20px;
+  color: #ccc;
+  pointer-events: none;
 }
 #search-page .search-page-input-box button {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-#search-page .search-page-input-box .sp-button-wrap{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 16px;
-    right: 20px;
-    width: 60px;
+#search-page .search-page-input-box .sp-button-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 16px;
+  right: 20px;
+  width: 60px;
 }
 #search-page .search-page-input-box .sp-close-button {
-    position: relative;
-    opacity: 0;
-    height: 21px;
-    transition: .5s;
+  position: relative;
+  opacity: 0;
+  height: 21px;
+  transition: 0.5s;
 }
 #search-page .search-page-input-box .sp-close-button::after {
-    position: absolute;
-    top: 0;
-    right: -10px;
-    content: "";
-    width: 2px;
-    height: 20px;
-    background: #ccc;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  content: "";
+  width: 2px;
+  height: 20px;
+  background: #ccc;
 }
 #search-page .search-page-input-box button i {
-    font-size: 20px;
+  font-size: 20px;
 }
-#search-page .search-page-input-box p{
-    height: 20px;
-    padding-left: 20px;
-    padding-top: 5px;
-    box-sizing: border-box;
+#search-page .search-page-input-box p {
+  height: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  box-sizing: border-box;
 }
 #search-page .searched-films-container {
-    width: 100%;
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }
-#search-page .searched-films-container ul{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
+#search-page .searched-films-container ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
-#search-page .searched-films-container ul li{
-    width: 220px;
-    border-radius: 20px;
-    height: 310px;
-    text-align: center;
-    color: #ccc;
-    line-height: 300px;
-    overflow: hidden;
-    transition: .25s;
+#search-page .searched-films-container ul li {
+  width: 220px;
+  border-radius: 20px;
+  height: 310px;
+  text-align: center;
+  color: #ccc;
+  line-height: 300px;
+  overflow: hidden;
+  transition: 0.25s;
 }
 #search-page .searched-films-container ul li:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-
-#search-page .searched-films-container ul li img{
-    width: 100%;
-}
-
-/* 인기 */
-#sp-reco-movie-wrap{
-    width: 100%;
-}
-#sp-reco-movie-wrap > div{
-    width: auto;
-    margin: 0 auto;
-}
-#sp-reco-movie-wrap > div ul {
-    display: flex;
-    width: auto;
-    height: 280px;
-    cursor: grab;
-}
-#sp-reco-movie-wrap > div ul li {
-    width: 150px;
-    margin-right: 20px;
-}
-#sp-reco-movie-wrap > div ul li:hover img{
-    transform:scale(1.1);
-}
-
-#sp-reco-movie-wrap > div ul li img {
-    width: 150px;
-    border-radius: 15px;
-}
-.sp-popular-movies {
-    
-}
-#sp-popular-movies-board{
-    
-}
-#sp-popular-movies-board li{
-   
-}
-#sp-popular-movies-board li img{
-    
-}
-
-.sp-hidden {
-    display: none;
-}
-
-@media (max-width : 1080px) {
-    .searched-films-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }    
-    #search-page .searched-films-container ul {
-        gap: 10px;
-    }
-    #search-page .searched-films-container ul li{
-        width: 192.5px;
-        height: 270px;
-    }     
-}
-@media (max-width : 912px) {
-    .searched-films-container {
-        max-width: 700px;
-        margin: 0 auto;
-    }    
-    #search-page .searched-films-container ul {
-        gap: 10px;
-    }
-    #search-page .searched-films-container ul li{
-        width: 167.5px;
-        height: 240px;
-    }
-}
-
-@media (max-width : 781px) {
-    #search-page {
-        padding: 0 20px;
-    }
-    .searched-films-container {
-        max-width: 650px;
-        margin: 0 auto;
-    }    
-    #search-page .searched-films-container ul {
-        grid-template-columns :repeat(3, 1fr)
-    }
-    #search-page .searched-films-container ul li{
-        width: 210px;
-        height: 300px;
-    }
+#search-page .searched-films-container ul li img {
+  width: 100%;
 }
 
 @media (max-width : 696px) {

@@ -3,7 +3,7 @@
 
 /*color*/
 :root {
-    --main-color: #ff0558;
+  --main-color: #ff0558;
 }
 
 #wrap {
@@ -110,113 +110,137 @@ iframe{
 }
 
 /* footer */
-
+.detail-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
 
 /*movie ost*/
 .movie-ost-container {
-    position: relative;
-    margin-bottom: 150px;
+  position: relative;
+  margin-bottom: 150px;
 }
 
 .record-image {
-    position: fixed;
-    left: -300px;
-    bottom: -300px;
-    animation: rotation 6s infinite linear;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 0 0 20px 20px rgba(0,0,0,0.6);
-    z-index: -2;
+  position: fixed;
+  left: -300px;
+  bottom: -300px;
+  animation: rotation 6s infinite linear;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.6);
+  z-index: -2;
 }
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* aside & dark mode*/
-  #home-aside {
-      position: fixed;
-      right: 25px;
-      bottom: 25px;
-  }
+#home-aside {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
 
-  #home-aside>button {
-      display: block;
-      width: 50px;
-      height: 50px;
-      margin: 10px 0;
-      border-radius: 50%;
-      background-color: lightgrey;
-  }
+#home-aside > button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 50%;
+  background-color: lightgrey;
+}
 
-  #home-aside>button>a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      line-height: 50px;
-      transition: all 0.3s ease-in;
-      color: #000;
-  }
+#home-aside > button > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  transition: all 0.3s ease-in;
+  color: #000;
+}
 
-  body.dark {
-      background: #292c35;
-  }
+.dark .movie-detail-info {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  body.dark p {
-      color: #fff;
-  }
+.dark .movie-info-background {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  .ball {
-      background-color: #fff;
-      position: absolute;
-      border-radius: 50%;
-      top: 2px;
-      left: 2px;
-      width: 22px;
-      height: 22px;
-      /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
-      /* transform을 0.2초간 끝이 느려지도록 */
-      transition: transform 0.2s ease-out;
-  }
+.dark #wrap {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  .fa-moon {
-      color: #f1c40f;
-  }
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  .fa-sun {
-      color: #f39c12;
-  }
+/* Dark mode styles for header elements */
+.dark #home-header {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 
-  /* 투명하게 만들고 label 안에 위치시킴 */
-  .checkbox {
-      opacity: 0;
-      position: absolute;
-  }
+.ball {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
+  /* transform을 0.2초간 끝이 느려지도록 */
+  transition: transform 0.2s ease-out;
+}
 
-  /* label(checkbox)이 클릭되면 공의 모션 */
-  /* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
-  .checkbox:checked+.label_DarkMode .ball {
-      transform: translateX(24px);
-  }
+.fa-moon {
+  color: #f1c40f;
+}
 
-  .label_DarkMode {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      position: relative;
-      width: 50px;
-      height: 26px;
-      background-color: #111;
-      border-radius: 50px;
-      /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
-      transform: scale(1.5);
-  }
+.fa-sun {
+  color: #f39c12;
+}
+
+/* 투명하게 만들고 label 안에 위치시킴 */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+/* label(checkbox)이 클릭되면 공의 모션 */
+/* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
+.checkbox:checked + .label_DarkMode .ball {
+  transform: translateX(24px);
+}
+
+.label_DarkMode {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #111;
+  border-radius: 50px;
+  /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
+  transform: scale(1.5);
+}
 
 /* animation */
 .movie-detail-text-line:hover{
@@ -238,7 +262,7 @@ iframe:hover{
 }
 
 p::first-letter {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 /* media query */

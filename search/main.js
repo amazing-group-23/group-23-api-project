@@ -26,6 +26,18 @@ const getMovies = async () => {
 
 //인기 영화 가져오기
 const getPopularMovies = async () => {
+  url = new URL(
+    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`
+  );
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log("데이터는", data);
+  popularMovieList = data.results.slice(0, 10);
+  getPopularMoviesRender();
+};
+
+//인기 영화 가져오기
+const getPopularMovies = async () => {
   isLoading = true;
   popularMovieList = [];
 
@@ -40,7 +52,7 @@ const getPopularMovies = async () => {
   }
 
   getPopularMoviesRender();
-}
+};
 
 //상영중인 영화 가져오기
 const getRunningMovies = async () => {
@@ -58,7 +70,7 @@ const getRunningMovies = async () => {
   }
 
   getRunningMoviesRender();
-}
+};
 // movies 그리기
 const getMoviesRender = () => {
   const moviesHtml = movieList
@@ -120,10 +132,11 @@ const getRunningMoviesRender = () => {
 //키워드
 const getMovieByKeyword = async () => {
   let keyword = document.querySelector(".search-page-input-box input").value;
-  
+
   // 검색어가 유효하지 않은 경우 경고창 띄우고 함수 종료
   if (keyword.length <= 1) {
-    document.querySelector('#search-page .search-page-input-box p').innerText = "검색어는 두 글자 이상이어야 합니다."
+    document.querySelector("#search-page .search-page-input-box p").innerText =
+      "검색어는 두 글자 이상이어야 합니다.";
     return;
   }
 

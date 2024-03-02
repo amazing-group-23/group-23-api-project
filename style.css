@@ -92,12 +92,12 @@ h2 {
   font-size: 30px;
 }
 .home-value-bar-inner dl dt::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 50px;
   height: 2px;
   border-radius: 2px;
@@ -106,7 +106,7 @@ h2 {
 .home-value-bar-inner dl dd {
   font-size: 18px;
 }
-.home-value-bar-inner dl dd strong{
+.home-value-bar-inner dl dd strong {
   text-transform: uppercase;
   color: var(--main-color);
 }
@@ -132,11 +132,16 @@ h2 {
   content: '';
   display: inline-block;
   position: absolute;
+  left: 9%;
+  top: 43%;
+  transform: translateY(-43%);
+  transform: rotate(90deg);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid var(--main-color);
   width: 5px;
   height: 5px;
-  top: 10px;
   border-radius: 50%;
-  background-color: var(--main-color);
 }
 
 
@@ -145,8 +150,14 @@ h2 {
 .mv-slide{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: none;
+  flex-wrap: wrap;
+  overflow: none;
+/*
   flex-wrap: no-wrap;
   overflow-x: auto;
+*/
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
   cursor: grab;
@@ -158,20 +169,24 @@ h2 {
   width: calc(100% / 5 - 20px);
   margin: 10px 10px;
   border-radius: 20px;
-  transition: transform .25s;
+  box-shadow: 0 0 10px 0 rgb(178, 178, 178);
+  transition: transform 0.25s;
   overflow: hidden;
 }
 .mv-slide li a {
   display: block;
   width: 100%;
   height: 100%;
+  width: 100%;
+  height: 100%;
 }
+
 .mv-slide li a img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  transition: transform .25s;
+  transition: transform 0.25s;
 }
 .mv-slide li:hover {
   transform: scale(1.05);
@@ -220,6 +235,9 @@ h2 {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+#main-movie-board li {
+  width: 300px;
 #main-movie-board li{
   width: 100%;
   margin: 0 0 15px 0;
@@ -234,16 +252,21 @@ h2 {
   width: 100%;
   height: 100%;
 }
-#main-movie-board li a img{
+#main-movie-board li a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  transition: transform .25s;
+  transition: transform 0.25s;
 }
 #main-movie-board li:hover {
   transform: scale(1.05);
 }
+
+#main-movie-board li:hover img {
+  transform: scale(1.05);
+}
+
 /* aside */
 #home-aside {
   position: fixed;
@@ -287,7 +310,8 @@ h2 {
 }
 
 /* Dark mode styles for header elements */
-.dark .home-header {
+.dark #home-header {
+  background-color: #1a1a1a;
   color: #ffffff;
 }
 /* Dark mode styles for header elements */
@@ -321,14 +345,14 @@ h2 {
 /* label(checkbox)이 클릭되면 공의 모션 */
 /* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
 .checkbox:checked + .label_DarkMode .ball {
-  transform: translateX(24px);
+  transform: translateX(34px);
 }
 .label_DarkMode {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  width: 50px;
+  width: 60px;
   height: 26px;
   background-color: #111;
   border-radius: 50px;
