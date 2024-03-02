@@ -124,7 +124,7 @@ iframe{
 
 .record-image {
   position: fixed;
-  width: 60vw;
+  width: 55vw;
   left: -300px;
   bottom: -300px;
   animation: rotation 6s infinite linear;
