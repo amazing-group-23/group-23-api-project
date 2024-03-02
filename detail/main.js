@@ -88,18 +88,22 @@ const renderOSTFromSpotify = async () => {
 
     // extracts spotify playlist id
     const spotifyId = playlist.data.uri.split(":")[2];
-    const iframeResult = `<iframe
-    style="border-radius: 12px"
-    src="https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator"
-    width="100%"
-    height="352"
-    frameborder="0"
-    allowfullscreen=""
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"
-    ></iframe>`;
+    const iframeResult = `
+    <h2 class="ost-label">Original Sound Track</h2>
+    <div class="movie-ost-playlist">
+      <iframe
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    </div>`;
 
-    const resultElement = document.querySelector(".movie-ost-playlist");
+    const resultElement = document.querySelector(".movie-ost-container");
     resultElement.innerHTML = iframeResult;
   } catch (error) {
     console.error(error);
