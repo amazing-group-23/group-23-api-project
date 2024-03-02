@@ -122,6 +122,9 @@ h2 {
   margin: 50px 0 25px 20px;
   font-size: 35px;
 }
+.mv-slide-section p {
+  margin-left: 15px;
+}
 
 #main-movie-section h2 {
   margin-top: 100px;
@@ -266,7 +269,7 @@ h2 {
 #main-movie-board li:hover img {
   transform: scale(1.05);
 }
-
+  
 /* aside */
 #home-aside {
   position: fixed;
