@@ -3,7 +3,7 @@ const API_KEY = "45b6699cac67a94b62f8d2f0e07277da";
 let url = "";
 let movieList = [];
 let topRateFilmsList = [];
-let trendFilmsList =[];
+let trendFilmsList = [];
 // 무한스크롤
 let currentPage = 1;
 let isLoading = false;
@@ -149,6 +149,7 @@ function clickDarkMode() {
   headerElements.forEach((element) => {
     element.classList.toggle("dark");
   });
+}
 
 const typeWord = async (word, delay = 100) => {
   const letters = word.split("");
@@ -203,26 +204,26 @@ hamburgerBtn.addEventListener("click", () => {
 });
 
 //top10 slide
-document.addEventListener('DOMContentLoaded', function () {
-  const slide = document.querySelector('#top-rate-movies');
-  const nextBtn = document.querySelector('.tr-next-button');
-  const prevBtn = document.querySelector('.tr-pre-button');
+document.addEventListener("DOMContentLoaded", function () {
+  const slide = document.querySelector("#top-rate-movies");
+  const nextBtn = document.querySelector(".tr-next-button");
+  const prevBtn = document.querySelector(".tr-pre-button");
 
-  nextBtn.addEventListener('click', function () {
-    const itemWidth = slide.querySelector('li').offsetWidth + 20; // Adjusted for margin
+  nextBtn.addEventListener("click", function () {
+    const itemWidth = slide.querySelector("li").offsetWidth + 20; // Adjusted for margin
     const scrollAmount = slide.scrollLeft + itemWidth * 5;
     slide.scrollTo({
       left: scrollAmount,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
 
-  prevBtn.addEventListener('click', function () {
-    const itemWidth = slide.querySelector('li').offsetWidth + 20; // Adjusted for margin
+  prevBtn.addEventListener("click", function () {
+    const itemWidth = slide.querySelector("li").offsetWidth + 20; // Adjusted for margin
     const scrollAmount = slide.scrollLeft - itemWidth * 5;
     slide.scrollTo({
       left: scrollAmount,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
 });
