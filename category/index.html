@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    
+    <section id="category-container">
+        <ul id="category-title-wrap">
+            <li><button>전체</button></li>
+            <li><button onclick="getMoviesByGenre(28)">액션</button></li>
+            <li><button onclick="getMoviesByGenre(53)">스릴러</button></li>
+            <li><button onclick="getMoviesByGenre(10749)">로맨스</button></li>
+            <li><button onclick="getMoviesByGenre(35)">코미디</button></li>
+            <li><button onclick="getMoviesByGenre(18)">드라마</button></li>
+            <li><button onclick="getMoviesByGenre(10751)">가족</button></li>
+        </ul>
+        <ul id="categorized-films-board">
+
+        </ul>
+    </section>
+
+    <script src="main.js"></script>
 </body>
 </html>
