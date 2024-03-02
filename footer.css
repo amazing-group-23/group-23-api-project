@@ -4,8 +4,7 @@
     padding: 20px 0;
     box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: 0 0 8px 0 #7a7a7a;
+    background-color: #ececec;
     overflow: hidden;
 }
 #home-footer .home-footer-inner {
@@ -17,6 +16,7 @@
     text-align: center;
 }
 #home-footer .home-footer-inner h3 {
+    position: relative;
     margin: 20px 0;
     font-size: 30px;
     font-weight: bold;
@@ -24,6 +24,16 @@
     text-transform: uppercase;
     color: var(--main-color);
     transition: .2s ease-in-out;
+}
+#home-footer .home-footer-inner h3::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--main-color);
 }
 #home-footer .home-footer-list {
     display: flex;
@@ -71,8 +81,6 @@
     width: 100%;
     object-fit: cover;
 }
-
-
 
 
 /* media */
