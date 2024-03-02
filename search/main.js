@@ -36,24 +36,6 @@ const getPopularMovies = async () => {
   getPopularMoviesRender();
 };
 
-//인기 영화 가져오기
-const getPopularMovies = async () => {
-  isLoading = true;
-  popularMovieList = [];
-
-  for (let page = 1; page <= 3; page++) {
-    const url = new URL(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=${page}`
-    );
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log("데이터는", data);
-    popularMovieList.push(...data.results);
-  }
-
-  getPopularMoviesRender();
-};
-
 //상영중인 영화 가져오기
 const getRunningMovies = async () => {
   isLoading = true;
