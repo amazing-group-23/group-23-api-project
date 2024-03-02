@@ -1,12 +1,8 @@
 const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
-const SPOTIFY_API_KEY = "ff518ea60amsh58ecc77c5666d05p17aaabjsnc1b8b85d4e36";
+//const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
+const SPOTIFY_API_KEY="8564be05bcmshab4e816a8ff6140p1cfa2bjsn71585391092b";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
-
-// const getYear = () => {
-//   const detailFooter = document.getElementById("detail-footer");
-//   const year = new Date().getFullYear();
-//   detailFooter.innerText = `©${year} muvic`;
-// };
+const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
 const renderMovieDetail = async () => {
   // get movie detail data
@@ -14,7 +10,9 @@ const renderMovieDetail = async () => {
     `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`
   );
   const data = await response.json();
-  const trailer = data.videos.results.find((video) => video.type === "Trailer");
+  const trailer = data.videos.results.find(
+    (video) => video.type === "Trailer"
+  );
   const movieDetailHTML = `
   <div class="movie-detail-info">
     <img class="movie-detail-poster" src="${
@@ -33,16 +31,13 @@ const renderMovieDetail = async () => {
   </div>
   <div class="trailer-container">
     <h1>Trailer</h1>
-    <iframe src="https://www.youtube.com/embed/${
-      trailer.key
-    }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <iframe src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
     data.poster_path
-      ? "https://image.tmdb.org/t/p/w500" + data.poster_path
-      : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
-  })`;
+    ? "https://image.tmdb.org/t/p/w500" + data.poster_path
+    : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"})`;
 
   const movieDetailContainer = document.querySelector(
     ".movie-detail-container"
@@ -96,28 +91,5 @@ const getOSTFromSpotify = async (query) => {
   }
 };
 
-// const checkbox = document.getElementById('checkbox');
-const checkbox = document.querySelector(".checkbox");
-console.log(checkbox);
-
-// checkbox를 click 했을 때 해당 함수를 실행
-checkbox.addEventListener("click", clickDarkMode);
-
-function clickDarkMode() {
-  // Toggle dark mode for the body
-  document.body.classList.toggle("dark");
-
-  // Toggle dark mode for specific elements in the header
-  const headerElements = document.querySelectorAll(".home-header");
-
-  headerElements.forEach((element) => {
-    element.classList.toggle("dark");
-  });
-
-  console.log("Dark mode toggled");
-}
 
 renderMovieDetail();
-
-// getYear();
-//
