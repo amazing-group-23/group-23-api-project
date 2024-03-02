@@ -7,14 +7,12 @@
 }
 
 #wrap {
- 
     max-width: 77.5rem;
     padding: 6.25rem;
     margin: 0 auto;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
 } 
 
 /*movie detail section*/
@@ -87,22 +85,32 @@
     background-color: #000;
     margin: 2.5rem 0;
 }
+.trailer-container{
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+}
 
+.trailer-container > h1{
+   text-align: center;
+   font-size: 3rem;
+   margin-bottom: 2rem;
+   font-style: italic;
+}
+.ost-label {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
 iframe{
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.6);
-    margin-top: 21.875rem;
     width: 73.125rem;
     height: 40.625rem;
+    transition: all 0.3s ease;
 }
 
 /* footer */
-.detail-footer {
-    position: fixed ;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-}
+
 
 /*movie ost*/
 .movie-ost-container {
@@ -331,7 +339,6 @@ p::first-letter {
     }
 
     .movie-detail-text {
-        margin-top: 0.8rem;
         width: 100%;
     }
 
@@ -342,7 +349,8 @@ p::first-letter {
     .movie-detail-text>h1 {
         color: var(--main-color);
         font-weight: 800;
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+        margin-top: 0.8rem;
     }
     
     .movie-detail-text>span {
@@ -367,7 +375,18 @@ p::first-letter {
     p::first-letter {
         font-size: 1.5rem;
     }
-    
+    .trailer-container {
+        margin-top: 10rem;
+    }
+    .trailer-container>h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .ost-label{
+        font-size: 2rem;
+        margin-bottom: 0.5rem;}
+
     iframe {
         width: 42rem;
         height: 23rem;
@@ -436,7 +455,7 @@ p::first-letter {
         width: 100%; 
     }
     .movie-info-background{
-        height: 60rem;
+        height: 58rem;
     }
 
     .movie-detail-text>h1 {
@@ -467,10 +486,17 @@ p::first-letter {
     p::first-letter {
         font-size: 1.1rem;
     }
-
+.trailer-container {
+    margin-top: 5rem;
+}
     iframe {
-        width: 17rem;
-        height: 13rem;
-        margin-top: 5rem;
+        width: 30rem;
+        height: 18rem;
      }
+}
+@media screen and (max-width: 400px){
+    iframe {
+            width: 17rem;
+            height: 13rem;
+        }
 }
