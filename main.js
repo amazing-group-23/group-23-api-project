@@ -51,6 +51,7 @@ const getTopRateMovies = async () => {
   const data = await response.json();
   console.log("데이터는", data);
   topRateFilmsList = data.results.slice(0, 10);
+  topRateFilmsList = data.results.slice(0, 10);
   topRateFilmsRender();
 };
 //최고평점 영화 렌더
@@ -138,30 +139,6 @@ console.log(checkbox);
 // checkbox를 click 했을 때 해당 함수를 실행
 checkbox.addEventListener("click", clickDarkMode);
 
-// 웹사이트의 배경 바꾸기
-// classList는 js가 css를 제어할 수 있게 함
-//class가 존재하면 클래스 제거, 클래스가 존재하지 않으면 클래스 추가하는 메서드
-// function clickDarkMode() {
-//   if (document.body.classList.contains("dark")) {
-//     //documentElement.head.classList.remove("dark");
-//     document.head.classList.remove("dark");
-//     //HTMLBodyElement.head.classList.remove("dark");
-//     //document.head.classList.remove("dark");
-//     document.body.classList.remove("dark");
-//     //document.documentElement.classList.remove("dark");
-//     //document.head.classList.remove("dark");
-//     console.log("convert into Light Mode");
-//   } else {
-//     //HTMLBodyElement.head.classList.add("dark");
-//     //documentElement.head.classList.add("dark");
-//     document.head.classList.add("dark");
-//     document.body.classList.add("dark");
-//     //document.documentElement.classList.add("dark");
-//     //document.head.classList.add("dark");
-//     console.log("convert into Dark Mode");
-//   }
-// }
-
 function clickDarkMode() {
   // Toggle dark mode for the body
   document.body.classList.toggle("dark");
@@ -172,9 +149,6 @@ function clickDarkMode() {
   headerElements.forEach((element) => {
     element.classList.toggle("dark");
   });
-
-  console.log("Dark mode toggled");
-}
 
 const typeWord = async (word, delay = 100) => {
   const letters = word.split("");
@@ -219,12 +193,12 @@ fetchMovies();
 typingEffect();
 
 // hamburger toggle btn
-const hamburgerBtn = document.querySelector('.hamburger-btn');
-const hamburgerBtnSticks = hamburgerBtn.querySelectorAll('span'); // 수정된 부분
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+const hamburgerBtnSticks = hamburgerBtn.querySelectorAll("span"); // 수정된 부분
 
-hamburgerBtn.addEventListener('click',() => {
-  hamburgerBtnSticks.forEach(stick => {
-    stick.classList.toggle('change');
+hamburgerBtn.addEventListener("click", () => {
+  hamburgerBtnSticks.forEach((stick) => {
+    stick.classList.toggle("change");
   });
 });
 
