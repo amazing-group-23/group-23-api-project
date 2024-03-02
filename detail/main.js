@@ -9,12 +9,19 @@ const movieId = new URLSearchParams(window.location.search).get("movieId");
 // };
 
 const renderMovieDetail = async () => {
-  // get movie detail data
+  // get movie detail data in Korean
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}`
+    `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}&language=ko-KR`
   );
   const data = await response.json();
-  const trailer = data.videos.results.find((video) => video.type === "Trailer");
+  let trailer = null;
+  if (data.videos) 
+  {
+    trailer = data.videos.results.find((video) => video.type === "Trailer");
+    if (!trailer) {
+      trailer = data.videos.results.find((video) => video.type === "Teaser");
+    }
+  }
   const movieDetailHTML = `
   <div class="movie-detail-info">
     <img class="movie-detail-poster" src="${
@@ -33,9 +40,14 @@ const renderMovieDetail = async () => {
   </div>
   <div class="trailer-container">
     <h1>Trailer</h1>
-    <iframe src="https://www.youtube.com/embed/${
-      trailer.key
-    }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      ${trailer ? `
+        <iframe src="https://www.youtube.com/embed/${
+          trailer.key
+        }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        ` : 
+        "<div>Trailer Not Found</div>"
+      }
+  </div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
@@ -50,16 +62,19 @@ const renderMovieDetail = async () => {
   movieDetailContainer.innerHTML = movieDetailHTML;
 
   // get spotify ost playlist by movie title and display the playlist on the screen
-  const resultElement = document.querySelector(".movie-ost-playlist");
-  resultElement.innerHTML = await getOSTFromSpotify(data.title);
+  renderOSTFromSpotify();
 
   //영화 제목으로 페이지 타이틀 변경
   document.title = `${data.title} | MUVIC`;
 };
 
 // Get Spotify iframe of OST songs for a given movie
-const getOSTFromSpotify = async (query) => {
-  const url = `https://spotify23.p.rapidapi.com/search/?q=${query}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
+const renderOSTFromSpotify = async () => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}&language=en-US`
+  );
+  const data = await response.json();
+  const url = `https://spotify23.p.rapidapi.com/search/?q=${data.title}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
   const options = {
     method: "GET",
     headers: {
@@ -89,10 +104,11 @@ const getOSTFromSpotify = async (query) => {
     loading="lazy"
     ></iframe>`;
 
-    return iframeResult;
+    const resultElement = document.querySelector(".movie-ost-playlist");
+    resultElement.innerHTML = iframeResult;
   } catch (error) {
     console.error(error);
-    return "<span></span>";
+    return "<span>OST Not Found</span>";
   }
 };
 

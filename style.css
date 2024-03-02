@@ -240,8 +240,6 @@ h2 {
   box-sizing: border-box;
 }
 
-#main-movie-board li {
-  width: 300px;
 #main-movie-board li{
   width: 100%;
   margin: 0 0 15px 0;
@@ -375,18 +373,6 @@ h2 {
 }
 
 @keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
   0% {
     opacity: 1;
   }
