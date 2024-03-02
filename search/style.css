@@ -1,14 +1,15 @@
-* {
+*{
   margin: 0;
   padding: 0;
 }
-li {
+li{
   list-style: none;
 }
-a {
+a{
   text-decoration: none;
   color: inherit;
 }
+
 
 /* 헤더자리대체 */
 header {
@@ -16,10 +17,16 @@ header {
   height: 60px;
   border-bottom: 1px solid #ebebeb;
 }
+
 #search-page {
+  margin: 0 auto;
+  margin-top: 150px;
   width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-#search-page .search-page-input-box {
+#search-page .search-page-input-box{
   position: relative;
   width: 600px;
   margin: 0 auto;
@@ -27,15 +34,15 @@ header {
   margin-bottom: 40px;
 }
 /* #search-page .search-page-input-box::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 600px;
-    height: 1px;
-    background-color: #ccc;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 1px;
+  background-color: #ccc;
 } */
-#search-page .search-page-input-box input {
+#search-page .search-page-input-box input{
   width: 100%;
   padding: 15px 90px 15px 20px;
   box-sizing: border-box;
@@ -58,7 +65,7 @@ header {
   outline: none;
   cursor: pointer;
 }
-#search-page .search-page-input-box .sp-button-wrap {
+#search-page .search-page-input-box .sp-button-wrap{
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -71,7 +78,7 @@ header {
   position: relative;
   opacity: 0;
   height: 21px;
-  transition: 0.5s;
+  transition: .5s;
 }
 #search-page .search-page-input-box .sp-close-button::after {
   position: absolute;
@@ -85,7 +92,7 @@ header {
 #search-page .search-page-input-box button i {
   font-size: 20px;
 }
-#search-page .search-page-input-box p {
+#search-page .search-page-input-box p{
   height: 20px;
   padding-left: 20px;
   padding-top: 5px;
@@ -95,14 +102,14 @@ header {
   width: 100%;
   margin-bottom: 20px;
 }
-#search-page .searched-films-container ul {
+#search-page .searched-films-container ul{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
 }
-#search-page .searched-films-container ul li {
+#search-page .searched-films-container ul li{
   width: 220px;
   border-radius: 20px;
   height: 310px;
@@ -110,113 +117,201 @@ header {
   color: #ccc;
   line-height: 300px;
   overflow: hidden;
-  transition: 0.25s;
+  transition: .25s;
 }
 #search-page .searched-films-container ul li:hover {
   transform: scale(1.05);
 }
 
-#search-page .searched-films-container ul li img {
+
+#search-page .searched-films-container ul li img{
   width: 100%;
 }
 
+/* 인기 */
+#sp-reco-movie-wrap{
+  width: 100%;
+}
+#sp-reco-movie-wrap > div{
+  width: auto;
+  margin: 0 auto;
+}
+#sp-reco-movie-wrap > div ul {
+  display: flex;
+  width: auto;
+  height: 280px;
+  cursor: grab;
+}
+#sp-reco-movie-wrap > div ul li {
+  width: 150px;
+  margin-right: 20px;
+}
+#sp-reco-movie-wrap > div ul li:hover img{
+  transform:scale(1.1);
+}
+
+#sp-reco-movie-wrap > div ul li img {
+  width: 150px;
+  border-radius: 15px;
+}
+.sp-popular-movies {
+  
+}
+#sp-popular-movies-board{
+  
+}
+#sp-popular-movies-board li{
+ 
+}
+#sp-popular-movies-board li img{
+  
+}
+
+.sp-hidden {
+  display: none;
+}
+
+@media (max-width : 1080px) {
+  .searched-films-container {
+      max-width: 800px;
+      margin: 0 auto;
+  }    
+  #search-page .searched-films-container ul {
+      gap: 10px;
+  }
+  #search-page .searched-films-container ul li{
+      width: 192.5px;
+      height: 270px;
+  }     
+}
+@media (max-width : 912px) {
+  .searched-films-container {
+      max-width: 700px;
+      margin: 0 auto;
+  }    
+  #search-page .searched-films-container ul {
+      gap: 10px;
+  }
+  #search-page .searched-films-container ul li{
+      width: 167.5px;
+      height: 240px;
+  }
+}
+
+@media (max-width : 781px) {
+  #search-page {
+      padding: 0 20px;
+  }
+  .searched-films-container {
+      max-width: 650px;
+      margin: 0 auto;
+  }    
+  #search-page .searched-films-container ul {
+      grid-template-columns :repeat(3, 1fr)
+  }
+  #search-page .searched-films-container ul li{
+      width: 210px;
+      height: 300px;
+  }
+}
+
 @media (max-width : 696px) {
-    #search-page .search-page-input-box {
-        width: 450px;
-    }
-    .searched-films-container {
-        max-width: 550px;
-        margin: 0 auto;
-    }
-    #search-page .searched-films-container ul li{
-        width: 176px;
-        height: 260px;
-    }
+  #search-page .search-page-input-box {
+      width: 450px;
+  }
+  .searched-films-container {
+      max-width: 550px;
+      margin: 0 auto;
+  }
+  #search-page .searched-films-container ul li{
+      width: 176px;
+      height: 260px;
+  }
 }
 
 @media (max-width : 592px) {
-    #search-page .search-page-input-box {
-        width: 350px;
-    }
-    #search-page .search-page-input-box input {
-        padding: 10px 90px 10px 20px;
-        font-size: 16px;
-    }
-    #search-page .search-page-input-box .sp-button-wrap {
-        top: 11px;
-    }
-    .searched-films-container {
-        max-width: 450px;
-        margin: 0 auto;
-    }    
-    #search-page .searched-films-container ul {
-        grid-template-columns :repeat(2, 1fr)
-    }
-    #search-page .searched-films-container ul li{
-        width: 220px;
-        height: 310px;
-    }
+  #search-page .search-page-input-box {
+      width: 350px;
+  }
+  #search-page .search-page-input-box input {
+      padding: 10px 90px 10px 20px;
+      font-size: 16px;
+  }
+  #search-page .search-page-input-box .sp-button-wrap {
+      top: 11px;
+  }
+  .searched-films-container {
+      max-width: 450px;
+      margin: 0 auto;
+  }    
+  #search-page .searched-films-container ul {
+      grid-template-columns :repeat(2, 1fr)
+  }
+  #search-page .searched-films-container ul li{
+      width: 220px;
+      height: 310px;
+  }
 }
 @media (max-width : 486px) {
-    #search-page .search-page-input-box {
-        width: 280px;
-    }
-    .searched-films-container {
-        max-width: 350px;
-        margin: 0 auto;
-    }
-    #search-page .searched-films-container ul li{
-        width: 170px;
-        height: 250px;
-    }
+  #search-page .search-page-input-box {
+      width: 280px;
+  }
+  .searched-films-container {
+      max-width: 350px;
+      margin: 0 auto;
+  }
+  #search-page .searched-films-container ul li{
+      width: 170px;
+      height: 250px;
+  }
 }
 @media (max-width : 390px) {
-    #search-page .search-page-input-box {
-        width: 250px;
-    }
-    #search-page .search-page-input-box .sp-button-wrap {
-        top: 10px;
-    }
-    .searched-films-container {
-        max-width: 250px;
-        margin: 0 auto;
-    }    
-    #search-page .searched-films-container ul {
-        grid-template-columns :repeat(1, 1fr)
-    }
-    #search-page .searched-films-container ul li{
-        width: 250px;
-        height: 350px;
-    }
+  #search-page .search-page-input-box {
+      width: 250px;
+  }
+  #search-page .search-page-input-box .sp-button-wrap {
+      top: 10px;
+  }
+  .searched-films-container {
+      max-width: 250px;
+      margin: 0 auto;
+  }    
+  #search-page .searched-films-container ul {
+      grid-template-columns :repeat(1, 1fr)
+  }
+  #search-page .searched-films-container ul li{
+      width: 250px;
+      height: 350px;
+  }
 }
 
 @keyframes sp-scroll-1{
-    0% {
-      transform: translateX(-10%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(-10%);
   }
-  
-  @keyframes sp-scroll-2 {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
+  100% {
+    transform: translateX(-100%);
   }
-  
-  /* 애니메이션 속도 및 무한 반복 설정 */
-  #sp-popular-movies-board {
-    animation: sp-scroll-1 65s linear infinite;
-    white-space: nowrap;
-    /* overflow: hidden; */
+}
+
+@keyframes sp-scroll-2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* 애니메이션 속도 및 무한 반복 설정 */
+#sp-popular-movies-board {
+  animation: sp-scroll-1 65s linear infinite;
+  white-space: nowrap;
+  /* overflow: hidden; */
 }
 
 #sp-running-movies-board {
-    animation: sp-scroll-2 65s linear infinite;
-    white-space: nowrap;
-    /* overflow: hidden; */
+  animation: sp-scroll-2 65s linear infinite;
+  white-space: nowrap;
+  /* overflow: hidden; */
 }
