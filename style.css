@@ -20,28 +20,23 @@ h2 {
   background: url("./assets/img/home-main-img-3.jpeg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-#home-main .home-main-inner::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  transition: .2s ease;
 }
 #home-main .home-main-inner dl {
-  position: absolute;
-  left: 7.5%;
-  top: 60%;
-  transform: translateY(-60%);
-  padding: 20px;
-  box-sizing: border-box;
+  position: relative;
+  max-width: 1240px;
+  height: 100%;
+  margin: 0 auto;
   font-weight: bold;
-  z-index: 1;
   color: #fff;
+  z-index: 1;
+}
+#home-main .home-main-inner dl div {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin: 0 20px;
+  transform: translateY(-50%);
 }
 #home-main .home-main-inner dl dt {
   font-size: 40px;
@@ -116,39 +111,33 @@ h2 {
   max-width: 1240px;
   margin: 0 auto;
 }
-.mv-slide-section h2,
-#main-movie-section h2 {
+.mv-slide-section h2 {
   position: relative;
   margin: 50px 0 10px 20px;
+  font-size: 35px;
+}
+#main-movie-section h2 {
+  position: relative;
+  margin: 50px 0 40px 20px;
   font-size: 35px;
 }
 .mv-slide-section p {
   margin: 0;
   margin-left: 15px;
-}
-
-#main-movie-section h2 {
-  margin-top: 100px;
+  font-weight: 600;
 }
 
 .mv-slide-section h2::after,
 #main-movie-section h2::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  left: 9%;
-  top: 43%;
-  transform: translateY(-43%);
-  transform: rotate(90deg);
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 16px solid var(--main-color);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-}
-
-
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 8px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+  }
 /* top10 list */
 /* 슬라이드 */
 .mv-slide{
@@ -394,17 +383,8 @@ h2 {
 /* pc */
 @media (max-width: 1080px){
   /* main */
-  #home-main .home-main-inner dl {
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   #home-main .home-main-inner dl dt h2 {
     font-size: 40px;
-    padding: 8px 10px;
-    color: #fff;
-    border-radius: 5px;
-    background-color: var(--main-color);
   }
   #home-main br {
     display: block;
@@ -436,14 +416,16 @@ h2 {
   .home-value-bar-inner dl dd {
     font-size: 16px;
   }
-
   /* section2 - top10 */
   .mv-slide-section {
     width: 100%;
   }
-  .mv-slide-section h2,
+  .mv-slide-section h2 {
+    margin: 40px 0 0px 20px;
+    font-size: 30px;
+  }
   #main-movie-section h2 {
-    margin: 40px 0 10p 20px;
+    margin: 40px 0 30px 20px;
     font-size: 30px;
   }
   /* section3 - movie */
@@ -484,7 +466,10 @@ h2 {
   .mv-slide-section button i {
     font-size: 25px;
   }
-  .mv-slide-section h2,
+  .mv-slide-section h2 {
+    margin: 25px 0 0px 20px;
+    font-size: 25px;
+  }
   #main-movie-section h2 {
     margin: 25px 0 25px 20px;
     font-size: 25px;
@@ -493,6 +478,10 @@ h2 {
   #main-movie-board {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+  .mv-slide-section p {
+    font-size: 12px;
+    font-weight: 400;
   }
 
   /* aside */
@@ -512,6 +501,12 @@ h2 {
 
 /* mobile */
 @media (max-width: 590px){
+  /* main */
+  #home-main .home-main-inner {
+    background: url("./assets/img/home-main-mobile.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
     /* section area */
   .home-value-bar-inner {
     padding: 20px 0 30px 20px;
