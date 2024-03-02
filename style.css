@@ -107,22 +107,25 @@ h2 {
   color: var(--main-color);
 }
 /* section2 - top10 */
-#top-rate-movie-section {
+.mv-slide-section {
   position: relative;
   max-width: 1240px;
   margin: 0 auto;
 }
-#top-rate-movie-section h2,
+.mv-slide-section h2,
 #main-movie-section h2 {
   position: relative;
   margin: 50px 0 25px 0;
   font-size: 35px;
 }
+#main-movie-section h2 {
+  margin-top: 100px;
+}
 
 
 /* top10 list */
 /* 슬라이드 */
-#top-rate-movies{
+.mv-slide{
   display: flex;
   justify-content: space-between;
   flex-wrap: no-wrap;
@@ -131,8 +134,8 @@ h2 {
   -webkit-overflow-scrolling: touch;
   cursor: grab;
 }
-#top-rate-movies:hover #top-rate-movie-section button {}
-#top-rate-movies li {
+
+.mv-slide li {
   flex: 0 0 auto;
   /* width: 230px; */
   width: calc(100% / 5 - 20px);
@@ -142,31 +145,31 @@ h2 {
   transition: transform .25s;
   overflow: hidden;
 }
-#top-rate-movies li a {
+.mv-slide li a {
   display: block;
   width: 100%;
   height: 100%;
 }
-#top-rate-movies li a img{
+.mv-slide li a img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
   transition: transform .25s;
 }
-#top-rate-movies li:hover {
+.mv-slide li:hover {
   transform: scale(1.05);
 }
 
-#top-rate-movie-section:hover button {
+.mv-slide-section:hover button {
   opacity: 1;
 }
-#top-rate-movie-section button {
+.mv-slide-section button {
   position: absolute;
   opacity: 0;
   transition: .5s;
 }
-#top-rate-movie-section button i {
+.mv-slide-section button i {
   font-size: 45px;
   color: var(--main-color);
 }

@@ -3,6 +3,7 @@ const API_KEY = "45b6699cac67a94b62f8d2f0e07277da";
 let url = "";
 let movieList = [];
 let topRateFilmsList = [];
+let trendFilmsList =[];
 // 무한스크롤
 let currentPage = 1;
 let isLoading = false;
@@ -41,6 +42,7 @@ const getMoviesRender = () => {
   document.getElementById("main-movie-board").innerHTML = moviesHtml;
 };
 
+//최고평점 영화
 const getTopRateMovies = async () => {
   url = new URL(
     `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=ko-KR&page=1`
@@ -51,7 +53,7 @@ const getTopRateMovies = async () => {
   topRateFilmsList = data.results.slice(0, 10);
   topRateFilmsRender();
 };
-
+//최고평점 영화 렌더
 const topRateFilmsRender = () => {
   const TopMoviesHtml = topRateFilmsList
     .map(
@@ -68,6 +70,36 @@ const topRateFilmsRender = () => {
     )
     .join("");
   document.getElementById("top-rate-movies").innerHTML = TopMoviesHtml;
+};
+
+//트렌드 영화
+const getTrendMovies = async () => {
+  url = new URL(
+    `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}&language=ko-KR&page=1`
+  );
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log("데이터는", data);
+  trendFilmsList = data.results.slice(0, 10);
+  trendFilmsRender();
+};
+//트렌드 렌더
+const trendFilmsRender = () => {
+  const trendMoviesHtml = trendFilmsList
+    .map(
+      (item) =>
+        `<li>
+          <a href="./detail/index.html?movieId=${item.id}">
+              <img src="${
+                item.poster_path
+                  ? "https://image.tmdb.org/t/p/w500" + item.poster_path
+                  : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
+              }" />
+          </a>
+      </li>`
+    )
+    .join("");
+  document.getElementById("trend-movies").innerHTML = trendMoviesHtml;
 };
 
 // 스크롤 이벤트 리스너 추가
@@ -96,6 +128,7 @@ const fetchMoreMovies = async () => {
 const fetchMovies = async () => {
   await getMovies();
   await getTopRateMovies();
+  await getTrendMovies();
 };
 
 // const checkbox = document.getElementById('checkbox');

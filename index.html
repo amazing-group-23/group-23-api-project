@@ -35,17 +35,7 @@
                 <h1><a href="/">MUVIC</a></h1>
                 <!-- menu -->
                 <ul class="home-menu">
-                  <li><a href="#none">genre</a>
-                    <!-- submenu -->
-                    <ul class="home-submenu-pc">
-                      <li><button onclick="getMoviesByGenre(28)">액션</button></li>
-                      <li><button onclick="getMoviesByGenre(53)">스릴러</button></li>
-                      <li><button onclick="getMoviesByGenre(10749)">로맨스</button></li>
-                      <li><button onclick="getMoviesByGenre(35)">코미디</button></li>
-                      <li><button onclick="getMoviesByGenre(18)">드라마</button></li>
-                      <li><button onclick="getMoviesByGenre(10751)">가족</button></li>
-                    </ul>
-                  </li>
+                  <li><a href="#none">genre</a></li>
                   <li><a href="#none">theater</a></li>
                   <li><a href="#none">music</a></li>
                   <li><a href="#none">trailer</a></li>
@@ -119,15 +109,28 @@
           </section>
 
           <!-- section2 - top10 -->
-          <section id="top-rate-movie-section">
-            <h2>Top10</h2>
+          <section id="top-rate-movie-section" class="mv-slide-section">
+            <h2>#Top10</h2>
 
             <!-- swiper 할곳 -->
-            <ul id="top-rate-movies">
+            <ul id="top-rate-movies" class="mv-slide">
             </ul>
             <button class="tr-pre-button"><i class="fa-solid fa-chevron-left"></i></button>
             <button class="tr-next-button"><i class="fa-solid fa-chevron-right"></i></button>
           </section>
+
+          <!-- 추가 -->
+          <section id="trend-movie-section" class="mv-slide-section">
+            <h2>#Trend</h2>
+
+            <!-- swiper 할곳 -->
+            <ul id="trend-movies" class="mv-slide">
+            </ul>
+            <button class="tr-pre-button"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="tr-next-button"><i class="fa-solid fa-chevron-right"></i></button>
+          </section>
+
+
 
           <!-- section3 -->
           <section id="main-movie-section">
