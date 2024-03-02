@@ -10,20 +10,19 @@ a{
     color: inherit;
 }
 
-
 /* 헤더자리대체 */
 header {
     width: 100%;
     height: 60px;
     border-bottom: 1px solid #ebebeb;
 }
-
 #search-page {
     margin: 0 auto;
     margin-top: 150px;
-    max-width: 1280px;
+    width: 100%;
     padding: 0 40px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 #search-page .search-page-input-box{
     position: relative;
@@ -128,26 +127,42 @@ header {
 }
 
 /* 인기 */
-.sp-popular-movies {
-    max-width: 1000px;
+#sp-reco-movie-wrap{
+    width: 100%;
+}
+#sp-reco-movie-wrap > div{
+    width: auto;
     margin: 0 auto;
 }
-#sp-popular-movies-board{
+#sp-reco-movie-wrap > div ul {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 350px;
-    overflow-x: auto;
-    scrollbar-width: none;
+    width: auto;
+    height: 280px;
     cursor: grab;
 }
-#sp-popular-movies-board li{
+#sp-reco-movie-wrap > div ul li {
     width: 150px;
     margin-right: 20px;
 }
-#sp-popular-movies-board li img{
+#sp-reco-movie-wrap > div ul li:hover img{
+    transform:scale(1.1);
+}
+
+#sp-reco-movie-wrap > div ul li img {
     width: 150px;
     border-radius: 15px;
+}
+.sp-popular-movies {
+    
+}
+#sp-popular-movies-board{
+    
+}
+#sp-popular-movies-board li{
+   
+}
+#sp-popular-movies-board li img{
+    
 }
 
 .sp-hidden {
@@ -266,4 +281,35 @@ header {
         width: 250px;
         height: 350px;
     }
+}
+
+@keyframes sp-scroll-1{
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes sp-scroll-2 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  /* 애니메이션 속도 및 무한 반복 설정 */
+  #sp-popular-movies-board {
+    animation: sp-scroll-1 55s linear infinite;
+    white-space: nowrap;
+    /* overflow: hidden; */
+}
+
+#sp-running-movies-board {
+    animation: sp-scroll-2 55s linear infinite;
+    white-space: nowrap;
+    /* overflow: hidden; */
 }

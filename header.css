@@ -298,6 +298,14 @@ color: white;
 color: #fff;
 }
 
+.header-element.dark {
+  background: #292c35;
+  color: white;
+}
+
+.header-element.dark p {
+  color: #fff;
+}
 
 
 /* pc */
