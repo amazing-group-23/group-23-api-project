@@ -294,15 +294,11 @@ h2 {
 #home-aside > button:hover a {
   color: var(--main-color);
 }
-.dark {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-.dark {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
 
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
 /* Dark mode styles for header elements */
 .dark #home-header {
   background-color: #1a1a1a;
@@ -385,6 +381,7 @@ h2 {
   /* main */
   #home-main .home-main-inner dl dt h2 {
     font-size: 40px;
+    color: #fff;
   }
   #home-main br {
     display: block;
@@ -398,7 +395,7 @@ h2 {
   /* section area */
   .home-value-bar-inner {
     width: 100%;
-    padding: 30px 0 40px 20px;
+    padding: 30px 20px 40px 20px;
   }
   .home-value-bar-inner dl {
     position: relative;
@@ -509,7 +506,7 @@ h2 {
   }
     /* section area */
   .home-value-bar-inner {
-    padding: 20px 0 30px 20px;
+    padding: 20px 20px 30px 20px;
   }
   .home-value-bar-inner dl dt {
     padding: 0 0 20px 0;
@@ -559,7 +556,7 @@ h2 {
 @media (max-width: 320px){
     /* section area */
     .home-value-bar-inner {
-      padding: 15px 0 25px 15px;
+      padding: 15px 15px 25px 15px;
     }
     .home-value-bar-inner dl dt {
       padding: 0 0 20px 0;
