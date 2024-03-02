@@ -20,6 +20,7 @@ h2 {
   background: url("./assets/img/home-main-img-3.jpeg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-attachment: fixed;
 }
 #home-main .home-main-inner::after {
   content: "";
@@ -115,6 +116,8 @@ h2 {
 #main-movie-section h2 {
   position: relative;
   margin: 50px 0;
+  position: relative;
+  margin: 50px 0;
   font-size: 35px;
 }
 #top-rate-movie-section h2::after,
@@ -141,10 +144,18 @@ h2 {
 }
 #top-rate-movies li {
   width: 300px;
+  position: relative;
+  width: 230px;
+  margin: 10px 0;
   border-radius: 20px;
+  box-shadow: 0 0 10px 0 rgb(178, 178, 178);
+  transition: transform 0.25s;
+  overflow: hidden;
 }
 #top-rate-movies li a {
   display: block;
+  width: 100%;
+  height: 100%;
   width: 100%;
   height: 100%;
 }
@@ -169,6 +180,9 @@ h2 {
   margin: 0 auto;
 }
 #main-movie-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
@@ -256,8 +270,9 @@ h2 {
 
 /* 투명하게 만들고 label 안에 위치시킴 */
 .checkbox {
-  opacity: 0;
+  display: none;
   position: absolute;
+  opacity: 0;
 }
 
 /* label(checkbox)이 클릭되면 공의 모션 */
@@ -278,7 +293,6 @@ h2 {
   /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
   transform: scale(1.5);
 }
-
 /* typing effect */
 .input-cursor {
   display: inline-block;
