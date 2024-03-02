@@ -203,25 +203,45 @@ hamburgerBtn.addEventListener("click", () => {
   });
 });
 
-//top10 slide
 document.addEventListener("DOMContentLoaded", function () {
-  const slide = document.querySelector("#top-rate-movies");
-  const nextBtn = document.querySelector(".tr-next-button");
-  const prevBtn = document.querySelector(".tr-pre-button");
+  const topRateSlide = document.querySelector("#top-rate-movies");
+  const trendSlide = document.querySelector("#trend-movies");
+  const topRateNextBtn = document.querySelector(".tr-next-button");
+  const topRatePrevBtn = document.querySelector(".tr-pre-button");
+  const trendNextBtn = document.querySelector(".trend-next-button");
+  const trendPrevBtn = document.querySelector(".trend-pre-button");
 
-  nextBtn.addEventListener("click", function () {
-    const itemWidth = slide.querySelector("li").offsetWidth + 20; // Adjusted for margin
-    const scrollAmount = slide.scrollLeft + itemWidth * 5;
-    slide.scrollTo({
+  topRateNextBtn.addEventListener("click", function () {
+    const itemWidth = topRateSlide.querySelector("li").offsetWidth + 20; // 마진 조정
+    const scrollAmount = topRateSlide.scrollLeft + itemWidth * 5;
+    topRateSlide.scrollTo({
       left: scrollAmount,
       behavior: "smooth",
     });
   });
 
-  prevBtn.addEventListener("click", function () {
-    const itemWidth = slide.querySelector("li").offsetWidth + 20; // Adjusted for margin
-    const scrollAmount = slide.scrollLeft - itemWidth * 5;
-    slide.scrollTo({
+  topRatePrevBtn.addEventListener("click", function () {
+    const itemWidth = topRateSlide.querySelector("li").offsetWidth + 20; // 마진 조정
+    const scrollAmount = topRateSlide.scrollLeft - itemWidth * 5;
+    topRateSlide.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+  });
+
+  trendNextBtn.addEventListener("click", function () {
+    const itemWidth = trendSlide.querySelector("li").offsetWidth + 20; // 마진 조정
+    const scrollAmount = trendSlide.scrollLeft + itemWidth * 5;
+    trendSlide.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+  });
+
+  trendPrevBtn.addEventListener("click", function () {
+    const itemWidth = trendSlide.querySelector("li").offsetWidth + 20; // 마진 조정
+    const scrollAmount = trendSlide.scrollLeft - itemWidth * 5;
+    trendSlide.scrollTo({
       left: scrollAmount,
       behavior: "smooth",
     });

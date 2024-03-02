@@ -221,6 +221,14 @@ h2 {
   top: 50%;
   right: 10px;
 }
+.trend-pre-button{
+  top: 50%;
+  left: 10px;
+}
+.trend-next-button{
+  top: 50%;
+  right: 10px;
+}
 
 /* section3 - movie */
 #main-movie-section {
