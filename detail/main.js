@@ -1,13 +1,12 @@
 const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
-const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
+const SPOTIFY_API_KEY = "ff518ea60amsh58ecc77c5666d05p17aaabjsnc1b8b85d4e36";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
-const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
-const getYear = () => {
-  const detailFooter = document.getElementById("detail-footer");
-  const year = new Date().getFullYear();
-  detailFooter.innerText = `©${year} muvic`;
-};
+// const getYear = () => {
+//   const detailFooter = document.getElementById("detail-footer");
+//   const year = new Date().getFullYear();
+//   detailFooter.innerText = `©${year} muvic`;
+// };
 
 const renderMovieDetail = async () => {
   // get movie detail data
@@ -34,7 +33,9 @@ const renderMovieDetail = async () => {
   </div>
   <div class="trailer-container">
     <h1>Trailer</h1>
-    <iframe src="https://www.youtube.com/embed/${trailer.key}?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <iframe src="https://www.youtube.com/embed/${
+      trailer.key
+    }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
@@ -118,4 +119,5 @@ function clickDarkMode() {
 
 renderMovieDetail();
 
-getYear();
+// getYear();
+//
