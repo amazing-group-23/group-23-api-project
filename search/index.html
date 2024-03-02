@@ -5,15 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link href="../style.css" rel="stylesheet" />
+    <link href="../header.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- 검색 페이지 뼈대 -->
-    <header></header>
+
+
     <section id="search-page">
         <div class = "search-page-input-box">
             <input type="text" placeholder="제목을 입력해보세요."/>
-            <button>검색</button>
+            <div class="sp-button-wrap">
+                <div class="sp-close-button"><button><i class="fa-solid fa-circle-xmark" style="color: #969696;"></i></button></div>
+                <button class="sp-search-button"><i class="fa-solid fa-circle-plus" style="color: #8f8f8f;"></i></button>
+            </div>
+            <p></p>
+        </div>
+        <div id="sp-reco-movie-wrap">
+            <div class="sp-popular-movies">
+                <!-- <h3>현재 인기있는 영화</h3> -->
+                <ul id="sp-popular-movies-board">
+
+                </ul>
+            </div>
+            <div class="sp-running-movies">
+                <!-- <h3>상영중인 영화</h3> -->
+                <ul id="sp-running-movies-board">
+
+                </ul>
+            </div>
         </div>
         <div class="searched-films-container">
             <ul id="movie-board">
@@ -22,6 +42,7 @@
         </div>
     </section>
 
+    <script src="https://kit.fontawesome.com/4a27de40e1.js" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
 </html>
