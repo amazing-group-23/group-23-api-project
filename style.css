@@ -119,10 +119,11 @@ h2 {
 .mv-slide-section h2,
 #main-movie-section h2 {
   position: relative;
-  margin: 50px 0 25px 20px;
+  margin: 50px 0 10px 20px;
   font-size: 35px;
 }
 .mv-slide-section p {
+  margin: 0;
   margin-left: 15px;
 }
 
@@ -130,7 +131,7 @@ h2 {
   margin-top: 100px;
 }
 
-#top-rate-movie-section h2::after,
+.mv-slide-section h2::after,
 #main-movie-section h2::after {
   content: '';
   display: inline-block;
@@ -214,7 +215,7 @@ h2 {
   font-size: 30px;
   color: #000;
 }
-#top-rate-movie-section button:hover i {
+.mv-slide-section button:hover i {
   color: var(--main-color);
 }
 .tr-pre-button{
@@ -422,7 +423,7 @@ h2 {
   #home-main .home-main-inner dl dd {
     font-size: 25px;
   }
-  #top-rate-movies li {
+  .mv-slide li {
     width: calc(100% / 4 - 20px);
   }
   /* section area */
@@ -448,12 +449,12 @@ h2 {
   }
 
   /* section2 - top10 */
-  #top-rate-movie-section {
+  .mv-slide-section {
     width: 100%;
   }
-  #top-rate-movie-section h2,
+  .mv-slide-section h2,
   #main-movie-section h2 {
-    margin: 40px 0 25px 20px;
+    margin: 40px 0 10p 20px;
     font-size: 30px;
   }
   /* section3 - movie */
@@ -481,17 +482,17 @@ h2 {
     width: 3px;
     height: 30px;
   }
-  #top-rate-movies li {
+  .mv-slide li {
     width: calc(100% / 3 - 20px);
   }
-  #top-rate-movie-section button {
+  .mv-slide-section button {
     width: 35px;
     height: 35px;
   }
-  #top-rate-movie-section button i {
+  .mv-slide-section button i {
     font-size: 25px;
   }
-  #top-rate-movie-section h2,
+  .mv-slide-section h2,
   #main-movie-section h2 {
     margin: 25px 0 25px 20px;
     font-size: 25px;
@@ -552,7 +553,7 @@ h2 {
    .input-cursor {
     height: 25px;
   }
-  #top-rate-movies li {
+  .mv-slide li {
     width: calc(100% / 2 - 20px);
   }
    /* section3 - movie */
@@ -585,7 +586,7 @@ h2 {
     .home-value-bar-inner dl dd {
       font-size: 12px;
     }
-  #top-rate-movies li {
+  .mv-slide li {
     width: calc(100% / 1 - 20px);
   }
-}
+}}
