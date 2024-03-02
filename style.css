@@ -236,7 +236,7 @@ h2 {
 }
 
 /* Dark mode styles for header elements */
-.dark .home-header {
+.dark #home-header {
   background-color: #1a1a1a;
   color: #ffffff;
 }
