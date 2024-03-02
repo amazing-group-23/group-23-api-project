@@ -214,24 +214,12 @@ html {
   color: #fff;
 }
 
-/* Dark mode styles for header elements */
-.dark #home-header {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
 .dark .movie-detail-info {
   background-color: #1a1a1a;
   color: #ffffff;
 }
 
 .dark .movie-info-background {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
-/* Dark mode styles for header elements */
-.dark #home-header {
   background-color: #1a1a1a;
   color: #ffffff;
 }
