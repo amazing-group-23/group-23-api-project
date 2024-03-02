@@ -37,7 +37,7 @@ const renderMovieDetail = async () => {
   <div class="trailer-container">
     <h1>Trailer</h1>
       ${trailer ? `
-        <iframe src="https://www.youtube.com/embed/${
+        <iframe class="youtube-trailer" src="https://www.youtube.com/embed/${
           trailer.key
         }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         ` : 
