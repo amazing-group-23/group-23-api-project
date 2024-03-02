@@ -48,7 +48,7 @@ const getTopRateMovies = async () => {
   const response = await fetch(url);
   const data = await response.json();
   console.log("데이터는", data);
-  topRateFilmsList = data.results.slice(0, 4);
+  topRateFilmsList = data.results.slice(0, 10);
   topRateFilmsRender();
 };
 
@@ -184,3 +184,13 @@ const typingEffect = async () => {
 // 영화 및 최고 평점 영화 가져오기
 fetchMovies();
 typingEffect();
+
+// hamburger toggle btn
+const hamburgerBtn = document.querySelector(".hamburger-btn");
+const hamburgerBtnSticks = hamburgerBtn.querySelectorAll("span"); // 수정된 부분
+
+hamburgerBtn.addEventListener("click", () => {
+  hamburgerBtnSticks.forEach((stick) => {
+    stick.classList.toggle("change");
+  });
+});
