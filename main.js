@@ -13,7 +13,7 @@ const typingText = document.querySelector(".typing-text");
 // movies 가져오기
 const getMovies = async () => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR&page=${currentPage}`
+    `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=ko-KR&page=${currentPage}`
   );
   const data = await response.json();
   console.log("데이터는", data);
@@ -129,18 +129,35 @@ checkbox.addEventListener("click", clickDarkMode);
 //   }
 // }
 
+// function clickDarkMode() {
+//   if (document.body.classList.contains("dark")) {
+//     //documentElement.head.classList.remove("dark");
+//     document.head.classList.remove("dark");
+//     //HTMLBodyElement.head.classList.remove("dark");
+//     //document.head.classList.remove("dark");
+//     document.body.classList.remove("dark");
+//     //document.documentElement.classList.remove("dark");
+//     //document.head.classList.remove("dark");
+//     console.log("convert into Light Mode");
+//   } else {
+//     //HTMLBodyElement.head.classList.add("dark");
+//     //documentElement.head.classList.add("dark");
+//     document.head.classList.add("dark");
+//     document.body.classList.add("dark");
+//     //document.documentElement.classList.add("dark");
+//     //document.head.classList.add("dark");
+//     console.log("convert into Dark Mode");
+//   }
+// }
+
 function clickDarkMode() {
-  // Toggle dark mode for the body
-  document.body.classList.toggle("dark");
-
-  // Toggle dark mode for specific elements in the header
-  const headerElements = document.querySelectorAll(".home-header");
-
-  headerElements.forEach((element) => {
-    element.classList.toggle("dark");
-  });
-
-  console.log("Dark mode toggled");
+  if (document.body.classList.contains("dark")) {
+    document.body.classList.remove("dark");
+    console.log("convert into Light Mode");
+  } else {
+    document.body.classList.add("dark");
+    console.log("convert into Dark Mode");
+  }
 }
 
 const typeWord = async (word, delay = 100) => {
@@ -192,5 +209,30 @@ const hamburgerBtnSticks = hamburgerBtn.querySelectorAll('span'); // 수정된 �
 hamburgerBtn.addEventListener('click',() => {
   hamburgerBtnSticks.forEach(stick => {
     stick.classList.toggle('change');
+  });
+});
+
+//top10 slide
+document.addEventListener('DOMContentLoaded', function () {
+  const slide = document.querySelector('#top-rate-movies');
+  const nextBtn = document.querySelector('.tr-next-button');
+  const prevBtn = document.querySelector('.tr-pre-button');
+
+  nextBtn.addEventListener('click', function () {
+    const itemWidth = slide.querySelector('li').offsetWidth + 20; // Adjusted for margin
+    const scrollAmount = slide.scrollLeft + itemWidth * 5;
+    slide.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+  prevBtn.addEventListener('click', function () {
+    const itemWidth = slide.querySelector('li').offsetWidth + 20; // Adjusted for margin
+    const scrollAmount = slide.scrollLeft - itemWidth * 5;
+    slide.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
   });
 });
