@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./header.css" />
     <!-- title -->
     <title>MUVIC</title>
-    
   </head>
   <body>
-    <div id="home-wrap">
+    <div id="home-wrap" >
+       <div class="header-element checkbox-container" >
       <header id="home-header">
+      <header class="home-header">
         <div>
           <!-- nav -->
           <nav>
@@ -30,6 +34,7 @@
                 <li><a href="#none">category</a></li>
               </ul>
             </div>
+            <div class="header-element"></div>
             <!-- nav-right -->
             <div class="nav-right">
               <a href="./search/index.html">
@@ -37,6 +42,7 @@
               </a>
 
               <div>
+
                 <input type="checkbox" class="checkbox" id="checkbox" />
                 <label
                   style="right: -50px"
@@ -47,67 +53,71 @@
                   <i class="fas fa-sun"></i>
                   <!-- 다크모드 전환 원 -->
                   <div class="ball"></div>
+                  
                 </label>
               </div>
             </div>
           </nav>
+          
         </div>
+        </div>
+        </div>
+        </header>
       </header>
 
       <!-- container -->
       <div id="home-container">
-          <!-- main -->
-          <main id="home-main">
-            <div class="home-main-inner">
-              <dl>
-                <dt>
-                  <h2>muvic</h2> is
-                  <span class="typing-text"></span>
-                  <span class="input-cursor"></span>
-                </dt>
-                <dd><h3>Movies and Music at the same times</h3></dd>
-              </dl>
-            </div>
-          </main>
+        <!-- main -->
+        <main id="home-main">
+          <div class="home-main-inner">
+            <dl>
+              <dt>
+                <h2>muvic</h2>
+                is
+                <span class="typing-text"></span>
+                <span class="input-cursor"></span>
+              </dt>
+              <dd><h3>Movies and Music at the same times</h3></dd>
+            </dl>
+          </div>
+        </main>
 
-          <!-- section1 - top10 -->
-          <section id="top-rate-movie-section">
-            <h2>Top10</h2>
+        <!-- section1 - top10 -->
+        <section id="top-rate-movie-section">
+          <h2>Top10</h2>
 
-            <!-- swiper 할곳 -->
-            <ul id="top-rate-movies">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+          <!-- swiper 할곳 -->
+          <ul id="top-rate-movies">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
 
-            <!-- line -->
-            <span></span>
-          </section>
+          <!-- line -->
+          <span></span>
+        </section>
 
-          <!-- section2 -->
-          <section id="main-movie-section">
-            <h2>Movie</h2>
-            <!-- list -->
-            <ul id="main-movie-board">
-            </ul>
-            <!-- pagination -->
-            <nav class="main-movie-pagination">
-                <a href="#none">
-                  <i class="fa-solid fa-angles-left"></i>
-                </a>
-                <a href="#none">1</a>
-                <a href="#none">2</a>
-                <a href="#none">3</a>
-                <a href="#none">
-                  <i class="fa-solid fa-angles-right"></i>
-                </a>
-            </nav>
-          </section>
-        </div>
+        <!-- section2 -->
+        <section id="main-movie-section">
+          <h2>Movie</h2>
+          <!-- list -->
+          <ul id="main-movie-board"></ul>
+          <!-- pagination -->
+          <nav class="main-movie-pagination">
+            <a href="#none">
+              <i class="fa-solid fa-angles-left"></i>
+            </a>
+            <a href="#none">1</a>
+            <a href="#none">2</a>
+            <a href="#none">3</a>
+            <a href="#none">
+              <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </nav>
+        </section>
+      </div>
     </div>
-
 
     <!-- aside -->
     <aside id="home-aside">
@@ -117,8 +127,6 @@
         </a>
       </button>
     </aside>
-
-
 
     <!-- font awesome -->
     <script
