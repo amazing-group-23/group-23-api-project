@@ -1,0 +1,117 @@
+#home-footer {
+    width: 100%;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 #7a7a7a;
+    overflow: hidden;
+}
+#home-footer .home-footer-inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+#home-footer .home-footer-inner h3 {
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    color: var(--main-color);
+    transition: .2s ease-in-out;
+}
+#home-footer .home-footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#home-footer dl {
+    width: 200px;
+}
+#home-footer dl dt {
+    margin: 20px 0;
+    font-size: 12px;
+}
+#home-footer dl dd {
+    padding: 3px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+#home-footer dl dd a {
+    color: #7a7a7a;
+    transition: .2s ease-in-out;
+}
+#home-footer dl dd:hover a {
+    color: #000;
+}
+#home-footer .home-footer-icon {
+    margin: 50px 0 40px 0;
+}
+#home-footer .home-footer-icon ul {
+    display: flex;
+    justify-content: center;
+}
+#home-footer .home-footer-icon ul li {
+    width: 45px;
+    height: 45px;
+    margin: 0 10px;
+    transition: .2s ease-in-out;
+}
+#home-footer .home-footer-icon ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#home-footer .home-footer-icon ul li a img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* media */
+@media (max-width : 1080px) {
+   
+  }
+  @media (max-width: 768px) {
+    #home-footer .home-footer-inner h3 {
+        font-size: 23px;
+        margin: 0 0;
+    }
+    #home-footer dl dd {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+    #home-footer .home-footer-icon {
+        margin: 20px 0 20px 0;
+    }
+    #home-footer .home-footer-icon ul li {
+        width: 30px;
+        height: 30px;
+    }
+  }
+  @media (max-width: 520px) {
+    #home-footer .home-footer-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    #home-footer .home-footer-inner h3 {
+        font-size: 20px;
+    }
+    #home-footer dl dt {
+       margin: 15px 0;
+    }
+  }
+  @media (max-width: 320px) {
+    #home-footer .home-footer-icon ul li {
+        margin: 0 5px;
+  }
+}
