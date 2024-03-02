@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <link href="../style.css" rel="stylesheet" />
     <link href="../header.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
+    <link href="../header.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
-</head>
-<body>
-
-
+  </head>
+  <body>
     <section id="search-page">
-        <div class = "search-page-input-box">
-            <input type="text" placeholder="제목을 입력해보세요."/>
-            <div class="sp-button-wrap">
-                <div class="sp-close-button"><button><i class="fa-solid fa-circle-xmark" style="color: #969696;"></i></button></div>
-                <button class="sp-search-button"><i class="fa-solid fa-circle-plus" style="color: #8f8f8f;"></i></button>
-            </div>
-            <p></p>
-        </div>
-        <div class="sp-popular-movies">
-            <h3>현재 인기있는 영화</h3>
-            <ul id="sp-popular-movies-board">
-
-            </ul>
-        </div>
-        <div class="searched-films-container">
-            <ul id="movie-board">
-                
-            </ul>
-        </div>
+      <div class="search-page-input-box">
+        <input type="text" placeholder="제목을 입력해보세요." />
+        <button>검색</button>
+      </div>
+      <div class="searched-films-container">
+        <ul id="movie-board"></ul>
+      </div>
     </section>
 
-    <script src="https://kit.fontawesome.com/4a27de40e1.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4a27de40e1.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
