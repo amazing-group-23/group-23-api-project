@@ -126,14 +126,20 @@ iframe{
 
 .record-image {
   position: fixed;
+  width: 60vw;
   left: -300px;
   bottom: -300px;
   animation: rotation 6s infinite linear;
   border-radius: 50%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.6);
   z-index: -2;
+}
+
+.dark .record-image {
+    box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.6);
 }
 
 @keyframes rotation {
@@ -176,16 +182,6 @@ iframe{
 }
 
 .dark .movie-info-background {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
-.dark #wrap {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
-.dark {
   background-color: #1a1a1a;
   color: #ffffff;
 }
