@@ -6,7 +6,8 @@
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fff;
+  opacity: 0.9;
   z-index: 998;
 }
 /* nav */
@@ -78,6 +79,7 @@
 }
 /* logo */
 #home-header .home-nav-inner h1 {
+  position: relative;
   margin: 0 10px 0 0;
   font-size: 30px;
   font-weight: bold;
@@ -86,6 +88,18 @@
   color: var(--main-color);
   transition: 0.2s ease-in-out;
 }
+
+#home-header .home-nav-inner h1::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+
 /* menu */
 #home-header .home-menu {
   position: relative;
@@ -119,6 +133,7 @@
 #home-header .home-menu > li:hover > a::after {
   opacity: 1;
   top: 30%;
+  z-index: 1;
 }
 #home-header .home-menu > li > a {
   display: block;
@@ -186,8 +201,8 @@
   display: block;
   width: 35px;
   height: 35px;
-  line-height: 35px;
-  font-size: 20px;
+  line-height: 37px;
+  font-size: 15px;
 }
 
 /* mobile menu */
@@ -317,19 +332,24 @@
   background-color: #1a1a1a;
   color: #ffffff;
 }
-.dark {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
 
 /* Dark mode styles for header elements */
-.dark .home-header {
+.dark #home-header {
+  background-color: #1a1a1a;
   color: #ffffff;
+  opacity: 0.9;
 }
-/* Dark mode styles for header elements */
-.dark .home-header {
-  color: #ffffff;
+
+.dark #home-header .hamburger-btn > span {
+  background-color: #fff;
 }
+
+.dark .home-submenu-pc,
+.dark #mobile-slide-menu {
+  background-color: #1a1a1a !important;
+  box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.6);
+}
+
 .ball {
   background-color: #fff;
   position: absolute;
@@ -341,6 +361,10 @@
   /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
   /* transform을 0.2초간 끝이 느려지도록 */
   transition: transform 0.2s ease-out;
+}
+
+.dark .ball {
+  background-color: #111;
 }
 
 .fa-moon {
@@ -363,7 +387,7 @@
   transform: translateX(24px);
 }
 
-.dark .nav-right i {
+.dark .nav-right .fa-magnifying-glass {
   color: #fff;
 }
 
@@ -379,6 +403,11 @@
   /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
   transform: scale(1.5);
 }
+
+.dark .label_DarkMode {
+  background-color: #fff;
+}
+
 /* typing effect */
 .input-cursor {
   display: inline-block;
