@@ -305,13 +305,13 @@ header {
   
   /* 애니메이션 속도 및 무한 반복 설정 */
   #sp-popular-movies-board {
-    animation: sp-scroll-1 25s linear infinite;
+    animation: sp-scroll-1 55s linear infinite;
     white-space: nowrap;
     /* overflow: hidden; */
 }
 
 #sp-running-movies-board {
-    animation: sp-scroll-2 25s linear infinite;
+    animation: sp-scroll-2 55s linear infinite;
     white-space: nowrap;
     /* overflow: hidden; */
 }
