@@ -1,4 +1,4 @@
-*{
+/**{
     margin: 0;
     padding: 0;
 }
@@ -13,44 +13,75 @@ button {
     background: none;
     outline: none;
     border: none;
+}*/
+/* main 추가.. */
+#category-main {
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/img/home-main-img-1.jpeg')center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
-
+#category-main dl {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    transform: translate(-50%,-75%);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+#category-main dl dt h2{
+    font-size: 30px;
+}
+/* 재은언니 area */
 #category-title-wrap {
     display: flex;
+    position: fixed;
+    right: 110px;
+    top: 60px;
     max-width: 1280px;
     margin: 0 auto;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    padding: 0 10px;
     box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
 }
 #category-title-wrap li {
+    padding: 10px 10px 15px 10px;
+    box-sizing: border-box;
     margin-right: 10px;
     font-size: 20px;
     cursor: pointer;
 }
 #category-title-wrap li:hover button{ 
-    color: #ccc;
+    color: var(--main-color);
 }
 #category-title-wrap button {
     font-size: 18px;
+    transition: color .2s ease-in;
 }
 #categorized-films-board{
     display: grid;
     grid-template-columns :repeat(5, 1fr);
     width: 1280px;
     margin: 0 auto;
+    padding: 40px 0 0 0;
+    box-sizing: border-box;
     gap: 40px;
 }
 #categorized-films-board li{
     width: 220px;
-    border-radius: 20px;
     height: 310px;
+    border-radius: 20px;
     text-align: center;
-    color: #ccc;
     line-height: 300px;
-    overflow: hidden;
     transition: .25s;
-    margin-top: 40px;
+    color: #ccc;
+    overflow: hidden;
 }
 #categorized-films-board li img {
     width: 100%;
