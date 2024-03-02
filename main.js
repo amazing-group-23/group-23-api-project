@@ -7,9 +7,8 @@ let topRateFilmsList = [];
 let currentPage = 1;
 let isLoading = false;
 // Typing effect
-const typingWords = ["awesome", "amazing", "fantastic"]
+const typingWords = ["awesome", "amazing", "fantastic"];
 const typingText = document.querySelector(".typing-text");
-
 
 // movies 가져오기
 const getMovies = async () => {
@@ -97,7 +96,7 @@ const fetchMoreMovies = async () => {
 const fetchMovies = async () => {
   await getMovies();
   await getTopRateMovies();
-}
+};
 
 // const checkbox = document.getElementById('checkbox');
 const checkbox = document.querySelector(".checkbox");
@@ -109,53 +108,78 @@ checkbox.addEventListener("click", clickDarkMode);
 // 웹사이트의 배경 바꾸기
 // classList는 js가 css를 제어할 수 있게 함
 //class가 존재하면 클래스 제거, 클래스가 존재하지 않으면 클래스 추가하는 메서드
+// function clickDarkMode() {
+//   if (document.body.classList.contains("dark")) {
+//     //documentElement.head.classList.remove("dark");
+//     document.head.classList.remove("dark");
+//     //HTMLBodyElement.head.classList.remove("dark");
+//     //document.head.classList.remove("dark");
+//     document.body.classList.remove("dark");
+//     //document.documentElement.classList.remove("dark");
+//     //document.head.classList.remove("dark");
+//     console.log("convert into Light Mode");
+//   } else {
+//     //HTMLBodyElement.head.classList.add("dark");
+//     //documentElement.head.classList.add("dark");
+//     document.head.classList.add("dark");
+//     document.body.classList.add("dark");
+//     //document.documentElement.classList.add("dark");
+//     //document.head.classList.add("dark");
+//     console.log("convert into Dark Mode");
+//   }
+// }
+
 function clickDarkMode() {
-  if (document.body.classList.contains("dark")) {
-    document.body.classList.remove("dark");
-    console.log("convert into Light Mode");
-  } else {
-    document.body.classList.add("dark");
-    console.log("convert into Dark Mode");
-  }
+  // Toggle dark mode for the body
+  document.body.classList.toggle("dark");
+
+  // Toggle dark mode for specific elements in the header
+  const headerElements = document.querySelectorAll(".home-header");
+
+  headerElements.forEach((element) => {
+    element.classList.toggle("dark");
+  });
+
+  console.log("Dark mode toggled");
 }
 
 const typeWord = async (word, delay = 100) => {
   const letters = word.split("");
   let i = 0;
-  while(i < letters.length) {
+  while (i < letters.length) {
     await waitForMs(delay);
     typingText.innerHTML += letters[i];
-    i++
+    i++;
   }
   return;
-}
+};
 
 const deleteSentence = async (eleRef) => {
   const sentence = typingText.innerHTML;
   const letters = sentence.split("");
   let i = 0;
-  while(letters.length > 0) {
+  while (letters.length > 0) {
     await waitForMs(100);
     letters.pop();
     typingText.innerHTML = letters.join("");
   }
-}
+};
 
-const waitForMs = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const waitForMs = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const typingEffect = async () => {
   var i = 0;
-  while(true) {
+  while (true) {
     await typeWord(typingWords[i]);
     await waitForMs(1500);
     await deleteSentence();
     await waitForMs(500);
-    i++
-    if(i >= typingWords.length) {
+    i++;
+    if (i >= typingWords.length) {
       i = 0;
     }
   }
-}
+};
 
 // 영화 및 최고 평점 영화 가져오기
 fetchMovies();
