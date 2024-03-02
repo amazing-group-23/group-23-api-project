@@ -1,12 +1,8 @@
 const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
-const SPOTIFY_API_KEY = "ff518ea60amsh58ecc77c5666d05p17aaabjsnc1b8b85d4e36";
+//const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
+const SPOTIFY_API_KEY="8564be05bcmshab4e816a8ff6140p1cfa2bjsn71585391092b";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
-
-// const getYear = () => {
-//   const detailFooter = document.getElementById("detail-footer");
-//   const year = new Date().getFullYear();
-//   detailFooter.innerText = `©${year} muvic`;
-// };
+const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
 const renderMovieDetail = async () => {
   // get movie detail data in Korean
@@ -31,9 +27,9 @@ const renderMovieDetail = async () => {
     }" />
     <div class="movie-detail-text">
       <h1>${data.title}</h1>
-      <span>Grenre: ${data.genres[0].name}</span>
-      <span>Rating: ${data.vote_average}<img src="star.png"/></span>
-      <span>Release Date: ${data.release_date}</span>
+      <span>장르 : ${data.genres[0].name}</span>
+      <span>평점 : ${data.vote_average}<img src="star.png"/></span>
+      <span>개봉일 : ${data.release_date}</span>
       <div class="movie-detail-text-line"></div>
       <p>${data.overview}</p>
     </div>
@@ -52,9 +48,8 @@ const renderMovieDetail = async () => {
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
     data.poster_path
-      ? "https://image.tmdb.org/t/p/w500" + data.poster_path
-      : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
-  })`;
+    ? "https://image.tmdb.org/t/p/w500" + data.poster_path
+    : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"})`;
 
   const movieDetailContainer = document.querySelector(
     ".movie-detail-container"
@@ -138,6 +133,3 @@ function clickDarkMode() {
 }
 
 renderMovieDetail();
-
-// getYear();
-//

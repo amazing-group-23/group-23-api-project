@@ -1,10 +1,18 @@
 @import "../reset.css";
 @import "../header.css";
+@import "../footer.css";
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/*color*/
-:root {
-  --main-color: #ff0558;
+/*  font-family: "Lato", "Roboto",sans-serif; */
+html{
+    font-family: "Lato", sans-serif;
+   
 }
+/*color*/
+ :root {
+  --main-color: #ff0558;
+} 
 
 #wrap {
     max-width: 77.5rem;
@@ -42,7 +50,6 @@
 
 .movie-detail-info{
     display: flex;
-    /* margin-bottom: 100px; */
     margin-bottom: 6.25rem;
 }
 
@@ -77,7 +84,7 @@
 
 .movie-detail-text > P{
     font-weight: 600;
-    font-size: 1.563rem;
+    font-size: 1.4rem;
     line-height: 1.5em;
 }  
 .movie-detail-text-line{
@@ -107,15 +114,6 @@ iframe{
     width: 73.125rem;
     height: 40.625rem;
     transition: all 0.3s ease;
-}
-
-/* footer */
-.detail-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*movie ost*/
@@ -152,38 +150,38 @@ iframe{
 }
 
 /* aside & dark mode*/
+/* aside */
 #home-aside {
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
 }
 
 #home-aside > button {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin: 10px 0;
-  border-radius: 50%;
-  background-color: lightgrey;
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    box-shadow: 0 0 8px 0 #00000061;
+    transition: .2s ease-in-out;
+}
+
+#home-aside > button:hover {
+    background-color: #fff;
 }
 
 #home-aside > button > a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 50px;
-  transition: all 0.3s ease-in;
-  color: #000;
-}
-
-.dark .movie-detail-info {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
-.dark .movie-info-background {
-  background-color: #1a1a1a;
-  color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+    color: #fff;
 }
 
 /* Dark mode styles for header elements */
@@ -192,50 +190,8 @@ iframe{
   color: #ffffff;
 }
 
-.ball {
-  background-color: #fff;
-  position: absolute;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  width: 22px;
-  height: 22px;
-  /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
-  /* transform을 0.2초간 끝이 느려지도록 */
-  transition: transform 0.2s ease-out;
-}
-
-.fa-moon {
-  color: #f1c40f;
-}
-
-.fa-sun {
-  color: #f39c12;
-}
-
-/* 투명하게 만들고 label 안에 위치시킴 */
-.checkbox {
-  opacity: 0;
-  position: absolute;
-}
-
-/* label(checkbox)이 클릭되면 공의 모션 */
-/* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
-.checkbox:checked + .label_DarkMode .ball {
-  transform: translateX(24px);
-}
-
-.label_DarkMode {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  width: 50px;
-  height: 26px;
-  background-color: #111;
-  border-radius: 50px;
-  /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
-  transform: scale(1.5);
+#home-aside > button:hover a {
+    color: var(--main-color);
 }
 
 /* animation */
@@ -467,6 +423,20 @@ p::first-letter {
         width: 35rem;
         height: 20rem;
     }
+        #home-aside {
+            right: 20px;
+            bottom: 20px;
+        }
+    
+        #home-aside>button {
+            width: 45px;
+            height: 45px;
+        }
+    
+        #home-aside>button>a {
+            line-height: 45px;
+            font-size: 15px;
+        }
 }
 
 @media screen and (max-width: 650px){
