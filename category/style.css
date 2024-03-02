@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+#category-title-wrap {
+    display: flex;
+}
