@@ -1,184 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-     <!-- font Roboto, Lato -->
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- font Roboto, Lato -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <link href="../reset.css" rel="stylesheet" />
     <link href="../header.css" rel="stylesheet" />
     <link href="../footer.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-</head>
-<body>
-  
-
-  <header id="home-header">
-    <div class="home-header">
-      <div>
-        <!-- nav -->
-        <nav>
-          <div class="home-nav-inner">
-            <!-- mobile menu -->
-            <button class="hamburger-btn" onclick="openNav()">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <!-- logo -->
-            <h1><a href="/">MUVIC</a></h1>
-            <!-- menu -->
-            <ul class="home-menu">
-              <li>
-                <a href="category/index.html">genre</a>
-                <!-- submenu -->
-                <ul class="home-submenu-pc">
-                  <li><a href="#none">All</a></li>
-                  <li><a href="#none">Action</a></li>
-                  <li><a href="#none">Comedy</a></li>
-                  <li><a href="#none">Drama</a></li>
-                  <li><a href="#none">Family</a></li>
-                  <li><a href="#none">Romance</a></li>
-                  <li><a href="#none">Thriller</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#none">theater</a>
-                <!-- submenu -->
-                <ul class="home-submenu-pc">
-                  <li><a href="#none">Rating</a></li>
-                  <li><a href="#none">Popularity</a></li>
-                  <li><a href="#none">location</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#none">music</a>
-                <!-- submenu -->
-                <ul class="home-submenu-pc">
-                  <li><a href="#none">Artists</a></li>
-                  <li><a href="#none">Albums</a></li>
-                  <li><a href="#none">ost</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#none">trailer</a>
-              </li>
-            </ul>
-          </div>
-          <!-- nav-right -->
-          <div class="nav-right">
-            <a href="./search/index.html">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-            <!-- dark mode -->
-            <div>
-              <input type="checkbox" class="checkbox" id="checkbox" />
-              <label
-                style="right: -50px"
-                align="center"
-                for="checkbox"
-                class="label_DarkMode"
-              >
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <!-- 다크모드 전환 원 -->
-                <div class="ball"></div>
-              </label>
+  </head>
+  <body>
+    <header id="home-header">
+      <div class="home-header">
+        <div>
+          <!-- nav -->
+          <nav>
+            <div class="home-nav-inner">
+              <!-- mobile menu -->
+              <button class="hamburger-btn" onclick="openNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <!-- logo -->
+              <h1><a href="/">MUVIC</a></h1>
+              <!-- menu -->
+              <ul class="home-menu">
+                <li>
+                  <a href="category/index.html">genre</a>
+                  <!-- submenu -->
+                  <ul class="home-submenu-pc">
+                    <li><a href="#none">All</a></li>
+                    <li><a href="#none">Action</a></li>
+                    <li><a href="#none">Comedy</a></li>
+                    <li><a href="#none">Drama</a></li>
+                    <li><a href="#none">Family</a></li>
+                    <li><a href="#none">Romance</a></li>
+                    <li><a href="#none">Thriller</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#none">theater</a>
+                  <!-- submenu -->
+                  <ul class="home-submenu-pc">
+                    <li><a href="#none">Rating</a></li>
+                    <li><a href="#none">Popularity</a></li>
+                    <li><a href="#none">location</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#none">music</a>
+                  <!-- submenu -->
+                  <ul class="home-submenu-pc">
+                    <li><a href="#none">Artists</a></li>
+                    <li><a href="#none">Albums</a></li>
+                    <li><a href="#none">ost</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#none">trailer</a>
+                </li>
+              </ul>
             </div>
-          </div>
-        </nav>
+            <!-- nav-right -->
+            <div class="nav-right">
+              <a href="./search/index.html">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <!-- dark mode -->
+              <div>
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label
+                  style="right: -5px"
+                  align="center"
+                  for="checkbox"
+                  class="label_DarkMode"
+                >
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <!-- 다크모드 전환 원 -->
+                  <div class="ball"></div>
+                </label>
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
-    </div>
-    <!-- home-header end -->
+      <!-- home-header end -->
 
-    <!-- 슬라이딩 메뉴 컨테이너 -->
-    <div id="mobile-slide-menu">
-      <button type="button" onclick="closeNav()">
-        <span></span>
-        <span></span>
-      </button>
+      <!-- 슬라이딩 메뉴 컨테이너 -->
+      <div id="mobile-slide-menu">
+        <button type="button" onclick="closeNav()">
+          <span></span>
+          <span></span>
+        </button>
 
-      <h1>muvic</h1>
+        <h1>muvic</h1>
 
-      <ul class="mobile-slide-menu-items">
-        <li>
-          <a href="#none" class="mobile-menu-hover">genre</a>
-          <!-- submenu -->
-          <ul class="mobile-slide-menu-items-sub">
-            <li><a href="#none">Action</a></li>
-            <li><a href="#none">Comedy</a></li>
-            <li><a href="#none">Drama</a></li>
-            <li><a href="#none">Family</a></li>
-            <li><a href="#none">Romance</a></li>
-            <li><a href="#none">Thriller</a></li>
-          </ul>
-        </li>
+        <ul class="mobile-slide-menu-items">
+          <li>
+            <a href="#none" class="mobile-menu-hover">genre</a>
+            <!-- submenu -->
+            <ul class="mobile-slide-menu-items-sub">
+              <li><a href="#none">Action</a></li>
+              <li><a href="#none">Comedy</a></li>
+              <li><a href="#none">Drama</a></li>
+              <li><a href="#none">Family</a></li>
+              <li><a href="#none">Romance</a></li>
+              <li><a href="#none">Thriller</a></li>
+            </ul>
+          </li>
 
-        <li>
-          <a href="#none" class="mobile-menu-hover">theater</a>
-          <!-- submenu -->
-          <ul class="mobile-slide-menu-items-sub">
-            <li><a href="#none">Rating</a></li>
-            <li><a href="#none">Popularity</a></li>
-            <li><a href="#none">location</a></li>
-          </ul>
-        </li>
+          <li>
+            <a href="#none" class="mobile-menu-hover">theater</a>
+            <!-- submenu -->
+            <ul class="mobile-slide-menu-items-sub">
+              <li><a href="#none">Rating</a></li>
+              <li><a href="#none">Popularity</a></li>
+              <li><a href="#none">location</a></li>
+            </ul>
+          </li>
 
-        <li>
-          <a href="#none" class="mobile-menu-hover">music</a>
-          <!-- submenu -->
-          <ul class="mobile-slide-menu-items-sub">
-            <li><a href="#none">Artists</a></li>
-            <li><a href="#none">Albums</a></li>
-            <li><a href="#none">ost</a></li>
-          </ul>
-        </li>
+          <li>
+            <a href="#none" class="mobile-menu-hover">music</a>
+            <!-- submenu -->
+            <ul class="mobile-slide-menu-items-sub">
+              <li><a href="#none">Artists</a></li>
+              <li><a href="#none">Albums</a></li>
+              <li><a href="#none">ost</a></li>
+            </ul>
+          </li>
 
-        <li><a href="#none" class="mobile-menu-hover">trailer</a></li>
-      </ul>
-    </div>
-  </header>
+          <li><a href="#none" class="mobile-menu-hover">trailer</a></li>
+        </ul>
+      </div>
+    </header>
 
-
-
-     <!-- category container-->
+    <!-- category container-->
     <section id="category-container">
       <!-- category LIST-->
-      
 
       <main id="category-main">
         <dl>
-            <dt>
-                <h2>A variety of content to suit your preferences,<br>
-                     all in one place
-                </h2>
-            </dt>
+          <dt>
+            <h2>
+              A variety of content to suit your preferences,<br />
+              all in one place
+            </h2>
+          </dt>
         </dl>
-    </main>
+      </main>
 
-    <ul id="category-title-wrap">
-      <li><button onclick="getAllMovies()">All</button></li>
-      <li><button onclick="getMoviesByGenre(28)">Action</button></li>
-      <li><button onclick="getMoviesByGenre(35)">Comedy</button></li>
-      <li><button onclick="getMoviesByGenre(18)">Drama</button></li>
-      <li><button onclick="getMoviesByGenre(10751)">Family</button></li>
-      <li><button onclick="getMoviesByGenre(10749)">Romance</button></li>
-      <li><button onclick="getMoviesByGenre(53)">Thriller</button></li>
-  </ul>
-        <!-- categorized-films-board -->
-        <ul id="categorized-films-board">
-        </ul>
+      <ul id="category-title-wrap">
+        <li><button onclick="getAllMovies()">All</button></li>
+        <li><button onclick="getMoviesByGenre(28)">Action</button></li>
+        <li><button onclick="getMoviesByGenre(35)">Comedy</button></li>
+        <li><button onclick="getMoviesByGenre(18)">Drama</button></li>
+        <li><button onclick="getMoviesByGenre(10751)">Family</button></li>
+        <li><button onclick="getMoviesByGenre(10749)">Romance</button></li>
+        <li><button onclick="getMoviesByGenre(53)">Thriller</button></li>
+      </ul>
+      <!-- categorized-films-board -->
+      <ul id="categorized-films-board"></ul>
     </section>
 
-  
-
-
-     <!-- footer -->
-     <footer id="home-footer">
+    <!-- footer -->
+    <footer id="home-footer">
       <div class="home-footer-inner">
         <!-- logo -->
         <h3>
@@ -243,15 +241,14 @@
         <a href="#home-wrap"> top </a>
       </button>
     </aside>
-    
 
     <!-- font awesome -->
     <script
-    src="https://kit.fontawesome.com/5a0d19e43a.js"
-    crossorigin="anonymous"
+      src="https://kit.fontawesome.com/5a0d19e43a.js"
+      crossorigin="anonymous"
     ></script>
     <!-- script -->
     <script src="main.js"></script>
     <script src="../header.js"></script>
-</body>
+  </body>
 </html>
