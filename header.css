@@ -140,7 +140,7 @@
   text-align: center;
   border-radius: 20px;
   background-color: #fff;
-  box-shadow: 0 0 8px 0 #454545;
+  box-shadow: 0 0 3px 0 #00000074;
   z-index: 999;
 }
 #home-header .home-submenu-pc::before {
@@ -155,7 +155,7 @@
 }
 #home-header .home-submenu-pc > li > a {
   display: block;
-  padding: 20px;
+  padding: 10px 20px;
   box-sizing: border-box;
   transition: all .2s ease-in-out;
 }
@@ -289,6 +289,7 @@
   color: var(--main-color);
 }
 
+/* dark mode */
 .header-element.dark {
 background: #292c35;
 color: white;
@@ -306,8 +307,81 @@ color: #fff;
 .header-element.dark p {
   color: #fff;
 }
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Dark mode styles for header elements */
+.dark .home-header {
+  color: #ffffff;
+}
+/* Dark mode styles for header elements */
+.dark .home-header {
+  color: #ffffff;
+}
+.ball {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
+  /* transform을 0.2초간 끝이 느려지도록 */
+  transition: transform 0.2s ease-out;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+.fa-sun {
+  color: #f39c12;
+}
+
+/* 투명하게 만들고 label 안에 위치시킴 */
+.checkbox {
+  display: none;
+  position: absolute;
+  opacity: 0;
+}
+
+/* label(checkbox)이 클릭되면 공의 모션 */
+/* + 연산자 : 선택자1 바로 다음에 오는 선택자 2를 선택 */
+.checkbox:checked + .label_DarkMode .ball {
+  transform: translateX(24px);
+}
+
+.label_DarkMode {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  width: 50px;
+  height: 26px;
+  background-color: #111;
+  border-radius: 50px;
+  /* width와 height만 바꿔주면 아이콘이 같이 안커짐 */
+  transform: scale(1.5);
+}
+/* typing effect */
+.input-cursor {
+  display: inline-block;
+  width: 5px;
+  height: 35px;
+  background-color: white;
+  margin-left: 5px;
+  animation: blink 0.6s linear infinite alternate;
+  animation: blink 0.6s linear infinite alternate;
+}
 
 
+/* media query */
 /* pc */
 @media (max-width : 1080px) {
 #home-header nav {
