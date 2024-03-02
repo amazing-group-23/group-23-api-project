@@ -16,12 +16,12 @@ button {
 }
 
 header {
-    font-family: 'Roboto';
-  }
+  font-family: "Roboto";
+}
 
-#category-container{
-    margin-top: 60px;
-    font-family: 'Lato';
+#category-container {
+  margin-top: 60px;
+  font-family: "Lato";
 }
 /* main 추가..*/
 #category-main {
@@ -53,10 +53,12 @@ header {
 
 .dark #category-title-wrap {
   background-color: #1a1a1a;
-  color: #ffffff;
 }
 
-/* 재은언니 area */
+.dark #category-title-wrap button {
+  color: #fff;
+}
+
 #category-title-wrap {
   display: flex;
   justify-content: start;

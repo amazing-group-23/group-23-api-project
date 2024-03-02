@@ -204,46 +204,32 @@ hamburgerBtn.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const topRateSlide = document.querySelector("#top-rate-movies");
-  const trendSlide = document.querySelector("#trend-movies");
-  const topRateNextBtn = document.querySelector(".tr-next-button");
-  const topRatePrevBtn = document.querySelector(".tr-pre-button");
-  const trendNextBtn = document.querySelector(".trend-next-button");
-  const trendPrevBtn = document.querySelector(".trend-pre-button");
+  const slideNextBtn = document.querySelectorAll(".slide-next-button");
+  const slidePrevBtn = document.querySelectorAll(".slide-pre-button");
 
-  topRateNextBtn.addEventListener("click", function () {
-    const itemWidth = topRateSlide.querySelector("li").offsetWidth + 20; // 마진 조정
-    const scrollAmount = topRateSlide.scrollLeft + itemWidth * 5;
-    topRateSlide.scrollTo({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  });
+  slideNextBtn.forEach((button) =>
+    button.addEventListener("click", (event) => {
+      const slides =
+        event.currentTarget.parentNode.querySelector("ul.mv-slide");
+      const itemWidth = slides.querySelector("li").offsetWidth + 20;
+      const scrollAmount = slides.scrollLeft + itemWidth * 5;
+      slides.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    })
+  );
 
-  topRatePrevBtn.addEventListener("click", function () {
-    const itemWidth = topRateSlide.querySelector("li").offsetWidth + 20; // 마진 조정
-    const scrollAmount = topRateSlide.scrollLeft - itemWidth * 5;
-    topRateSlide.scrollTo({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  });
-
-  trendNextBtn.addEventListener("click", function () {
-    const itemWidth = trendSlide.querySelector("li").offsetWidth + 20; // 마진 조정
-    const scrollAmount = trendSlide.scrollLeft + itemWidth * 5;
-    trendSlide.scrollTo({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  });
-
-  trendPrevBtn.addEventListener("click", function () {
-    const itemWidth = trendSlide.querySelector("li").offsetWidth + 20; // 마진 조정
-    const scrollAmount = trendSlide.scrollLeft - itemWidth * 5;
-    trendSlide.scrollTo({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  });
+  slidePrevBtn.forEach((button) =>
+    button.addEventListener("click", (event) => {
+      const slides =
+        event.currentTarget.parentNode.querySelector("ul.mv-slide");
+      const itemWidth = slides.querySelector("li").offsetWidth + 20;
+      const scrollAmount = slides.scrollLeft - itemWidth * 5;
+      slides.scrollTo({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+    })
+  );
 });

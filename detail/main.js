@@ -1,8 +1,6 @@
 const TMDB_API_KEY = "b472f129bf47a15cddfd73872a69e3b0";
-//const SPOTIFY_API_KEY = "b22641e066mshbec1e14b206a93dp11c43djsnf93f64b4c709";
-const SPOTIFY_API_KEY="8564be05bcmshab4e816a8ff6140p1cfa2bjsn71585391092b";
+const SPOTIFY_API_KEY = "1ed631061amshf6c8f7865a35e3fp15e154jsn537f165b84dd";
 const movieId = new URLSearchParams(window.location.search).get("movieId");
-const YOUTUBE_API_KEY = "AIzaSyAqQbSYuH48TygsXo1tuAYk5k5Nh8ha9rM";
 
 const renderMovieDetail = async () => {
   // get movie detail data in Korean
@@ -11,8 +9,7 @@ const renderMovieDetail = async () => {
   );
   const data = await response.json();
   let trailer = null;
-  if (data.videos) 
-  {
+  if (data.videos) {
     trailer = data.videos.results.find((video) => video.type === "Trailer");
     if (!trailer) {
       trailer = data.videos.results.find((video) => video.type === "Teaser");
@@ -36,20 +33,20 @@ const renderMovieDetail = async () => {
   </div>
   <div class="trailer-container">
     <h1>Trailer</h1>
-      ${trailer ? `
-        <iframe class="youtube-trailer" src="https://www.youtube.com/embed/${
-          trailer.key
-        }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        ` : 
-        "<div>Trailer Not Found</div>"
-      }
+        <iframe 
+        class="youtube-trailer"
+        src="https://www.youtube.com/embed/${
+          trailer ? trailer.key : "ZWcRmoLqhkc"
+        }?si=rcmKr8H3D-PN33AE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
   </div>
   `;
   const recordImage = document.querySelector("img.record-image");
   recordImage.style.backgroundImage = `url(${
     data.poster_path
-    ? "https://image.tmdb.org/t/p/w500" + data.poster_path
-    : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"})`;
+      ? "https://image.tmdb.org/t/p/w500" + data.poster_path
+      : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
+  })`;
 
   const movieDetailContainer = document.querySelector(
     ".movie-detail-container"
@@ -65,11 +62,11 @@ const renderMovieDetail = async () => {
 
 // Get Spotify iframe of OST songs for a given movie
 const renderOSTFromSpotify = async () => {
-  const response = await fetch(
+  const responseMovie = await fetch(
     `https://api.themoviedb.org/3/movie/${movieId}?&append_to_response=videos&api_key=${TMDB_API_KEY}&language=en-US`
   );
-  const data = await response.json();
-  const url = `https://spotify23.p.rapidapi.com/search/?q=${data.title}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
+  const dataMovie = await responseMovie.json();
+  const url = `https://spotify23.p.rapidapi.com/search/?q=${dataMovie.title}&type=multi&offset=0&limit=10&numberOfTopResults=5`;
   const options = {
     method: "GET",
     headers: {
@@ -78,14 +75,21 @@ const renderOSTFromSpotify = async () => {
     },
   };
 
+  const resultElement = document.querySelector(".movie-ost-container");
+
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
+    if (!result) {
+      throw new Error("OST Not Found");
+    }
     const playlist = result.albums.items.find((item) =>
       item.data.name.toLowerCase().includes("soundtrack")
     );
 
+    if (!playlist) {
+      throw new Error("OST Not Found");
+    }
     // extracts spotify playlist id
     const spotifyId = playlist.data.uri.split(":")[2];
     const iframeResult = `
@@ -95,7 +99,7 @@ const renderOSTFromSpotify = async () => {
         style="border-radius: 12px"
         src="https://open.spotify.com/embed/album/${spotifyId}?utm_source=generator"
         width="100%"
-        height="352"
+        height="500"
         frameborder="0"
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -103,11 +107,15 @@ const renderOSTFromSpotify = async () => {
       ></iframe>
     </div>`;
 
-    const resultElement = document.querySelector(".movie-ost-container");
     resultElement.innerHTML = iframeResult;
   } catch (error) {
     console.error(error);
-    return "<span>OST Not Found</span>";
+    resultElement.innerHTML = `
+    <h2 class="ost-label">Original Sound Track</h2>
+    <div class="movie-ost-playlist">
+      <img class= "ost-not-found" src="../assets/img/music-404.jpg" />
+    </div>
+    `;
   }
 };
 
