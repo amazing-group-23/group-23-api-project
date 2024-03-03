@@ -14,6 +14,15 @@ if (checkbox) {
   checkbox.addEventListener("click", clickDarkMode);
 
   function clickDarkMode(event) {
+    const searchModalIframe = document.querySelector("#search-modal-iframe");
+    if (searchModalIframe) {
+      const searchModalIframeBody =
+        searchModalIframe.contentWindow.document.body;
+      searchModalIframeBody.classList.remove("dark");
+      if (event.currentTarget.checked) {
+        searchModalIframeBody.classList.add("dark");
+      }
+    }
     document.body.classList.remove("dark");
     if (event.currentTarget.checked) {
       document.body.classList.add("dark");

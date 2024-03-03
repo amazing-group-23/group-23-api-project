@@ -7,10 +7,11 @@ searchButton.addEventListener("click", () => {
   searchModal.style.display = "block";
   overlay.style.display = "block";
   searchModal.innerHTML = `
-    <iframe src="/search/index.html"></iframe>
+    <iframe id="search-modal-iframe" src="/search/index.html"></iframe>
   `;
   closeModal.style.display = "block";
   searchButton.style.display = "none";
+  document.body.style.overflowY = "hidden";
 });
 
 closeModal.addEventListener("click", () => {
@@ -20,4 +21,5 @@ closeModal.addEventListener("click", () => {
   overlay.style.display = "none";
   closeModal.style.display = "none";
   searchButton.style.display = "block";
+  document.body.style.overflowY = "visible";
 });
