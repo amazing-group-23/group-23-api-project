@@ -22,10 +22,13 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./footer.css" />
+    <link rel="stylesheet" href="./modal.css" />
     <!-- title -->
     <title>MUVIC</title>
   </head>
   <body>
+    <div id="overlay"></div>
+    <div class="search-modal"></div>
     <div id="home-wrap">
       <div class="header-element checkbox-container">
         <header id="home-header">
@@ -81,9 +84,9 @@
               <!-- nav-right -->
 
               <div class="nav-right">
-                <a href="./search/index.html">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
+                <!-- <a href="./search/index.html"> -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- </a> -->
                 <!-- dark mode -->
                 <div>
                   <input type="checkbox" class="checkbox" id="checkbox" />
@@ -306,5 +309,6 @@
     <script src="./header.js" defer></script>
     <script src="./main.js" defer></script>
     <script src="./darkMode.js" defer></script>
+    <script src="./modal.js" defer></script>
   </body>
 </html>
