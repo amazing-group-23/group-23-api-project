@@ -120,13 +120,13 @@ margin-top: 10rem;
 }
 
 .youtube-trailer,
-.movie-ost-playlist {
+.movie-ost-playlist > iframe {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.6);
   transition: all 0.3s ease;
 }
 
 .youtube-trailer:hover,
-.movie-ost-playlist:hover {
+.movie-ost-playlist > iframe:hover {
   transform: scale(1.01);
   transition: all 0.4s ease-in-out;
 }
@@ -291,6 +291,10 @@ p::first-letter {
     width: 60rem;
     height: 35rem;
   }
+  .ost-not-found{
+    width: 60rem;
+    height: 35rem;
+  }
 }
 @media screen and (max-width: 1024px) {
   .movie-detail-poster {
@@ -333,6 +337,10 @@ p::first-letter {
   }
 
   .youtube-trailer {
+    width: 50rem;
+    height: 28rem;
+  }
+  .ost-not-found{
     width: 50rem;
     height: 28rem;
   }
@@ -407,6 +415,10 @@ p::first-letter {
     width: 42rem;
     height: 23rem;
   }
+  .ost-not-found{
+    width: 42rem;
+    height: 23rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -460,6 +472,10 @@ p::first-letter {
   }
 
   .youtube-trailer {
+    width: 35rem;
+    height: 20rem;
+  }
+  .ost-not-found{
     width: 35rem;
     height: 20rem;
   }
@@ -523,6 +539,10 @@ p::first-letter {
     width: 29rem;
     height: 18rem;
   }
+  .ost-not-found{
+    width: 29rem;
+    height: 18rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .movie-info-background {
@@ -535,6 +555,10 @@ p::first-letter {
     width: 18.5rem;
     height: 13.5rem;
   }
+ .ost-not-found{
+    width: 18.5rem;
+    height: 13.5rem;
+ }
  .movie-ost-container{
     margin-top: 5rem;
     margin-bottom: 5rem;
