@@ -2,14 +2,13 @@
   display: none;
   position: fixed;
   z-index: 1000;
-  width: 80vw;
-  height: 90vh;
+  width: 100vw;
+  height: 80vh;
   background-color: #fff;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 15px;
-  box-shadow: 0 0 10px 0px rgb(0, 0, 0);
+  left: calc(50% - 50vw);
+  top: 60px;
+  /* transform: translate(-50%, -50%); */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   overflow: hidden;
   border: none;
 }
@@ -26,32 +25,13 @@
 #overlay {
   position: fixed; /* Sit on top of the page content */
   display: none; /* Hidden by default */
-  width: 110%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
+  width: 110vw; /* Full width (cover the whole page) */
+  height: 100vh; /* Full height (cover the whole page) */
+  top: 60px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  background-color:#ffffff96; 
   z-index: 999; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
-}
-
-.close-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  font-size: 20px;
-  font-weight: 900;
-  right: 5px;
-  top: 5px;
-  cursor: pointer;
-  border-radius: 50%;
-  padding: 5px;
-  width: 15px;
-  height: 15px;
-  background-color: var(--main-color);
-  color: #fff;
-  z-index: 1001;
 }

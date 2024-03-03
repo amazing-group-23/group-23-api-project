@@ -1,22 +1,19 @@
 const API_KEY = "30cd8cae353bf46280229ed39cd6c327";
+const genreId = new URLSearchParams(window.location.search).get("genreId");
+const allGenreTabs = document.querySelectorAll("#category-title-wrap li");
+
 let url = "";
 let movieList = [];
 // 무한 스크롤
 let page = 1; // 초기 페이지 번호
 
-//영화가져오기
-const getMovies = async () => {
-  url = new URL(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko-KR`
-  );
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log("데이터는", data);
-  movieList = data.results;
-  getMoviesRender();
-};
 //전체영화가져오기
 const getAllMovies = async () => {
+  allGenreTabs.forEach((tab) => {
+    tab.id.includes("all")
+      ? tab.classList.add("active")
+      : tab.classList.remove("active");
+  });
   url = new URL(
     `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=ko-KR`
   );
@@ -47,6 +44,11 @@ const getMoviesRender = () => {
 };
 
 const getMoviesByGenre = async (genreId) => {
+  allGenreTabs.forEach((tab) => {
+    tab.id.includes(genreId)
+      ? tab.classList.add("active")
+      : tab.classList.remove("active");
+  });
   url = new URL(
     `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&language=ko-KR&with_genres=${genreId}`
   );
@@ -80,4 +82,12 @@ const getMoreMovies = async (page) => {
   getMoviesRender();
 };
 
-window.onload = getAllMovies;
+const init = () => {
+  if (genreId) {
+    getMoviesByGenre(genreId);
+  } else {
+    getAllMovies();
+  }
+};
+
+window.onload = init;
