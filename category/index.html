@@ -18,9 +18,12 @@
     <link href="../reset.css" rel="stylesheet" />
     <link href="../header.css" rel="stylesheet" />
     <link href="../footer.css" rel="stylesheet" />
+    <link href="../modal.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="overlay"></div>
+    <div class="search-modal"></div>
     <header id="home-header">
       <div>
         <!-- nav -->
@@ -74,9 +77,9 @@
           <!-- nav-right -->
 
           <div class="nav-right">
-            <a href="./search/index.html">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
+            <!-- <a href="./search/index.html"> -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- </a> -->
             <!-- dark mode -->
             <div>
               <input type="checkbox" class="checkbox" id="checkbox" />
@@ -249,5 +252,6 @@
     <script src="main.js" defer></script>
     <script src="../header.js" defer></script>
     <script src="../darkMode.js" defer></script>
+    <script src="../modal.js" defer></script>
   </body>
 </html>
