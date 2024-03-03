@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <link href="../topBtn.css" rel="stylesheet" />
     <link href="../style.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
   </head>
@@ -52,15 +53,13 @@
 
     <!-- aside -->
     <aside id="home-aside">
-      <button type="button">
-        <a href="#"> top </a>
+      <button type="button" onclick="scrollToTop()" id="topButton">
+        <a href="#none">top</a>
       </button>
     </aside>
 
-    <script
-      src="https://kit.fontawesome.com/4a27de40e1.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/4a27de40e1.js" crossorigin="anonymous"></script>
+    <script src="../TopBtn.js"></script>
     <script src="./main.js" defer></script>
     <script src="../darkMode.js" defer></script>
   </body>

@@ -20,6 +20,7 @@
     <link href="../header.css" rel="stylesheet" />
     <link href="../modal.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
+    <link href="../topBtn.css" rel="stylesheet"/>
   </head>
   <body>
     <div id="overlay"></div>
@@ -283,8 +284,8 @@
 
     <!-- aside -->
     <aside id="home-aside">
-      <button type="button">
-        <a href="#home-wrap"> top </a>
+      <button type="button" onclick="scrollToTop()" id="topButton">
+        <a href="#none">top</a>
       </button>
     </aside>
 
@@ -298,5 +299,6 @@
     <script src="../header.js" defer></script>
     <script src="../darkMode.js" defer></script>
     <script src="../modal.js" defer></script>
-  </body>
+    <script src="../TopBtn.js" defer></script>
+    </body>
 </html>
