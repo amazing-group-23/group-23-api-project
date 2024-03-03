@@ -316,6 +316,8 @@
   border-radius: 20px;
   transition: background 0.2s ease-in-out;
 }
+#mobile-slide-menu .mobile-slide-menu-items-sub > li:hover {
+}
 #mobile-slide-menu .mobile-slide-menu-items-sub > li > a {
   display: block;
   font-size: 14px;

@@ -327,3 +327,8 @@ header {
   white-space: nowrap;
   /* overflow: hidden; */
 }
+
+#home-aside {
+  bottom: 10px;
+  right: 5%;
+}
