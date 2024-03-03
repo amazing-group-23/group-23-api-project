@@ -217,6 +217,7 @@
   height: 35px;
   line-height: 37px;
   font-size: 15px;
+  cursor: pointer;
 }
 
 /* mobile menu */
@@ -373,6 +374,7 @@
   left: 2px;
   width: 22px;
   height: 22px;
+  cursor: pointer;
   /* transition : 속성을 서서히 변화시킴(일정시간에 걸쳐 일어나도록) */
   /* transform을 0.2초간 끝이 느려지도록 */
   transition: transform 0.2s ease-out;
