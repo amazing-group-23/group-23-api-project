@@ -25,7 +25,9 @@ const renderMovieDetail = async () => {
     <div class="movie-detail-text">
       <h1>${data.title}</h1>
       <span>장르 : ${data.genres[0].name}</span>
-      <span>평점 : ${data.vote_average}<img src="star.png"/></span>
+      <span>평점 : ${
+        data.vote_average
+      }<img src="../assets/img/star.png"/></span>
       <span>개봉일 : ${data.release_date}</span>
       <div class="movie-detail-text-line"></div>
       <p>${data.overview}</p>
@@ -118,26 +120,5 @@ const renderOSTFromSpotify = async () => {
     `;
   }
 };
-
-// const checkbox = document.getElementById('checkbox');
-const checkbox = document.querySelector(".checkbox");
-console.log(checkbox);
-
-// checkbox를 click 했을 때 해당 함수를 실행
-checkbox.addEventListener("click", clickDarkMode);
-
-function clickDarkMode() {
-  // Toggle dark mode for the body
-  document.body.classList.toggle("dark");
-
-  // Toggle dark mode for specific elements in the header
-  const headerElements = document.querySelectorAll(".home-header");
-
-  headerElements.forEach((element) => {
-    element.classList.toggle("dark");
-  });
-
-  console.log("Dark mode toggled");
-}
 
 renderMovieDetail();
