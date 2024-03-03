@@ -239,7 +239,6 @@
   visibility: hidden;
   z-index: 999;
   transition: 0.2s ease-in-out;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 #mobile-slide-menu button {
   position: absolute;
