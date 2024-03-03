@@ -22,7 +22,7 @@ header {
 
 #search-page {
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 20px;
   width: 100%;
   padding: 0 40px;
   box-sizing: border-box;
@@ -142,7 +142,7 @@ header {
 #sp-reco-movie-wrap > div ul {
   display: flex;
   width: auto;
-  height: 280px;
+  height: 250px;
   cursor: grab;
 }
 #sp-reco-movie-wrap > div ul li {
@@ -160,6 +160,27 @@ header {
 
 .sp-hidden {
   display: none;
+}
+
+
+
+
+
+
+
+@media (max-width : 1050px) {
+  #sp-reco-movie-wrap > div {
+    height: 210px;
+  }
+  #sp-reco-movie-wrap > div ul {
+    height: 210px;
+  }
+  #sp-reco-movie-wrap > div ul li {
+    width: 120px;
+  }
+  #sp-reco-movie-wrap > div ul li img{
+    width: 120px;
+  }
 }
 
 @media (max-width : 1080px) {
