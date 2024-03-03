@@ -431,7 +431,7 @@ h2 {
     font-size: 30px;
   }
   #main-movie-section h2 {
-    margin: 40px 0 30px 20px;
+    margin: 40px 0 0px 20px;
     font-size: 30px;
   }
   /* section3 - movie */
@@ -478,7 +478,7 @@ h2 {
     font-size: 25px;
   }
   #main-movie-section h2 {
-    margin: 25px 0 25px 20px;
+    margin: 25px 0 0px 20px;
     font-size: 25px;
   }
   /* section3 - movie */
@@ -487,6 +487,10 @@ h2 {
     gap: 20px;
   }
   .mv-slide-section p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  #main-movie-section p {
     font-size: 12px;
     font-weight: 400;
   }
