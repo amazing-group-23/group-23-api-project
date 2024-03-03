@@ -49,11 +49,14 @@ h2 {
   font-size: 40px;
   text-transform: uppercase;
   border-bottom: 1px solid #fff;
+  transition: .2s ease-in;
 }
 #home-main .home-main-inner dl dt h2 {
   display: inline-block;
   font-size: 70px;
+  font-family: "Roboto", sans-serif;
   color: var(--main-color);
+  transition: .2s ease-in;
 }
 #home-main br {
   display: none;
@@ -61,8 +64,8 @@ h2 {
 #home-main .home-main-inner dl dd {
   margin: 20px 0 0 0;
   font-size: 30px;
+  transition: .2s ease-in;
 }
-
 /* section area */
 #home-value-bar {
   position: relative;
