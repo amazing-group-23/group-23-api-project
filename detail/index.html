@@ -9,6 +9,7 @@
     <link href="../footer.css" rel="stylesheet" />
     <link href="../modal.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
+    <link href="../topBtn.css" rel="stylesheet"/>
   </head>
   <body>
     <div id="overlay"></div>
@@ -239,8 +240,8 @@
 
     <!-- aside -->
     <aside id="home-aside">
-      <button type="button">
-        <a href="#"> top </a>
+      <button type="button" onclick="scrollToTop()" id="topButton">
+        <a href="#none">top</a>
       </button>
     </aside>
     <img
@@ -257,5 +258,6 @@
     <script src="../header.js" defer></script>
     <script src="../darkMode.js" defer></script>
     <script src="../modal.js" defer></script>
+    <script src="../TopBtn.js"></script>
   </body>
 </html>
