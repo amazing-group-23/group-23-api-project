@@ -115,7 +115,7 @@ const renderOSTFromSpotify = async () => {
     resultElement.innerHTML = `
     <h2 class="ost-label">Original Sound Track</h2>
     <div class="movie-ost-playlist">
-      <img class= "ost-not-found" src="../assets/img/music-404.jpg" />
+      <img class= "ost-not-found" src="../assets/img/404ost.png" />
     </div>
     `;
   }
