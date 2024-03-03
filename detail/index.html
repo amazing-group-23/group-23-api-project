@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MUVIC</title>
-    <link rel="stylesheet" href="style.css" />
+    <link href="../reset.css" rel="stylesheet" />
+    <link href="../header.css" rel="stylesheet" />
+    <link href="../footer.css" rel="stylesheet" />
+    <link href="../modal.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="overlay"></div>
+    <div class="search-modal"></div>
     <div id="wrap">
       <header id="home-header">
         <div>
@@ -27,12 +33,24 @@
                   <a href="/category/index.html">Genre</a>
                   <!-- submenu -->
                   <ul class="home-submenu-pc">
-                    <li><a href="#none">Action</a></li>
-                    <li><a href="#none">Comedy</a></li>
-                    <li><a href="#none">Drama</a></li>
-                    <li><a href="#none">Family</a></li>
-                    <li><a href="#none">Romance</a></li>
-                    <li><a href="#none">Thriller</a></li>
+                    <li>
+                      <a href="/category/index.html?genreId=28">Action</a>
+                    </li>
+                    <li>
+                      <a href="/category/index.html?genreId=35">Comedy</a>
+                    </li>
+                    <li>
+                      <a href="/category/index.html?genreId=18">Drama</a>
+                    </li>
+                    <li>
+                      <a href="/category/index.html?genreId=10751">Family</a>
+                    </li>
+                    <li>
+                      <a href="/category/index.html?genreId=10749">Romance</a>
+                    </li>
+                    <li>
+                      <a href="/category/index.html?genreId=53">Thriller</a>
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -61,9 +79,9 @@
             <!-- nav-right -->
 
             <div class="nav-right">
-              <a href="./search/index.html">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
+              <!-- <a href="./search/index.html"> -->
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <!-- </a> -->
               <!-- dark mode -->
               <div>
                 <input type="checkbox" class="checkbox" id="checkbox" />
@@ -100,12 +118,24 @@
               </a>
               <!-- submenu -->
               <ul class="mobile-slide-menu-items-sub">
-                <li><a href="#none">Action</a></li>
-                <li><a href="#none">Comedy</a></li>
-                <li><a href="#none">Drama</a></li>
-                <li><a href="#none">Family</a></li>
-                <li><a href="#none">Romance</a></li>
-                <li><a href="#none">Thriller</a></li>
+                <li>
+                  <a href="/category/index.html?genreId=28">Action</a>
+                </li>
+                <li>
+                  <a href="/category/index.html?genreId=35">Comedy</a>
+                </li>
+                <li>
+                  <a href="/category/index.html?genreId=18">Drama</a>
+                </li>
+                <li>
+                  <a href="/category/index.html?genreId=10751">Family</a>
+                </li>
+                <li>
+                  <a href="/category/index.html?genreId=10749">Romance</a>
+                </li>
+                <li>
+                  <a href="/category/index.html?genreId=53">Thriller</a>
+                </li>
               </ul>
             </li>
 
@@ -218,5 +248,6 @@
     <script src="./main.js" defer></script>
     <script src="../header.js" defer></script>
     <script src="../darkMode.js" defer></script>
+    <script src="../modal.js" defer></script>
   </body>
 </html>

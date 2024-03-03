@@ -16,11 +16,14 @@
     />
     <!-- css -->
     <link href="../reset.css" rel="stylesheet" />
-    <link href="../header.css" rel="stylesheet" />
     <link href="../footer.css" rel="stylesheet" />
+    <link href="../header.css" rel="stylesheet" />
+    <link href="../modal.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="overlay"></div>
+    <div class="search-modal"></div>
     <header id="home-header">
       <div>
         <!-- nav -->
@@ -40,12 +43,24 @@
                 <a href="/category/index.html">Genre</a>
                 <!-- submenu -->
                 <ul class="home-submenu-pc">
-                  <li><a href="#none">Action</a></li>
-                  <li><a href="#none">Comedy</a></li>
-                  <li><a href="#none">Drama</a></li>
-                  <li><a href="#none">Family</a></li>
-                  <li><a href="#none">Romance</a></li>
-                  <li><a href="#none">Thriller</a></li>
+                  <li>
+                    <a href="/category/index.html?genreId=28">Action</a>
+                  </li>
+                  <li>
+                    <a href="/category/index.html?genreId=35">Comedy</a>
+                  </li>
+                  <li>
+                    <a href="/category/index.html?genreId=18">Drama</a>
+                  </li>
+                  <li>
+                    <a href="/category/index.html?genreId=10751">Family</a>
+                  </li>
+                  <li>
+                    <a href="/category/index.html?genreId=10749">Romance</a>
+                  </li>
+                  <li>
+                    <a href="/category/index.html?genreId=53">Thriller</a>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -74,9 +89,9 @@
           <!-- nav-right -->
 
           <div class="nav-right">
-            <a href="./search/index.html">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
+            <!-- <a href="./search/index.html"> -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- </a> -->
             <!-- dark mode -->
             <div>
               <input type="checkbox" class="checkbox" id="checkbox" />
@@ -111,12 +126,24 @@
             <a href="/category/index.html" class="mobile-menu-hover"> genre </a>
             <!-- submenu -->
             <ul class="mobile-slide-menu-items-sub">
-              <li><a href="#none">Action</a></li>
-              <li><a href="#none">Comedy</a></li>
-              <li><a href="#none">Drama</a></li>
-              <li><a href="#none">Family</a></li>
-              <li><a href="#none">Romance</a></li>
-              <li><a href="#none">Thriller</a></li>
+              <li>
+                <a href="/category/index.html?genreId=28">Action</a>
+              </li>
+              <li>
+                <a href="/category/index.html?genreId=35">Comedy</a>
+              </li>
+              <li>
+                <a href="/category/index.html?genreId=18">Drama</a>
+              </li>
+              <li>
+                <a href="/category/index.html?genreId=10751">Family</a>
+              </li>
+              <li>
+                <a href="/category/index.html?genreId=10749">Romance</a>
+              </li>
+              <li>
+                <a href="/category/index.html?genreId=53">Thriller</a>
+              </li>
             </ul>
           </li>
 
@@ -161,13 +188,27 @@
       </main>
 
       <ul id="category-title-wrap">
-        <li><button onclick="getAllMovies()">All</button></li>
-        <li><button onclick="getMoviesByGenre(28)">Action</button></li>
-        <li><button onclick="getMoviesByGenre(35)">Comedy</button></li>
-        <li><button onclick="getMoviesByGenre(18)">Drama</button></li>
-        <li><button onclick="getMoviesByGenre(10751)">Family</button></li>
-        <li><button onclick="getMoviesByGenre(10749)">Romance</button></li>
-        <li><button onclick="getMoviesByGenre(53)">Thriller</button></li>
+        <li id="all">
+          <button onclick="getAllMovies()">All</button>
+        </li>
+        <li id="28">
+          <button onclick="getMoviesByGenre(28)">Action</button>
+        </li>
+        <li id="35">
+          <button onclick="getMoviesByGenre(35)">Comedy</button>
+        </li>
+        <li id="18">
+          <button onclick="getMoviesByGenre(18)">Drama</button>
+        </li>
+        <li id="10751">
+          <button onclick="getMoviesByGenre(10751)">Family</button>
+        </li>
+        <li id="10749">
+          <button onclick="getMoviesByGenre(10749)">Romance</button>
+        </li>
+        <li id="53">
+          <button onclick="getMoviesByGenre(53)">Thriller</button>
+        </li>
       </ul>
       <!-- categorized-films-board -->
       <ul id="categorized-films-board"></ul>
@@ -249,5 +290,6 @@
     <script src="main.js" defer></script>
     <script src="../header.js" defer></script>
     <script src="../darkMode.js" defer></script>
+    <script src="../modal.js" defer></script>
   </body>
 </html>
