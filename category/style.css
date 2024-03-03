@@ -22,6 +22,8 @@ header {
 #category-container {
   margin-top: 60px;
   font-family: "Lato";
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 /* main 추가..*/
 #category-main {
@@ -44,7 +46,7 @@ header {
   text-align: center;
   transform: translate(-50%, -100px);
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.595);
   backdrop-filter: blur(10px);
 }
 #category-main dl dt h2 {
@@ -60,7 +62,7 @@ header {
 }
 
 .dark #categorized-films-board li {
-  box-shadow: 0 0 10px 0px rgb(255, 255, 255);
+  box-shadow: rgba(180, 180, 180, 0.271) 0px 2px 5px 0px;
 }
 
 #category-title-wrap {
@@ -106,7 +108,7 @@ header {
   color: #ccc;
   overflow: hidden;
   transition: 0.5s;
-  box-shadow: 0 0 10px 0px rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.395) 0px 2px 5px 0px;
 }
 #categorized-films-board li:hover {
   transform: scale(1.1);
@@ -116,6 +118,13 @@ header {
 }
 
 @media (max-width: 1300px) {
+  #category-main{
+    max-width: 900px;
+    height: 350px;
+  }
+  #category-main dl dt h2{
+    font-size: 23px;
+  }
   #category-title-wrap {
     max-width: 900px;
   }
@@ -130,6 +139,16 @@ header {
 }
 
 @media (max-width: 980px) {
+  #category-main{
+    max-width: 780px;
+    height: 320px;
+  }
+  #category-main dl {
+    top: 40%;
+  }
+  #category-main dl dt h2{
+    font-size: 20px;
+  }
   #category-title-wrap {
     max-width: 780px;
   }
@@ -145,6 +164,13 @@ header {
 }
 
 @media (max-width: 830px) {
+  #category-main{
+    max-width: 650px;
+    height: 300px;
+  }
+  #category-main dl dt h2{
+    font-size: 17px;
+  }
   #category-title-wrap {
     max-width: 650px;
   }
@@ -160,6 +186,13 @@ header {
 }
 
 @media (max-width: 685px) {
+  #category-main{
+    max-width: 550px;
+    height: 280px;
+  }
+  #category-main dl dt h2{
+    font-size: 14px;
+  }
   #category-title-wrap {
     max-width: 550px;
   }
@@ -174,6 +207,16 @@ header {
   }
 }
 @media (max-width: 580px) {
+  #category-main{
+    max-width: 450px;
+    height: 260px;
+  }
+  #category-main dl {
+    top: 40%;
+  }
+  #category-main dl dt h2{
+    font-size: 12px;
+  }
   #category-title-wrap {
     max-width: 450px;
   }
@@ -188,6 +231,19 @@ header {
   }
 }
 @media (max-width: 480px) {
+  #category-main{
+    max-width: 380px;
+    height: 240px;
+  }
+  #category-main dl {
+    top: 38%;
+  }
+  #category-main dl dt h2{
+    font-size: 12px;
+  }
+  #category-main dl dt h2 br {
+    display: none;
+  }
   #category-title-wrap {
     max-width: 380px;
   }
@@ -206,6 +262,16 @@ header {
 }
 
 @media (max-width: 410px) {
+  #category-main{
+    max-width: 300px;
+    height: 150px;
+  }
+  #category-main dl {
+    top: 30%;
+  }
+  #category-main dl dt h2{
+    font-size: 10px;
+  }
   #category-title-wrap {
     max-width: 300px;
   }
