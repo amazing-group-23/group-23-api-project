@@ -3,17 +3,22 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
 
-#home-container p {
+#home-container div {
   position: absolute;
-  font-size: 10rem;
+  font-size: 10vw;
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.6;
   text-shadow: #fc0 1px 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 #home-container img {
