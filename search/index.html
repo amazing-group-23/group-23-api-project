@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>검색 | MUVIC</title>
+    <!-- <title>검색 | MUVIC</title> -->
     <!-- font Roboto, Lato -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -17,33 +17,35 @@
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <section id="search-page">
-      <div class="search-page-input-box">
-        <input type="text" placeholder="제목을 입력해보세요." />
-        <div class="sp-button-wrap">
-          <div class="sp-close-button">
-            <button>
-              <i class="fa-solid fa-circle-xmark" style="color: #969696"></i>
+    <section id="search-page-container">
+      <div id="search-page">
+        <div class="search-page-input-box">
+          <input type="text" placeholder="제목을 입력해보세요." />
+          <div class="sp-button-wrap">
+            <div class="sp-close-button">
+              <button>
+                <i class="fa-solid fa-circle-xmark" style="color: #969696"></i>
+              </button>
+            </div>
+            <button class="sp-search-button">
+              <i class="fa-solid fa-circle-plus" style="color: #8f8f8f"></i>
             </button>
           </div>
-          <button class="sp-search-button">
-            <i class="fa-solid fa-circle-plus" style="color: #8f8f8f"></i>
-          </button>
+          <p></p>
         </div>
-        <p></p>
-      </div>
-      <div id="sp-reco-movie-wrap">
-        <div class="sp-popular-movies">
-          <!-- <h3>현재 인기있는 영화</h3> -->
-          <ul id="sp-popular-movies-board"></ul>
+        <div id="sp-reco-movie-wrap">
+          <div class="sp-popular-movies">
+            <!-- <h3>현재 인기있는 영화</h3> -->
+            <ul id="sp-popular-movies-board"></ul>
+          </div>
+          <div class="sp-running-movies">
+            <!-- <h3>상영중인 영화</h3> -->
+            <ul id="sp-running-movies-board"></ul>
+          </div>
         </div>
-        <div class="sp-running-movies">
-          <!-- <h3>상영중인 영화</h3> -->
-          <ul id="sp-running-movies-board"></ul>
+        <div class="searched-films-container">
+          <ul id="movie-board"></ul>
         </div>
-      </div>
-      <div class="searched-films-container">
-        <ul id="movie-board"></ul>
       </div>
     </section>
     <!-- footer -->

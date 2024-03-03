@@ -219,10 +219,9 @@
   color: #000;
 }
 #home-header .nav-right i {
-  display: block;
   width: 35px;
   height: 35px;
-  line-height: 37px;
+  line-height: 35px;
   font-size: 15px;
   cursor: pointer;
 }
@@ -283,8 +282,6 @@
   justify-content: space-between;
   height: 82%;
 }
-#mobile-slide-menu .mobile-slide-menu-items > li {
-}
 #mobile-slide-menu .mobile-menu-hover {
   position: relative;
   display: block;
@@ -319,8 +316,6 @@
   box-sizing: border-box;
   border-radius: 20px;
   transition: background 0.2s ease-in-out;
-}
-#mobile-slide-menu .mobile-slide-menu-items-sub > li:hover {
 }
 #mobile-slide-menu .mobile-slide-menu-items-sub > li > a {
   display: block;
@@ -406,6 +401,10 @@
 }
 .fa-sun {
   color: #f39c12;
+}
+
+.nav-right .close-modal {
+  display: none;
 }
 
 /* 투명하게 만들고 label 안에 위치시킴 */
