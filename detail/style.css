@@ -66,7 +66,7 @@ html {
   color: var(--main-color);
   font-weight: 800;
   font-size: 3.125rem;
-  margin: 3.75rem 0;
+  margin: 3.8rem 0;
 }
 
 .movie-detail-text > span {
@@ -93,11 +93,10 @@ html {
   background-color: #000;
   margin: 2.5rem 0;
 }
-
-.youtube-trailer {
-  width: 73.125rem;
-  height: 40.625rem;
+.trailer-container{
+margin-top: 10rem;
 }
+
 
 .trailer-container > h1 {
   text-align: center;
@@ -106,18 +105,18 @@ html {
   font-style: italic;
   font-family: "Lato", sans-serif;
 }
+
+.youtube-trailer {
+  width: 73.125rem;
+  height: 40.625rem;
+}
+
 .ost-label {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
   font-style: italic;
   font-family: "Lato", sans-serif;
-}
-.youtube-trailer {
-  /* box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.6); */
-  width: 73.125rem;
-  height: 40.625rem;
-  /* transition: all 0.3s ease; */
 }
 
 .youtube-trailer,
@@ -139,6 +138,7 @@ html {
 
 /*movie ost*/
 .movie-ost-container {
+  margin-top: 10rem;
   position: relative;
   margin-bottom: 150px;
 }
@@ -299,14 +299,14 @@ p::first-letter {
   }
 
   .movie-detail-text {
-    margin-top: 2.2rem;
+    margin-top: 5rem;
     width: 100%;
   }
 
   .movie-detail-text > h1 {
     color: var(--main-color);
     font-weight: 800;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 
   .movie-detail-text > span {
@@ -324,12 +324,12 @@ p::first-letter {
 
   .movie-detail-text > P {
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.2em;
   }
 
   p::first-letter {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .youtube-trailer {
@@ -485,7 +485,7 @@ p::first-letter {
     width: 100%;
   }
   .movie-info-background {
-    height: 58rem;
+    height: 60.5rem;
   }
 
   .movie-detail-text > h1 {
@@ -520,13 +520,23 @@ p::first-letter {
     margin-top: 5rem;
   }
   .youtube-trailer {
-    width: 30rem;
+    width: 29rem;
     height: 18rem;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+  .movie-info-background {
+    height: 55rem;
+    }
+  .trailer-container {
+    margin-top: 5rem;
+    }
   .youtube-trailer {
-    width: 17rem;
-    height: 13rem;
+    width: 18.5rem;
+    height: 13.5rem;
   }
+ .movie-ost-container{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+ }
 }
