@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./footer.css" />
     <link rel="stylesheet" href="./modal.css" />
+    <link rel="stylesheet" href="./topBtn.css" />
     <!-- title -->
     <title>MUVIC</title>
   </head>
@@ -321,8 +322,8 @@
 
     <!-- aside -->
     <aside id="home-aside">
-      <button type="button">
-        <a href="#home-wrap"> top </a>
+      <button type="button" onclick="scrollToTop()" id="topButton">
+        <a href="#none">top</a>
       </button>
     </aside>
 
@@ -338,5 +339,6 @@
     <script src="./main.js" defer></script>
     <script src="./darkMode.js" defer></script>
     <script src="./modal.js" defer></script>
+    <script src="./TopBtn.js" defer></script>
   </body>
 </html>
