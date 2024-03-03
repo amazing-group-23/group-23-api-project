@@ -81,9 +81,12 @@ header {
   font-size: 15px;
   cursor: pointer;
 }
-#category-title-wrap li:hover button {
+
+#category-title-wrap li:hover button,
+#category-title-wrap li.active button {
   color: var(--main-color);
 }
+
 #category-title-wrap button {
   font-size: 15px;
   transition: color 0.2s ease-in;
