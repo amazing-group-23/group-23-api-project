@@ -37,21 +37,18 @@ h2 {
   font-weight: bold;
   color: #fff;
   z-index: 1;
-  top: 60%;
-  left: 2%;
 }
 #home-main .home-main-inner dl div {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 60%;
   margin: 0 20px;
-  transform: translateY(-50%);
+  transform: translateY(-60%);
 }
 #home-main .home-main-inner dl dt {
   font-size: 40px;
   text-transform: uppercase;
   border-bottom: 1px solid #fff;
-  width: 50%;
 }
 #home-main .home-main-inner dl dt h2 {
   display: inline-block;
@@ -136,6 +133,7 @@ h2 {
   margin: 0;
   margin-left: 15px;
   font-weight: 600;
+  font-family: "Pretendard-Regular";
 }
 
 .mv-slide-section h2::after,
